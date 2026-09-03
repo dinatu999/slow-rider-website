@@ -159,3 +159,66 @@
   line-height: 1.7;
   color: #555555;
 }
+/* ================================
+CONTACT SECTION IMPROVEMENTS
+================================ */
+
+.contact-info {
+max-width: 550px;
+}
+
+.contact-benefits {
+margin-top: 25px;
+display: grid;
+gap: 10px;
+}
+
+.contact-benefits p {
+margin: 0;
+color: #34404d;
+font-size: 14px;
+}
+
+.contact form h3 {
+font: 800 22px Montserrat, sans-serif;
+margin: 0 0 8px;
+color: var(--dark);
+}
+
+.contact input,
+.contact select,
+.contact textarea {
+width: 100%;
+background: #ffffff;
+color: var(--dark);
+}
+
+.contact select {
+cursor: pointer;
+appearance: auto;
+}
+
+.contact textarea {
+resize: vertical;
+min-height: 130px;
+}
+
+.contact form .btn {
+width: 100%;
+text-align: center;
+margin-top: 5px;
+}
+
+.form-note {
+margin: 0;
+text-align: center;
+font-size: 12px;
+line-height: 1.5;
+color: #718096;
+}
+
+@media (max-width: 700px) {
+.contact form {
+padding: 20px;
+}
+}
