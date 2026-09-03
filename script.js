@@ -26,7 +26,21 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 
 document.getElementById('quoteForm').addEventListener('submit', function(e){
   e.preventDefault();
-  const lines = [`Hello Slow Rider,`, '', `Name: ${document.getElementById('name').value}`, `Company: ${document.getElementById('company').value}`, `Country: ${document.getElementById('country').value}`, `Phone: ${document.getElementById('phone').value}`, `Estimated Quantity: ${document.getElementById('quantity').value || 'Not specified'}`,`Interested in: ${document.getElementById('interest').value}`, `Requirements: ${document.getElementById('message').value}`];
+const lines = [
+  `Hello Slow Rider,`,
+  ``,
+  `I would like to request more information and a quotation.`,
+  ``,
+  `Name: ${document.getElementById('name').value}`,
+  `Company: ${document.getElementById('company').value || 'Not specified'}`,
+  `Country: ${document.getElementById('country').value}`,
+  `WhatsApp / Phone: ${document.getElementById('phone').value || 'Not specified'}`,
+  `Estimated Order Quantity: ${document.getElementById('quantity').value || 'Not specified'}`,
+  `Product Interested In: ${document.getElementById('interest').value}`,
+  ``,
+  `Requirements:`,
+  `${document.getElementById('message').value || 'Not specified'}`
+];
   window.open(`https://wa.me/8618620284214?text=${encodeURIComponent(lines.join('\n'))}`, '_blank');
 });
 
