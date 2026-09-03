@@ -1,22 +1,17 @@
 # Slow Rider Website
 
-This is a working static website starter for Slow Rider.
+Static website for Slow Rider electric vehicles.
 
-## Open the website
-Double-click `index.html` to open it in a web browser.
+## How to edit
+- `index.html` — website text and sections
+- `style.css` — design and layout
+- `script.js` — WhatsApp inquiry form and product details popup
+- `images/` — product images
 
-## Files
-- `index.html` — website content
-- `style.css` — website design
-- `script.js` — WhatsApp inquiry functions
-- `website-concept.png` — original visual concept (if included)
+## Current products
+1. Patrol Electric Scooter — 1000W, 45 km/h
+2. Maxi Scooter — 2000W, 80–90 km/h
+3. Sunrise — 3000W, 70 km/h
+4. Big CG125 — 3000W, 70 km/h
 
-## Important before publishing
-1. Add your real business email.
-2. Replace example product specifications with real specifications.
-3. Add real product photos, factory photos, certifications, and company information.
-4. Do not publish claims or certifications that are not accurate.
-
-## Publish for free
-You can upload these files to a free static hosting service such as GitHub Pages or Cloudflare Pages.
-A custom `.com` domain is separate and normally must be registered if available.
+Replace the business email before using the website for serious customer inquiries.
