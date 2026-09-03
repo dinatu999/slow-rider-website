@@ -222,3 +222,129 @@ color: #718096;
 padding: 20px;
 }
 }
+/* ================================
+   WHY CHOOSE SLOW RIDER - NEW DESIGN
+================================ */
+
+.why-choose {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.why-choose-content h2 {
+  font: 800 34px Montserrat;
+  margin: 0 0 18px;
+}
+
+.why-intro {
+  color: #657080;
+  line-height: 1.7;
+  max-width: 650px;
+  margin-bottom: 32px;
+}
+
+.why-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.why-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.why-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f6f8;
+  border-radius: 12px;
+  font-size: 23px;
+}
+
+.why-item h3 {
+  margin: 0 0 7px;
+  font: 700 16px Montserrat;
+}
+
+.why-item p {
+  margin: 0;
+  color: #657080;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* RIGHT DARK PANEL */
+
+.why-panel {
+  background: linear-gradient(145deg, #111923, #263c4d);
+  color: white;
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.why-panel-tag {
+  display: inline-block;
+  color: #ffb900;
+  font: 700 10px Montserrat;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
+}
+
+.why-panel h2 {
+  font: 800 28px Montserrat;
+  line-height: 1.25;
+  margin: 0 0 20px;
+}
+
+.why-panel p {
+  color: #d7e0e7;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.why-panel .btn {
+  margin-top: 18px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .why-list {
+    grid-template-columns: 1fr;
+  }
+
+  .why-panel {
+    padding: 30px 24px;
+  }
+
+  .why-choose-content h2 {
+    font-size: 28px;
+  }
+
+}
