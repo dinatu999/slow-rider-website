@@ -487,7 +487,7 @@ const products = [
     id: "bull-3w",
     name: "3 Wheeler Bull",
     category: "Three Wheel Vehicle",
-    image: "slow_rider_product_images/牛系三轮_配置xlsx_1__3.png",
+    image: "slow_rider_product_images/牛系三轮_配置xlsx_1__3.png?v=3",,
     description:
       "A 500W electric three-wheel vehicle designed for practical transport and stable operation, with 45 km/h maximum speed.",
     specs: {
