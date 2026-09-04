@@ -1,14 +1,20 @@
-/* =========================================
-   SLOW RIDER WEBSITE SCRIPT V2
-========================================= */
+/* =====================================================
+   SLOW RIDER WEBSITE
+   PRODUCT DATABASE + FUNCTIONS
+===================================================== */
 
 
-/* =========================================
+/* =====================================================
    PRODUCT DATABASE
-========================================= */
+===================================================== */
 
 
 const products = [
+
+
+/* =========================
+   ELECTRIC SCOOTERS
+========================= */
 
 
 {
@@ -23,13 +29,12 @@ name:"Patrol Electric Scooter",
 image:"patrol-police.png",
 
 description:
-"Reliable electric scooter designed for urban mobility and global distribution.",
+"Electric scooter designed for urban mobility and international distribution.",
 
 specs:{
 Motor:"1000W",
 Battery:"Lithium Battery",
-Range:"80-100 km",
-Speed:"45-55 km/h"
+Application:"Urban Transportation"
 }
 
 },
@@ -37,7 +42,7 @@ Speed:"45-55 km/h"
 
 
 {
-id:"maxi",
+id:"maxi-scooter",
 
 category:"Electric Scooter",
 
@@ -48,16 +53,23 @@ name:"Maxi Electric Scooter",
 image:"maxi-scooter.png",
 
 description:
-"Comfortable electric scooter with strong performance.",
+"Comfortable electric scooter with modern design.",
 
 specs:{
-Motor:"1200W",
+Motor:"High Performance Motor",
 Battery:"Lithium Battery",
-Range:"100 km",
-Speed:"50 km/h"
+Application:"City Mobility"
 }
 
 },
+
+
+
+
+
+/* =========================
+   ELECTRIC MOTORCYCLES
+========================= */
 
 
 
@@ -68,18 +80,41 @@ category:"Electric Motorcycle",
 
 type:"electric",
 
-name:"Sunrise Electric Motorcycle",
+name:"Sunrise",
 
 image:"sunrise.png",
 
 description:
-"Classic motorcycle style with electric power technology.",
+"Classic electric motorcycle model for global markets.",
 
 specs:{
-Motor:"1500W",
-Battery:"72V Lithium",
-Range:"100 km",
-Speed:"60 km/h"
+Motor:"Electric Motor",
+Battery:"Lithium Battery",
+Style:"Motorcycle Design"
+}
+
+},
+
+
+
+{
+id:"big-cg125",
+
+category:"Electric Motorcycle",
+
+type:"electric",
+
+name:"Big CG125",
+
+image:"big-cg125.png",
+
+description:
+"Electric motorcycle inspired by classic CG125 style.",
+
+specs:{
+Motor:"High Power Motor",
+Battery:"Lithium Battery",
+Application:"Daily Transportation"
 }
 
 },
@@ -93,140 +128,156 @@ category:"Electric Motorcycle",
 
 type:"electric",
 
-name:"Big CG125 Electric",
+name:"CG125",
 
-image:"big-cg125.png",
+image:"slow_rider_product_images/CG125_配置_2.jpeg",
 
 description:
-"Electric motorcycle inspired by traditional motorcycle design.",
+"Classic motorcycle design with electric configuration.",
 
 specs:{
-Motor:"2000W",
-Battery:"72V Lithium",
-Range:"120 km",
-Speed:"70 km/h"
+Category:"Electric Motorcycle"
 }
 
 },
 
 
 
-/* NEW PRODUCTS TEMPORARY IMAGES */
-
-
 {
-id:"ebike",
+id:"u2",
 
-category:"E-Bike",
+category:"Electric Motorcycle",
 
 type:"electric",
 
-name:"Electric Bike",
+name:"U2",
 
-image:"patrol-police.png",
+image:"slow_rider_product_images/U2_配置_2.png",
 
 description:
-"Electric bicycle solution for city transportation.",
+"Compact electric motorcycle designed for urban transportation.",
 
 specs:{
-Motor:"500W",
-Battery:"48V",
-Range:"60 km"
+Category:"Electric Motorcycle"
 }
 
 },
 
 
 
-{
-id:"utility",
 
-category:"Electric Utility Vehicle",
+{
+id:"h1",
+
+category:"Electric Motorcycle",
 
 type:"electric",
 
-name:"Electric Utility Vehicle",
+name:"H1",
 
-image:"patrol-police.png",
+image:"slow_rider_product_images/H1_配置_2.png",
 
 description:
-"Electric commercial transportation solution.",
+"Modern electric motorcycle model.",
 
 specs:{
-Battery:"48V-72V",
-Application:"Cargo / Factory"
+Category:"Electric Motorcycle"
 }
 
 },
 
 
 
-{
-id:"big-bull",
-
-category:"Gas ATV",
-
-type:"petrol",
-
-name:"Big Bull 4X4 ATV",
-
-image:"big-cg125.png",
-
-description:
-"Powerful gasoline ATV with off-road capability.",
-
-specs:{
-Engine:"300cc",
-Transmission:"CVT",
-Drive:"2WD / 4WD",
-Fuel:"5L"
-}
-
-},
-
-
 
 {
-id:"bashan",
+id:"v6",
 
-category:"Gas ATV",
-
-type:"petrol",
-
-name:"Bashan 400cc ATV",
-
-image:"big-cg125.png",
-
-description:
-"High performance ATV with 4WD system.",
-
-specs:{
-Engine:"400cc",
-Transmission:"CVT",
-Drive:"4WD"
-}
-
-},
-
-
-
-{
-id:"electric-atv",
-
-category:"Electric ATV",
+category:"Electric Motorcycle",
 
 type:"electric",
 
-name:"Electric ATV",
+name:"V6",
 
-image:"patrol-police.png",
+image:"slow_rider_product_images/V6_配置_2.jpeg",
 
 description:
-"Electric off-road vehicle with customizable battery options.",
+"Electric motorcycle with stylish appearance.",
 
 specs:{
-Motor:"1500W",
-Battery:"72V"
+Category:"Electric Motorcycle"
+}
+
+},
+
+
+
+
+{
+id:"cloud",
+
+category:"Electric Motorcycle",
+
+type:"electric",
+
+name:"Cloud",
+
+image:"slow_rider_product_images/Cloud_配置_2.jpeg",
+
+description:
+"Comfortable electric motorcycle model.",
+
+specs:{
+Category:"Electric Motorcycle"
+}
+
+},
+
+
+
+
+{
+id:"m1",
+
+category:"Electric Motorcycle",
+
+type:"electric",
+
+name:"M1",
+
+image:"slow_rider_product_images/M1_配置_2.jpeg",
+
+description:
+"Electric motorcycle suitable for urban markets.",
+
+specs:{
+Category:"Electric Motorcycle"
+}
+
+},
+
+
+
+/* =========================
+   OTHER ELECTRIC MODELS
+========================= */
+
+
+{
+id:"fengshen",
+
+category:"Electric Vehicle",
+
+type:"electric",
+
+name:"封神",
+
+image:"slow_rider_product_images/封神_配置_2.png",
+
+description:
+"Electric vehicle model.",
+
+specs:{
+Category:"Electric Vehicle"
 }
 
 },
@@ -234,25 +285,241 @@ Battery:"72V"
 
 
 {
-id:"utv",
+id:"he-feng",
 
-category:"UTV",
+category:"Electric Vehicle",
 
-type:"petrol",
+type:"electric",
 
-name:"Utility UTV",
+name:"和风",
 
-image:"big-cg125.png",
+image:"slow_rider_product_images/和风_配置_2.jpeg",
 
 description:
-"Multi-purpose vehicle for agriculture and outdoor use.",
+"Electric mobility solution.",
 
 specs:{
-Engine:"250cc-400cc",
-Transmission:"CVT"
+Category:"Electric Vehicle"
+}
+
+},
+
+
+
+{
+id:"jike",
+
+category:"Electric Vehicle",
+
+type:"electric",
+
+name:"极核",
+
+image:"slow_rider_product_images/极核_配置_2.jpeg",
+
+description:
+"Electric vehicle model.",
+
+specs:{
+Category:"Electric Vehicle"
+}
+
+},
+
+
+
+{
+id:"cangqiong",
+
+category:"Electric Vehicle",
+
+type:"electric",
+
+name:"苍穹",
+
+image:"slow_rider_product_images/苍穹_配置_2.jpeg",
+
+description:
+"Electric vehicle model.",
+
+specs:{
+Category:"Electric Vehicle"
+}
+
+},
+
+
+
+{
+id:"tank",
+
+category:"Electric Vehicle",
+
+type:"electric",
+
+name:"坦克",
+
+image:"slow_rider_product_images/坦克配置_2.png",
+
+description:
+"Electric vehicle model.",
+
+specs:{
+Category:"Electric Vehicle"
+}
+
+},
+   /* =========================
+   CARGO VEHICLES
+========================= */
+
+
+{
+id:"cargo-basic",
+
+category:"Cargo Vehicle",
+
+type:"electric",
+
+name:"Two Wheel Cargo Basic",
+
+image:"slow_rider_product_images/两轮货运基础款_配置_2.png",
+
+description:
+"Electric cargo vehicle designed for delivery and commercial use.",
+
+specs:{
+Category:"Cargo Vehicle",
+Application:"Delivery / Logistics"
+}
+
+},
+
+
+
+{
+id:"cargo-premium",
+
+category:"Cargo Vehicle",
+
+type:"electric",
+
+name:"Two Wheel Cargo Premium",
+
+image:"slow_rider_product_images/两轮货运豪华版_配置_2.png",
+
+description:
+"Premium cargo solution for commercial transportation.",
+
+specs:{
+Category:"Cargo Vehicle",
+Application:"Logistics"
+}
+
+},
+
+
+
+{
+id:"delivery",
+
+category:"Cargo Vehicle",
+
+type:"electric",
+
+name:"Delivery Vehicle",
+
+image:"slow_rider_product_images/快递车_配置_2__2.png",
+
+description:
+"Electric delivery vehicle for last-mile transportation.",
+
+specs:{
+Category:"Delivery Vehicle"
+}
+
+},
+
+
+
+
+/* =========================
+   PASSENGER VEHICLES
+========================= */
+
+
+{
+id:"passenger",
+
+category:"Passenger Vehicle",
+
+type:"electric",
+
+name:"Two Wheel Passenger Vehicle",
+
+image:"slow_rider_product_images/两轮载人车_配置_2.png",
+
+description:
+"Electric passenger transport vehicle.",
+
+specs:{
+Category:"Passenger Vehicle"
+}
+
+},
+
+
+
+
+
+/* =========================
+   THREE WHEEL VEHICLES
+========================= */
+
+
+{
+id:"eagle-tricycle",
+
+category:"Three Wheel Vehicle",
+
+type:"electric",
+
+name:"Eagle Series Three Wheel Vehicle",
+
+image:"slow_rider_product_images/鹰系三轮_配置xlsx_2.png",
+
+description:
+"Three wheel electric vehicle solution.",
+
+specs:{
+Category:"Three Wheel Vehicle"
+}
+
+},
+
+
+
+{
+id:"bull-tricycle",
+
+category:"Three Wheel Vehicle",
+
+type:"electric",
+
+name:"Bull Series Three Wheel Vehicle",
+
+image:"slow_rider_product_images/牛系三轮_配置xlsx_1__2.png",
+
+description:
+"Three wheel transport vehicle.",
+
+specs:{
+Category:"Three Wheel Vehicle"
 }
 
 }
+
+
 
 
 
@@ -263,9 +530,10 @@ Transmission:"CVT"
 
 
 
-/* =========================================
-   DISPLAY PRODUCTS
-========================================= */
+
+/* =====================================================
+   PRODUCT DISPLAY
+===================================================== */
 
 
 function renderProducts(category="all"){
@@ -273,6 +541,7 @@ function renderProducts(category="all"){
 
 const container =
 document.getElementById("productContainer");
+
 
 
 if(!container){
@@ -287,21 +556,22 @@ container.innerHTML="";
 
 
 
-let list;
+let displayProducts;
 
 
 
 if(category==="all"){
 
-list=products;
+displayProducts = products;
 
 }
 
 else{
 
-list=
+displayProducts =
 products.filter(
-product=>product.category===category
+product =>
+product.category === category
 );
 
 }
@@ -309,21 +579,25 @@ product=>product.category===category
 
 
 
-list.forEach(product=>{
+
+displayProducts.forEach(product=>{
 
 
+const card =
+document.createElement("div");
 
-let card=document.createElement("div");
 
 
 card.className="product-card";
 
 
 
-card.innerHTML=`
+card.innerHTML = `
+
 
 <img src="${product.image}"
 alt="${product.name}">
+
 
 
 <div class="product-content">
@@ -336,6 +610,7 @@ ${product.category}
 </span>
 
 
+
 <h3>
 
 ${product.name}
@@ -343,11 +618,13 @@ ${product.name}
 </h3>
 
 
+
 <p>
 
 ${product.description}
 
 </p>
+
 
 
 <button onclick="openProduct('${product.id}')">
@@ -358,6 +635,7 @@ View Details
 
 
 </div>
+
 
 `;
 
@@ -370,6 +648,7 @@ container.appendChild(card);
 });
 
 
+
 }
 
 
@@ -377,9 +656,11 @@ container.appendChild(card);
 
 
 
-/* =========================================
+
+
+/* =====================================================
    FILTER
-========================================= */
+===================================================== */
 
 
 function filterProducts(category){
@@ -396,9 +677,11 @@ renderProducts(category);
 
 
 
-/* =========================================
+
+
+/* =====================================================
    PRODUCT MODAL
-========================================= */
+===================================================== */
 
 
 function openProduct(id){
@@ -433,7 +716,8 @@ return;
 
 
 
-modal.innerHTML=`
+
+modal.innerHTML = `
 
 
 <div class="modal-box">
@@ -448,7 +732,11 @@ onclick="closeProduct()">
 
 
 
-<img src="${product.image}">
+
+<img src="${product.image}"
+alt="${product.name}">
+
+
 
 
 
@@ -460,6 +748,7 @@ ${product.name}
 
 
 
+
 <p>
 
 ${product.description}
@@ -468,22 +757,22 @@ ${product.description}
 
 
 
+
 <div class="spec-list">
 
 
 ${
-
 Object.entries(product.specs)
 
 .map(
-
-([key,value])=>
+([key,value]) =>
 
 `
 
 <div>
 
 <strong>${key}</strong>:
+
 ${value}
 
 </div>
@@ -512,6 +801,7 @@ Request Quote
 
 
 
+
 </div>
 
 
@@ -523,6 +813,8 @@ modal.style.display="flex";
 
 
 }
+
+
 
 
 
@@ -554,13 +846,24 @@ modal.style.display="none";
 
 
 
-/* =========================================
+
+/* =====================================================
    MOBILE MENU
-========================================= */
+===================================================== */
+
+
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
+
+
+renderProducts();
+
 
 
 const menuBtn =
 document.querySelector(".menu-btn");
+
 
 
 const nav =
@@ -581,7 +884,6 @@ nav.classList.toggle(
 );
 
 
-
 }
 
 );
@@ -591,19 +893,7 @@ nav.classList.toggle(
 
 
 
-
-/* =========================================
-   START
-========================================= */
-
-
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
-
-
-renderProducts();
-
-
-
 });
+
+
+
