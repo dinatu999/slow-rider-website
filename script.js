@@ -1,706 +1,469 @@
-/* =================================
-   SLOW RIDER WEBSITE JAVASCRIPT
-================================= */
+/* =========================================
+   SLOW RIDER V2
+   PRODUCT DATABASE
+========================================= */
 
 
-/* =================================
-   ADD JS ENABLED CLASS
-================================= */
+const products = [
 
-document.documentElement.classList.add("js-enabled");
+/* =========================
+   ELECTRIC SCOOTERS
+========================= */
+
+{
+    id: "patrol",
+    category: "Electric Scooter",
+    type: "electric",
+    name: "Patrol Electric Scooter",
+    image: "images/patrol.jpg",
+    description:
+    "Reliable electric scooter designed for urban mobility and global distribution.",
+    specs:{
+        motor:"1000W",
+        battery:"Lithium Battery",
+        range:"80-100 km",
+        speed:"45-55 km/h",
+        application:"Urban commuting"
+    }
+},
 
 
-/* =================================
-   WHATSAPP PRODUCT QUOTE
-================================= */
+{
+    id:"maxi-scooter",
+    category:"Electric Scooter",
+    type:"electric",
+    name:"Maxi Electric Scooter",
+    image:"images/maxi.jpg",
+    description:
+    "Comfortable electric scooter with strong performance and OEM customization.",
+    specs:{
+        motor:"1200W",
+        battery:"Lithium Battery",
+        range:"100 km",
+        speed:"50 km/h"
+    }
+},
 
-function askQuote(product) {
 
-  const text =
-`Hello Slow Rider,
 
-I am interested in: ${product}
+/* =========================
+   ELECTRIC MOTORCYCLES
+========================= */
 
-Please send me more information and a quotation.
 
-My country:
-Estimated quantity:
-Additional requirements:`;
+{
+    id:"sunrise",
+    category:"Electric Motorcycle",
+    type:"electric",
+    name:"Sunrise Electric Motorcycle",
+    image:"images/sunrise.jpg",
+    description:
+    "Classic motorcycle design combined with electric power technology.",
+    specs:{
+        motor:"1500W",
+        battery:"72V Lithium",
+        range:"100 km",
+        speed:"60 km/h"
+    }
+},
 
-  window.open(
-    `https://wa.me/8618620284214?text=${encodeURIComponent(text)}`,
-    "_blank"
-  );
 
+{
+    id:"big-cg125",
+    category:"Electric Motorcycle",
+    type:"electric",
+    name:"Big CG125 Electric",
+    image:"images/big-cg125.jpg",
+    description:
+    "Electric motorcycle inspired by traditional commuter motorcycles.",
+    specs:{
+        motor:"2000W",
+        battery:"72V Lithium",
+        range:"120 km",
+        speed:"70 km/h"
+    }
+},
+
+
+
+/* =========================
+   E-BIKE
+========================= */
+
+
+{
+    id:"city-ebike",
+    category:"E-Bike",
+    type:"electric",
+    name:"City Electric Bike",
+    image:"images/ebike.jpg",
+    description:
+    "Lightweight electric bicycle for city transportation.",
+    specs:{
+        motor:"500W",
+        battery:"48V Lithium",
+        range:"60 km",
+        speed:"35 km/h"
+    }
+},
+
+
+
+/* =========================
+   ELECTRIC UTILITY
+========================= */
+
+
+{
+    id:"electric-utility",
+    category:"Electric Utility Vehicle",
+    type:"electric",
+    name:"Electric Utility Vehicle",
+    image:"images/utility.jpg",
+    description:
+    "Electric transport solution for commercial and industrial applications.",
+    specs:{
+        motor:"Custom",
+        battery:"48V-72V",
+        application:"Cargo / Factory / Resort"
+    }
+},
+
+
+
+/* =========================
+   GAS ATV
+========================= */
+
+
+{
+    id:"big-bull-4x4",
+    category:"Gas ATV",
+    type:"petrol",
+    name:"Big Bull 4X4 ATV",
+    image:"images/big-bull.jpg",
+    description:
+    "Powerful off-road ATV with CVT transmission and 4WD capability.",
+    specs:{
+        engine:"300cc Water-cooled",
+        transmission:"CVT",
+        drive:"2WD / 4WD",
+        fuel:"5L Tank",
+        weight:"240kg"
+    }
+},
+
+
+{
+    id:"big-hummer",
+    category:"Gas ATV",
+    type:"petrol",
+    name:"Big Hummer ATV",
+    image:"images/big-hummer.jpg",
+    description:
+    "Heavy duty recreational ATV designed for off-road performance.",
+    specs:{
+        engine:"200cc",
+        transmission:"Automatic",
+        drive:"Chain Drive",
+        fuel:"10L Tank"
+    }
+},
+
+
+{
+    id:"bashan-400",
+    category:"Gas ATV",
+    type:"petrol",
+    name:"Bashan 400cc 4WD",
+    image:"images/bashan.jpg",
+    description:
+    "High performance ATV with full-time 4WD system.",
+    specs:{
+        engine:"400cc",
+        transmission:"CVT",
+        drive:"4WD",
+        suspension:"Independent Suspension"
+    }
+},
+
+
+
+/* =========================
+   ELECTRIC ATV
+========================= */
+
+
+{
+    id:"big-bull-electric",
+    category:"Electric ATV",
+    type:"electric",
+    name:"Big Bull Electric ATV",
+    image:"images/big-bull-electric.jpg",
+    description:
+    "Electric ATV with customizable battery and motor options.",
+    specs:{
+        motor:"1500W",
+        battery:"72V",
+        drive:"4WD",
+        batteryOption:"60V / 72V"
+    }
+},
+
+
+{
+    id:"little-warrior-electric",
+    category:"Electric ATV",
+    type:"electric",
+    name:"Little Warrior Electric ATV",
+    image:"images/little-warrior.jpg",
+    description:
+    "Compact electric ATV suitable for recreational use.",
+    specs:{
+        motor:"500W",
+        battery:"48V",
+        size:"Small ATV"
+    }
+},
+
+
+
+/* =========================
+   UTV
+========================= */
+
+
+{
+    id:"utility-utv",
+    category:"UTV",
+    type:"petrol",
+    name:"Utility UTV",
+    image:"images/utv.jpg",
+    description:
+    "Multi-purpose off-road vehicle for commercial applications.",
+    specs:{
+        engine:"250cc-400cc",
+        transmission:"CVT",
+        application:"Farm / Resort / Outdoor"
+    }
 }
 
 
-/* =================================
-   PRODUCT DATA
-================================= */
+];
 
-const products = {
 
-  patrol: {
 
-    name: "Patrol Electric Scooter",
+/* =========================================
+   PRODUCT DISPLAY
+========================================= */
 
-    image: "patrol-police.png",
 
-    description:
-      "A practical patrol and utility electric scooter with a distinctive appearance, LED lighting and emergency light function.",
+function renderProducts(category="all"){
 
-    specs: [
+    const container =
+    document.getElementById("productContainer");
 
-      ["Motor", "1000W"],
 
-      ["Tyres (Front / Rear)", "3.00-10 Tubeless"],
+    if(!container) return;
 
-      ["Brakes (Front / Rear)", "Disc / Disc"],
 
-      ["Battery", "Lead-acid / Lithium"],
+    container.innerHTML="";
 
-      ["Max Speed", "45 km/h"],
 
-      ["Lighting", "LED headlight + emergency light"],
+    const filtered =
+    category==="all"
+    ?
+    products
+    :
+    products.filter(
+        p=>p.category===category
+    );
 
-      ["Wheel Hub", "Iron"],
 
-      ["Color", "Blue with white"]
 
-    ]
+    filtered.forEach(product=>{
 
-  },
 
+        const card=document.createElement("div");
 
-  maxi: {
+        card.className="product-card";
 
-    name: "Maxi Scooter",
 
-    image: "maxi-scooter.png",
+        card.innerHTML=`
 
-    description:
-      "A sporty maxi-style electric scooter designed for stronger performance and everyday road use.",
+        <img src="${product.image}"
+        alt="${product.name}">
 
-    specs: [
 
-      ["Motor", "2000W"],
+        <div class="product-content">
 
-      ["Tyres (Front / Rear)", "3.00-10 Tubeless"],
-
-      ["Brakes (Front / Rear)", "Disc / Disc"],
-
-      ["Battery", "Lead-acid / Lithium"],
-
-      ["Max Speed", "80–90 km/h"],
-
-      ["Lighting", "LED headlight"],
-
-      ["Wheel Hub", "Aluminum"],
-
-      ["Color", "Black"]
-
-    ]
-
-  },
-
-
-  sunrise: {
-
-    name: "Sunrise",
-
-    image: "sunrise.png",
-
-    description:
-      "A bold electric motorcycle with a road-bike style and a powerful 3000W motor.",
-
-    specs: [
-
-      ["Motor", "3000W"],
-
-      ["Tyres (Front / Rear)", "2.75-18 / 110-90-16 Tubeless"],
-
-      ["Brakes (Front / Rear)", "Disc / Disc"],
-
-      ["Battery", "Lead-acid / Lithium"],
-
-      ["Max Speed", "70 km/h"],
-
-      ["Lighting", "LED headlight"],
-
-      ["Wheel Hub", "Aluminum"],
-
-      ["Colors", "Black / Red"]
-
-    ]
-
-  },
-
-
-  cg125: {
-
-    name: "Big CG125",
-
-    image: "big-cg125.png",
-
-    description:
-      "A classic-style electric motorcycle platform with multiple color options and a 3000W motor.",
-
-    specs: [
-
-      ["Motor", "3000W"],
-
-      ["Tyres (Front / Rear)", "2.75-18 / 110-90-16 Tubeless"],
-
-      ["Brakes (Front / Rear)", "Disc / Disc"],
-
-      ["Battery", "Lead-acid / Lithium"],
-
-      ["Max Speed", "70 km/h"],
-
-      ["Lighting", "LED headlight"],
-
-      ["Wheel Hub", "Aluminum"],
-
-      ["Colors", "Black / Blue / Red"]
-
-    ]
-
-  }
-
-};
-
-
-/* =================================
-   PRODUCT MODAL
-================================= */
-
-const modal =
-  document.getElementById("productModal");
-
-const modalContent =
-  document.getElementById("modalContent");
-
-
-function showDetails(key) {
-
-  const product = products[key];
-
-  if (!product) return;
-
-
-  const rows = product.specs
-    .map(
-      ([label, value]) =>
-        `<tr>
-          <td>${label}</td>
-          <td>${value}</td>
-        </tr>`
-    )
-    .join("");
-
-
-  modalContent.innerHTML = `
-
-    <div class="modal-product">
-
-      <img
-        src="${product.image}"
-        alt="${product.name}"
-      >
-
-
-      <div>
-
-        <span class="product-tag">
-          SLOW RIDER PRODUCT
+        <span class="product-category">
+        ${product.category}
         </span>
 
 
-        <h2 id="modalTitle">
-          ${product.name}
-        </h2>
+        <h3>
+        ${product.name}
+        </h3>
 
 
         <p>
-          ${product.description}
+        ${product.description}
         </p>
 
 
-        <table class="spec-table">
+        <button
+        onclick="openProduct('${product.id}')">
+        View Details
+        </button>
 
-          <tbody>
-            ${rows}
-          </tbody>
-
-        </table>
-
-
-        <div class="modal-actions">
-
-          <button
-            class="btn primary"
-            id="modalQuoteButton"
-          >
-            Get Quote on WhatsApp
-          </button>
-
-
-          <button
-            class="btn details-btn"
-            id="modalCloseButton"
-          >
-            Close
-          </button>
 
         </div>
 
-      </div>
+        `;
 
-    </div>
 
-  `;
+        container.appendChild(card);
 
-
-  modal.classList.add("open");
-
-  modal.setAttribute(
-    "aria-hidden",
-    "false"
-  );
-
-
-  document.body.style.overflow =
-    "hidden";
-
-
-  document
-    .getElementById("modalQuoteButton")
-    .addEventListener(
-      "click",
-      function () {
-        askQuote(product.name);
-      }
-    );
-
-
-  document
-    .getElementById("modalCloseButton")
-    .addEventListener(
-      "click",
-      closeModal
-    );
-
-}
-
-
-function closeModal() {
-
-  modal.classList.remove("open");
-
-  modal.setAttribute(
-    "aria-hidden",
-    "true"
-  );
-
-
-  document.body.style.overflow = "";
-
-}
-
-
-/* Product detail buttons */
-
-document
-  .querySelectorAll(
-    ".details-btn[data-product]"
-  )
-  .forEach(function (button) {
-
-    button.addEventListener(
-      "click",
-      function () {
-
-        showDetails(
-          button.dataset.product
-        );
-
-      }
-    );
-
-  });
-
-
-/* Main close button */
-
-const modalClose =
-  document.querySelector(".modal-close");
-
-
-if (modalClose) {
-
-  modalClose.addEventListener(
-    "click",
-    closeModal
-  );
-
-}
-
-
-/* Click outside modal */
-
-if (modal) {
-
-  modal.addEventListener(
-    "click",
-    function (event) {
-
-      if (event.target === modal) {
-        closeModal();
-      }
-
-    }
-  );
-
-}
-
-
-/* Escape key */
-
-document.addEventListener(
-  "keydown",
-  function (event) {
-
-    if (
-      event.key === "Escape" &&
-      modal.classList.contains("open")
-    ) {
-
-      closeModal();
-
-    }
-
-  }
-);
-
-
-/* =================================
-   CONTACT FORM
-================================= */
-
-const quoteForm =
-  document.getElementById("quoteForm");
-
-
-if (quoteForm) {
-
-  quoteForm.addEventListener(
-    "submit",
-    function (event) {
-
-      event.preventDefault();
-
-
-      const name =
-        document
-          .getElementById("name")
-          .value
-          .trim();
-
-
-      const company =
-        document
-          .getElementById("company")
-          .value
-          .trim();
-
-
-      const country =
-        document
-          .getElementById("country")
-          .value
-          .trim();
-
-
-      const phone =
-        document
-          .getElementById("phone")
-          .value
-          .trim();
-
-
-      const quantity =
-        document
-          .getElementById("quantity")
-          .value;
-
-
-      const interest =
-        document
-          .getElementById("interest")
-          .value;
-
-
-      const message =
-        document
-          .getElementById("message")
-          .value
-          .trim();
-
-
-      if (!name || !country) {
-
-        alert(
-          "Please enter your name and country."
-        );
-
-        return;
-
-      }
-
-
-      const lines = [
-
-        "Hello Slow Rider,",
-
-        "",
-
-        "I would like to request more information and a quotation.",
-
-        "",
-
-        `Name: ${name}`,
-
-        `Company: ${
-          company || "Not specified"
-        }`,
-
-        `Country: ${country}`,
-
-        `WhatsApp / Phone: ${
-          phone || "Not specified"
-        }`,
-
-        `Estimated Quantity: ${
-          quantity || "Not specified"
-        }`,
-
-        `Interested in: ${
-          interest || "Not specified"
-        }`,
-
-        "",
-
-        "Requirements:",
-
-        message || "Not specified"
-
-      ];
-
-
-      const whatsappURL =
-        `https://wa.me/8618620284214?text=${encodeURIComponent(
-          lines.join("\n")
-        )}`;
-
-
-      window.open(
-        whatsappURL,
-        "_blank"
-      );
-
-    }
-  );
-
-}
-
-
-/* =================================
-   CURRENT YEAR
-================================= */
-
-const yearElement =
-  document.getElementById("year");
-
-
-if (yearElement) {
-
-  yearElement.textContent =
-    new Date().getFullYear();
-
-}
-
-
-/* =================================
-   MOBILE MENU
-================================= */
-
-const menuBtn =
-  document.querySelector(".menu-btn");
-
-
-const nav =
-  document.getElementById("mainNav");
-
-
-function closeMobileMenu() {
-
-  if (!nav || !menuBtn) return;
-
-
-  nav.classList.remove(
-    "mobile-open"
-  );
-
-
-  menuBtn.setAttribute(
-    "aria-expanded",
-    "false"
-  );
-
-
-  menuBtn.textContent = "☰";
-
-
-  document.body.classList.remove(
-    "menu-open"
-  );
-
-}
-
-
-if (menuBtn && nav) {
-
-  menuBtn.addEventListener(
-    "click",
-    function () {
-
-      const isOpen =
-        nav.classList.contains(
-          "mobile-open"
-        );
-
-
-      if (isOpen) {
-
-        closeMobileMenu();
-
-      } else {
-
-        nav.classList.add(
-          "mobile-open"
-        );
-
-
-        menuBtn.setAttribute(
-          "aria-expanded",
-          "true"
-        );
-
-
-        menuBtn.textContent = "×";
-
-
-        document.body.classList.add(
-          "menu-open"
-        );
-
-      }
-
-    }
-  );
-
-
-  /* Close menu after clicking link */
-
-  nav
-    .querySelectorAll("a")
-    .forEach(function (link) {
-
-      link.addEventListener(
-        "click",
-        function () {
-
-          closeMobileMenu();
-
-        }
-      );
 
     });
 
 }
 
 
-/* =================================
-   SCROLL REVEAL ANIMATION
-================================= */
-
-const revealElements =
-  document.querySelectorAll(
-    ".reveal-section, .reveal-card"
-  );
 
 
-if (
-  "IntersectionObserver" in window
-) {
-
-  const observer =
-    new IntersectionObserver(
-
-      function (entries) {
-
-        entries.forEach(
-          function (entry) {
-
-            if (
-              entry.isIntersecting
-            ) {
-
-              entry.target.classList.add(
-                "visible"
-              );
+/* =========================================
+   PRODUCT MODAL
+========================================= */
 
 
-              observer.unobserve(
-                entry.target
-              );
-
-            }
-
-          }
-        );
-
-      },
-
-      {
-        threshold: 0.12
-      }
-
-    );
+function openProduct(id){
 
 
-  revealElements.forEach(
-    function (element) {
-
-      observer.observe(
-        element
-      );
-
-    }
-  );
-
-} else {
+const product =
+products.find(
+p=>p.id===id
+);
 
 
-  revealElements.forEach(
-    function (element) {
+if(!product)return;
 
-      element.classList.add(
-        "visible"
-      );
 
-    }
-  );
+
+const modal =
+document.getElementById("productModal");
+
+
+if(!modal)return;
+
+
+
+modal.innerHTML=`
+
+
+<div class="modal-box">
+
+
+<span class="close-modal"
+onclick="closeProduct()">
+×
+</span>
+
+
+<img src="${product.image}">
+
+
+<h2>
+${product.name}
+</h2>
+
+
+<p>
+${product.description}
+</p>
+
+
+<div class="spec-list">
+
+${
+Object.entries(product.specs)
+.map(
+([key,value])=>
+`
+<div>
+<strong>
+${key}
+</strong>
+:
+${value}
+</div>
+`
+)
+.join("")
+}
+
+</div>
+
+
+
+<a class="whatsapp-btn"
+href="https://wa.me/?text=I am interested in ${product.name}">
+Request Quote
+</a>
+
+
+</div>
+
+
+`;
+
+
+modal.style.display="flex";
+
 
 }
+
+
+
+
+function closeProduct(){
+
+const modal =
+document.getElementById("productModal");
+
+if(modal)
+modal.style.display="none";
+
+}
+
+
+
+
+/* =========================================
+   CATEGORY FILTER
+========================================= */
+
+
+function filterProducts(category){
+
+renderProducts(category);
+
+}
+
+
+
+
+/* =========================================
+   INITIAL LOAD
+========================================= */
+
+
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
+
+renderProducts();
+
+
+});
