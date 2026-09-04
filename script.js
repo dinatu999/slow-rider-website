@@ -550,7 +550,7 @@ Battery:"Lithium Battery",
 Application:"Urban Transportation",
 
 OEM:"Available"
-
+}
 },
    /* =====================================================
    CARGO VEHICLES
