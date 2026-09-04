@@ -1,5 +1,5 @@
 /* =========================================
-   SLOW RIDER WEBSITE SCRIPT
+   SLOW RIDER WEBSITE SCRIP
    PRODUCT DATABASE + AUTOMATIC IMAGE FALLBACK
 ========================================= */
 
@@ -487,7 +487,7 @@ const products = [
     id: "bull-3w",
     name: "3 Wheeler Bull",
     category: "Three Wheel Vehicle",
-    image: "slow_rider_product_images/牛系三轮_配置xlsx_1__2.png",
+    image: "slow_rider_product_images/牛系三轮_配置xlsx_1__3.png",
     description:
       "A 500W electric three-wheel vehicle designed for practical transport and stable operation, with 45 km/h maximum speed.",
     specs: {
