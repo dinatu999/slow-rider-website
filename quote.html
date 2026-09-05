@@ -1,1 +1,316 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Slow Rider | Request a Quote</title><meta name="description" content="Slow Rider wholesale electric vehicles and ATVs for global dealers, distributors and importers."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=5"></head><body><header class="site-header"><div class="topbar"><a class="brand" href="index.html"><span class="brand-symbol">S</span><span class="brand-copy"><strong>SLOW RIDER</strong><small>RIDE YOUR WAY</small></span></a><button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button><nav id="mainNav" class="main-nav"><a href="index.html">HOME</a><a href="products.html">PRODUCTS</a><a href="about.html">ABOUT US</a><a href="contact.html">CONTACT</a><a class="nav-whatsapp" href="https://wa.me/8618620284214" target="_blank" rel="noopener">◉ &nbsp; WhatsApp</a><button class="language" type="button">◎ EN⌄</button></nav></div></header><div class="quote-page"><section class="page-hero"><div class="page-hero-inner"><span class="eyebrow">WHOLESALE INQUIRY</span><h1>Request a quote.</h1><p>Tell us your requirements and our team can respond with pricing, specifications and shipping information.</p></div></section><main class="page-content"><div class="quote-form"><h2>Vehicle Inquiry</h2><form onsubmit="event.preventDefault(); const f=this; const name=f.name.value||'there'; const category=f.category.value; const qty=f.quantity.value||'Not specified'; const msg=f.message.value||'No additional requirements'; const text='Hello Slow Rider,\n\nMy name: '+name+'\nCompany: '+(f.company.value||'Not specified')+'\nCountry: '+(f.country.value||'Not specified')+'\nInterested product: '+category+'\nEstimated quantity: '+qty+'\n\nRequirements:\n'+msg; window.open('https://wa.me/8618620284214?text='+encodeURIComponent(text),'_blank','noopener,noreferrer');"><div class="form-grid"><div class="form-field"><label>Name</label><input name="name" required placeholder="Your Name"></div><div class="form-field"><label>Company</label><input name="company" placeholder="Company Name"></div><div class="form-field"><label>Country</label><input name="country" placeholder="Country"></div><div class="form-field"><label>Quantity Required</label><input name="quantity" placeholder="Example: 50 units"></div><div class="form-field full"><label>Interested Product Category</label><select name="category"><option>Electric Scooter</option><option>Electric Motorcycle</option><option>Electric Utility</option><option>Electric Cargo</option><option>Passenger Vehicle</option><option>3-Wheel Vehicle</option><option>ATV</option><option>Other</option></select></div><div class="form-field full"><label>Requirements / Message</label><textarea name="message" placeholder="Tell us the model, specifications, destination, delivery time or other requirements."></textarea></div></div><button class="primary-btn form-submit" type="submit">Send Inquiry via WhatsApp</button></form></div></main></div><footer class="trust-footer"><div class="trust-grid"><div class="trust-item"><span>◉</span><div><strong>Quality Guarantee</strong><small>High quality products</small></div></div><div class="trust-item"><span>♧</span><div><strong>Worldwide Shipping</strong><small>Fast &amp; reliable delivery</small></div></div><div class="trust-item"><span>▣</span><div><strong>Secure Payment</strong><small>Secure transactions</small></div></div><div class="trust-item"><span>♧</span><div><strong>After Sales Support</strong><small>Dealer support</small></div></div></div><div class="footer-bottom"><span>© 2026 Slow Rider. All Rights Reserved.</span><span>China • Global Supply</span></div></footer><script src="script.js?v=5"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Slow Rider | Request a Quote</title>
+
+  <meta
+    name="description"
+    content="Slow Rider wholesale electric vehicles and ATVs for global dealers, distributors and importers."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css?v=5">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="topbar">
+
+      <a class="brand" href="index.html">
+        <span class="brand-symbol">S</span>
+
+        <span class="brand-copy">
+          <strong>SLOW RIDER</strong>
+          <small>RIDE YOUR WAY</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <nav id="mainNav" class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="contact.html">CONTACT</a>
+
+        <a
+          class="nav-whatsapp"
+          href="https://wa.me/8618620284214"
+          target="_blank"
+          rel="noopener"
+        >
+          ◉ &nbsp; WhatsApp
+        </a>
+
+        <button class="language" type="button">
+          ◎ EN⌄
+        </button>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- QUOTE PAGE -->
+  <div class="quote-page">
+
+    <section class="page-hero">
+      <div class="page-hero-inner">
+
+        <span class="eyebrow">
+          WHOLESALE INQUIRY
+        </span>
+
+        <h1>
+          Request a quote.
+        </h1>
+
+        <p>
+          Tell us your requirements and our team can respond with pricing,
+          specifications and shipping information.
+        </p>
+
+      </div>
+    </section>
+
+
+    <main class="page-content">
+
+      <div class="quote-form">
+
+        <h2>
+          Vehicle Inquiry
+        </h2>
+
+        <form
+          onsubmit="
+            event.preventDefault();
+
+            const f = this;
+
+            const name =
+              f.name.value || 'there';
+
+            const category =
+              f.category.value;
+
+            const qty =
+              f.quantity.value || 'Not specified';
+
+            const msg =
+              f.message.value || 'No additional requirements';
+
+            const text =
+              'Hello Slow Rider,\\n\\n' +
+              'My name: ' + name + '\\n' +
+              'Company: ' + (f.company.value || 'Not specified') + '\\n' +
+              'Country: ' + (f.country.value || 'Not specified') + '\\n' +
+              'Interested product: ' + category + '\\n' +
+              'Estimated quantity: ' + qty + '\\n\\n' +
+              'Requirements:\\n' + msg;
+
+            window.open(
+              'https://wa.me/8618620284214?text=' +
+              encodeURIComponent(text),
+              '_blank',
+              'noopener,noreferrer'
+            );
+          "
+        >
+
+          <div class="form-grid">
+
+            <div class="form-field">
+              <label for="name">
+                Name
+              </label>
+
+              <input
+                id="name"
+                name="name"
+                required
+                placeholder="Your Name"
+              >
+            </div>
+
+
+            <div class="form-field">
+              <label for="company">
+                Company
+              </label>
+
+              <input
+                id="company"
+                name="company"
+                placeholder="Company Name"
+              >
+            </div>
+
+
+            <div class="form-field">
+              <label for="country">
+                Country
+              </label>
+
+              <input
+                id="country"
+                name="country"
+                placeholder="Country"
+              >
+            </div>
+
+
+            <div class="form-field">
+              <label for="quantity">
+                Quantity Required
+              </label>
+
+              <input
+                id="quantity"
+                name="quantity"
+                placeholder="Example: 50 units"
+              >
+            </div>
+
+
+            <div class="form-field full">
+
+              <label for="category">
+                Interested Product Category
+              </label>
+
+              <select
+                id="category"
+                name="category"
+              >
+                <option>Electric Scooter</option>
+                <option>Electric Motorcycle</option>
+                <option>Electric Utility</option>
+                <option>Electric Cargo</option>
+                <option>Passenger Vehicle</option>
+                <option>3-Wheel Vehicle</option>
+                <option>ATV</option>
+                <option>Other</option>
+              </select>
+
+            </div>
+
+
+            <div class="form-field full">
+
+              <label for="message">
+                Requirements / Message
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us the model, specifications, destination, delivery time or other requirements."
+              ></textarea>
+
+            </div>
+
+          </div>
+
+
+          <button
+            class="primary-btn form-submit"
+            type="submit"
+          >
+            Send Inquiry via WhatsApp
+          </button>
+
+        </form>
+
+      </div>
+
+    </main>
+
+  </div>
+
+
+  <!-- TRUST FOOTER -->
+  <footer class="trust-footer">
+
+    <div class="trust-grid">
+
+      <div class="trust-item">
+        <span>◉</span>
+
+        <div>
+          <strong>Quality Guarantee</strong>
+          <small>High quality products</small>
+        </div>
+      </div>
+
+
+      <div class="trust-item">
+        <span>♧</span>
+
+        <div>
+          <strong>Worldwide Shipping</strong>
+          <small>Fast &amp; reliable delivery</small>
+        </div>
+      </div>
+
+
+      <div class="trust-item">
+        <span>▣</span>
+
+        <div>
+          <strong>Secure Payment</strong>
+          <small>Secure transactions</small>
+        </div>
+      </div>
+
+
+      <div class="trust-item">
+        <span>♧</span>
+
+        <div>
+          <strong>After Sales Support</strong>
+          <small>Dealer support</small>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 Slow Rider. All Rights Reserved.
+      </span>
+
+      <span>
+        China • Global Supply
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="script.js?v=5"></script>
+
+</body>
+</html>
