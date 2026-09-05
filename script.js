@@ -1680,3 +1680,31 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 });
+/* HOMEPAGE FEATURED ATVS */
+document.addEventListener('DOMContentLoaded', function () {
+
+  const featuredATVs = document.getElementById('featuredATVs');
+
+  if (!featuredATVs || typeof products === 'undefined') return;
+
+  const atvProducts = products
+    .filter(function (p) {
+      return p.category === 'ATV';
+    })
+    .slice(0, 4);
+
+  featuredATVs.innerHTML = atvProducts
+    .map(productCard)
+    .join('');
+
+  featuredATVs
+    .querySelectorAll('.catalog-product-image')
+    .forEach(function (img, i) {
+
+      if (atvProducts[i]) {
+        loadProductImage(img, atvProducts[i]);
+      }
+
+    });
+
+});
