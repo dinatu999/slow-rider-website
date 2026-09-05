@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Slow Rider | Products</title>
+  <title>Products | Slow Rider Wholesale Electric Vehicles & ATVs</title>
 
   <meta
     name="description"
-    content="Slow Rider wholesale electric vehicles and ATVs for global dealers, distributors and importers."
+    content="Browse Slow Rider's wholesale catalog of electric scooters, electric motorcycles, commercial vehicles and ATVs supplied from China."
   >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,7 +53,7 @@
 
         <a href="index.html">HOME</a>
 
-        <a href="products.html">PRODUCTS</a>
+        <a href="products.html" class="active">PRODUCTS</a>
 
         <a href="about.html">ABOUT US</a>
 
@@ -86,17 +85,17 @@
     <div class="page-hero-inner">
 
       <span class="eyebrow">
-        SLOW RIDER CATALOG
+        WHOLESALE VEHICLE CATALOG
       </span>
 
       <h1>
-        Wholesale vehicles for global dealers.
+        Find the right vehicle for your market.
       </h1>
 
       <p>
-        Browse electric mobility, commercial vehicles and 42 ATV models.
-        Open any product for full specifications and send an inquiry directly
-        on WhatsApp.
+        Browse our electric scooters, electric motorcycles,
+        commercial vehicles and ATVs supplied from China to
+        dealers, distributors and importers worldwide.
       </p>
 
     </div>
@@ -104,74 +103,70 @@
   </section>
 
 
-  <!-- CATALOG -->
-  <main class="catalog-shell" id="products">
+  <!-- PRODUCT CATALOG -->
+  <main id="products" class="catalog-shell">
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
 
       <div class="sidebar-title">
-        CATEGORIES
+        Product Categories
       </div>
 
 
       <button
+        type="button"
         class="side-item active"
         data-filter="all"
       >
-
         <span class="side-icon">▦</span>
-
         <span>All Products</span>
-
-        <b id="count-all">0</b>
-
+        <b id="count-all">66</b>
       </button>
 
 
-      <!-- ATV -->
       <div class="side-group">
 
         <button
+          type="button"
           class="side-item side-parent"
           data-filter="ATV"
         >
-
           <span class="side-icon">🏍</span>
-
           <span>ATVs</span>
-
-          <b id="count-atv">0</b>
-
+          <b id="count-atv">42</b>
         </button>
-
 
         <div class="sub-items">
 
-          <button data-filter="Kids ATV">
-            Kids ATVs
-            <small>125cc</small>
-            <b id="count-kids-atv">0</b>
+          <button type="button" data-filter="Gas ATV">
+            Gas ATVs
+            <b id="count-gas-atv">36</b>
           </button>
 
-          <button data-filter="Utility ATV">
-            Utility ATVs
+          <button type="button" data-filter="Electric ATV">
+            Electric ATVs
+            <b id="count-electric-atv">6</b>
+          </button>
+
+          <button type="button" data-filter="Utility ATV">
+            Utility ATV
             <b id="count-utility-atv">0</b>
           </button>
 
-          <button data-filter="Sport ATV">
-            Sport / 4x4 ATVs
+          <button type="button" data-filter="Sport ATV">
+            Sport ATV
             <b id="count-sport-atv">0</b>
           </button>
 
-          <button data-filter="Electric ATV">
-            Electric ATVs
-            <b id="count-electric-atv">0</b>
+          <button type="button" data-filter="Kids ATV">
+            Kids ATV
+            <b id="count-kids-atv">0</b>
           </button>
 
-          <button data-filter="Gas ATV">
-            Gas / Petrol ATVs
-            <b id="count-gas-atv">0</b>
+          <button type="button" data-filter="Side by Side">
+            Side by Side
+            <b id="count-side-by-side">0</b>
           </button>
 
         </div>
@@ -179,53 +174,33 @@
       </div>
 
 
-      <!-- ELECTRIC VEHICLES -->
       <div class="side-group">
 
         <button
+          type="button"
           class="side-item side-parent"
           data-filter="Electric Mobility"
         >
-
           <span class="side-icon">⚡</span>
-
-          <span>Electric Vehicles</span>
-
-          <b id="count-electric-mobility">0</b>
-
+          <span>Electric Mobility</span>
+          <b id="count-electric-mobility">24</b>
         </button>
-
 
         <div class="sub-items">
 
-          <button data-filter="Electric Scooter">
+          <button type="button" data-filter="E-Bike">
+            E-Bikes
+            <b id="count-e-bike">0</b>
+          </button>
+
+          <button type="button" data-filter="Electric Scooter">
             Electric Scooters
-            <b id="count-scooter">0</b>
+            <b id="count-electric-scooter">4</b>
           </button>
 
-          <button data-filter="Electric Motorcycle">
+          <button type="button" data-filter="Electric Motorcycle">
             Electric Motorcycles
-            <b id="count-motorcycle">0</b>
-          </button>
-
-          <button data-filter="Utility Vehicle">
-            Electric Utility
-            <b id="count-utility">0</b>
-          </button>
-
-          <button data-filter="Cargo Vehicle">
-            Electric Cargo
-            <b id="count-cargo">0</b>
-          </button>
-
-          <button data-filter="Passenger Vehicle">
-            Passenger Vehicles
-            <b id="count-passenger">0</b>
-          </button>
-
-          <button data-filter="Three Wheel Vehicle">
-            3-Wheel Vehicles
-            <b id="count-three-wheel">0</b>
+            <b id="count-electric-motorcycle">11</b>
           </button>
 
         </div>
@@ -233,18 +208,36 @@
       </div>
 
 
-      <!-- COMMERCIAL -->
       <button
+        type="button"
         class="side-item"
         data-filter="Commercial"
       >
-
         <span class="side-icon">◉</span>
-
         <span>Commercial</span>
+        <b id="count-commercial">9</b>
+      </button>
 
-        <b id="count-commercial">0</b>
 
+      <button
+        type="button"
+        class="side-item"
+        data-filter="Go Kart"
+      >
+        <span class="side-icon">🏎</span>
+        <span>Go Karts</span>
+        <b id="count-gokart">0</b>
+      </button>
+
+
+      <button
+        type="button"
+        class="side-item"
+        data-filter="Other"
+      >
+        <span class="side-icon">•</span>
+        <span>Other Vehicles</span>
+        <b id="count-other">0</b>
       </button>
 
     </aside>
@@ -253,6 +246,33 @@
     <!-- CATALOG MAIN -->
     <section class="catalog-main">
 
+      <!-- SEARCH BOX -->
+      <div class="catalog-search">
+
+        <span class="catalog-search-icon">
+          🔍
+        </span>
+
+        <input
+          type="search"
+          id="productSearch"
+          placeholder="Search products, models, specifications..."
+          autocomplete="off"
+          aria-label="Search products"
+        >
+
+        <button
+          type="button"
+          id="clearProductSearch"
+          aria-label="Clear search"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <!-- MOBILE FILTER -->
       <div class="mobile-filter-row">
 
         <label for="mobileFilter">
@@ -269,28 +289,8 @@
             ATVs
           </option>
 
-          <option value="Kids ATV">
-            Kids ATVs • 125cc
-          </option>
-
-          <option value="Utility ATV">
-            Utility ATVs
-          </option>
-
-          <option value="Sport ATV">
-            Sport / 4x4 ATVs
-          </option>
-
-          <option value="Electric ATV">
-            Electric ATVs
-          </option>
-
-          <option value="Gas ATV">
-            Gas / Petrol ATVs
-          </option>
-
-          <option value="Electric Mobility">
-            All Electric Vehicles
+          <option value="E-Bike">
+            E-Bikes
           </option>
 
           <option value="Electric Scooter">
@@ -319,16 +319,15 @@
 
 
   <!-- PRODUCT DETAILS MODAL -->
-  <!-- IMPORTANT: View Details uses this container -->
-
   <div
     id="productModal"
     class="product-modal"
     aria-hidden="true"
-  ></div>
+  >
+  </div>
 
 
-  <!-- FOOTER -->
+  <!-- TRUST FOOTER -->
   <footer class="trust-footer">
 
     <div class="trust-grid">
@@ -338,8 +337,10 @@
         <span>◉</span>
 
         <div>
-          <strong>Quality Guarantee</strong>
-          <small>High quality products</small>
+          <strong>Wholesale Supply</strong>
+          <small>
+            Solutions for dealers, distributors & importers
+          </small>
         </div>
 
       </div>
@@ -350,8 +351,10 @@
         <span>♧</span>
 
         <div>
-          <strong>Worldwide Shipping</strong>
-          <small>Fast &amp; reliable delivery</small>
+          <strong>Global Shipping</strong>
+          <small>
+            Support for international orders
+          </small>
         </div>
 
       </div>
@@ -362,8 +365,10 @@
         <span>▣</span>
 
         <div>
-          <strong>Secure Payment</strong>
-          <small>Secure transactions</small>
+          <strong>Product Support</strong>
+          <small>
+            Specifications, quotations & order assistance
+          </small>
         </div>
 
       </div>
@@ -374,8 +379,10 @@
         <span>♧</span>
 
         <div>
-          <strong>After Sales Support</strong>
-          <small>Dealer support</small>
+          <strong>After-Sales Support</strong>
+          <small>
+            Support for dealers after purchase
+          </small>
         </div>
 
       </div>
@@ -390,7 +397,7 @@
       </span>
 
       <span>
-        China • Global Supply
+        China • Global Wholesale Supply
       </span>
 
     </div>
@@ -402,5 +409,4 @@
   <script src="script.js?v=5"></script>
 
 </body>
-
 </html>
