@@ -1658,3 +1658,25 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeProduct()});win
   });
 
 })();
+/* HOMEPAGE FEATURED VEHICLES */
+document.addEventListener('DOMContentLoaded', function () {
+
+  const featured = document.getElementById('featuredProducts');
+
+  if (!featured || typeof products === 'undefined') return;
+
+  const featuredProducts = products.slice(0, 6);
+
+  featured.innerHTML = featuredProducts
+    .map(productCard)
+    .join('');
+
+  featured.querySelectorAll('.catalog-product-image').forEach(function (img, i) {
+
+    if (featuredProducts[i]) {
+      loadProductImage(img, featuredProducts[i]);
+    }
+
+  });
+
+});
