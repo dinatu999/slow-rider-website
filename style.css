@@ -141,3 +141,45 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(255,91,10,.25);
 }
+/* LARGER HOMEPAGE PRODUCT CARDS */
+.home-featured .product-card {
+  padding-bottom: 4px;
+}
+
+.home-featured .product-content {
+  padding: 20px 20px 18px;
+}
+
+.home-featured .product-content h3 {
+  font-size: 18px;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.home-featured .product-meta {
+  font-size: 14px;
+  line-height: 1.55;
+  min-height: 44px;
+}
+
+.home-featured .product-bottom {
+  margin-top: 16px;
+  gap: 8px;
+}
+
+.home-featured .product-price {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.home-featured .details-btn,
+.home-featured .mini-wa {
+  font-size: 13px;
+  padding: 10px 13px;
+  min-height: 40px;
+}
+
+.home-featured .product-badge {
+  font-size: 12px;
+  padding: 6px 10px;
+}
