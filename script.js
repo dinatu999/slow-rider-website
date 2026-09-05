@@ -1,7 +1,7 @@
 /* =========================================
-   SLOW RIDER WEBSITE SCRIP
-   PRODUCT DATABASE + AUTOMATIC IMAGE FALLBACK
-========================================= */
+   SLOW RIDER WEBSITE
+   PRODUCT CATALOG + WHATSAPP
+   ========================================= */
 
 const products = [
   {
@@ -109,7 +109,7 @@ const products = [
     id: "u2",
     name: "U2 Electric Motorcycle",
     category: "Electric Motorcycle",
-    image: "slow_rider_product_images/U2__配置_2.png",
+    image: "slow_rider_product_images/U2_配置_2.png",
     description:
       "A compact 1500W electric motorcycle for urban commuting, offering 55 km/h maximum speed, dual disc brakes and multiple battery options.",
     specs: {
@@ -487,7 +487,7 @@ const products = [
     id: "bull-3w",
     name: "3 Wheeler Bull",
     category: "Three Wheel Vehicle",
-    image: "slow_rider_product_images/牛系三轮_配置xlsx_1__3.png?v=3",
+    image: "slow_rider_product_images/牛系三轮_配置xlsx_1__3.png",
     description:
       "A 500W electric three-wheel vehicle designed for practical transport and stable operation, with 45 km/h maximum speed.",
     specs: {
@@ -507,102 +507,53 @@ const products = [
 
 
 /* =========================================
-   AUTOMATIC IMAGE PATH HANDLING
-========================================= */
+   IMAGE LOADING
+   ========================================= */
 
-function getImageCandidates(product) {
-  const path = product.image || "";
+function getImageUrl(path) {
+  if (!path) return "";
 
-  if (!path) {
-    return [];
-  }
-
-  const candidates = [path];
-
-  function add(value) {
-    if (value && !candidates.includes(value)) {
-      candidates.push(value);
-    }
-  }
-
-  /* single / double underscore variations */
-  add(path.replace("__配置_", "_配置_"));
-  add(path.replace("_配置_", "__配置_"));
-
-  /* xlsx naming variations */
-  add(path.replace("_配置xlsx_", "_配置_"));
-  add(path.replace("_配置_", "_配置xlsx_"));
-
-  /* extension variations */
-
-  if (/\.png$/i.test(path)) {
-    add(path.replace(/\.png$/i, ".jpeg"));
-    add(path.replace(/\.png$/i, ".jpg"));
-  }
-
-  if (/\.jpeg$/i.test(path)) {
-    add(path.replace(/\.jpeg$/i, ".png"));
-    add(path.replace(/\.jpeg$/i, ".jpg"));
-  }
-
-  if (/\.jpg$/i.test(path)) {
-    add(path.replace(/\.jpg$/i, ".png"));
-    add(path.replace(/\.jpg$/i, ".jpeg"));
-  }
-
-  return candidates;
+  /*
+     encodeURI keeps the folder structure and
+     safely handles Chinese characters/spaces.
+  */
+  return encodeURI(path);
 }
 
 
-function loadProductImage(img, product) {
-  const candidates = getImageCandidates(product);
+function setProductImage(img, product) {
+  if (!img || !product) return;
 
-  let index = 0;
+  img.onerror = function () {
+    console.warn("Image could not be loaded:", product.image);
 
-  function tryNext() {
-    if (index >= candidates.length) {
-      img.onerror = null;
-      img.style.display = "none";
+    img.onerror = null;
+    img.classList.add("image-error");
 
-      const wrapper = img.parentElement;
+    const wrapper = img.parentElement;
 
-      if (
-        wrapper &&
-        !wrapper.querySelector(".image-unavailable-text")
-      ) {
-        const note = document.createElement("span");
+    if (wrapper && !wrapper.querySelector(".image-error-message")) {
+      const message = document.createElement("div");
 
-        note.className = "image-unavailable-text";
-        note.textContent = "Product image unavailable";
+      message.className = "image-error-message";
+      message.textContent = "Image unavailable";
 
-        wrapper.appendChild(note);
-      }
-
-      return;
+      wrapper.appendChild(message);
     }
+  };
 
-    img.src = encodeURI(candidates[index]);
-
-    index += 1;
-  }
-
-  img.onerror = tryNext;
-
-  tryNext();
+  img.src = getImageUrl(product.image);
 }
 
 
 /* =========================================
    PRODUCT CATALOGUE
-========================================= */
+   ========================================= */
 
 function renderProducts(category = "all") {
-  const container =
-    document.getElementById("productContainer");
+  const container = document.getElementById("productContainer");
 
-  if (!container) {
-    return;
-  }
+  if (!container) return;
 
   container.innerHTML = "";
 
@@ -610,29 +561,35 @@ function renderProducts(category = "all") {
     category === "all"
       ? products
       : products.filter(
-          product =>
-            product.category === category
+          product => product.category === category
         );
 
+  if (!list.length) {
+    container.innerHTML = `
+      <div class="catalog-empty">
+        <h3>No products found</h3>
+        <p>Please select another category.</p>
+      </div>
+    `;
+
+    return;
+  }
+
   list.forEach(product => {
-    const card =
-      document.createElement("article");
+    const card = document.createElement("article");
 
     card.className = "product-card";
 
     card.innerHTML = `
       <div class="product-image-wrapper">
-
         <img
           class="catalog-product-image"
           alt="${product.name}"
           loading="lazy"
         >
-
       </div>
 
       <div class="product-content">
-
         <span class="product-category">
           ${product.category}
         </span>
@@ -647,23 +604,24 @@ function renderProducts(category = "all") {
 
         <button
           type="button"
-          onclick="openProduct('${product.id}')"
+          class="product-details-button"
         >
           View Details
         </button>
-
       </div>
     `;
 
     const image =
-      card.querySelector(
-        ".catalog-product-image"
-      );
+      card.querySelector(".catalog-product-image");
 
-    loadProductImage(
-      image,
-      product
-    );
+    setProductImage(image, product);
+
+    const detailsButton =
+      card.querySelector(".product-details-button");
+
+    detailsButton.addEventListener("click", () => {
+      openProduct(product.id);
+    });
 
     container.appendChild(card);
   });
@@ -672,15 +630,29 @@ function renderProducts(category = "all") {
 
 function filterProducts(category) {
   renderProducts(category);
+
+  /*
+     Keep the catalog buttons visually active
+     when the HTML uses data-category.
+  */
+  document
+    .querySelectorAll("[data-category]")
+    .forEach(button => {
+      button.classList.toggle(
+        "active",
+        button.dataset.category === category
+      );
+    });
 }
 
 
 /* =========================================
-   WHATSAPP QUOTE
-========================================= */
+   WHATSAPP
+   ========================================= */
 
 function askQuote(productName) {
-  const text = `Hello Slow Rider,
+  const text =
+`Hello Slow Rider,
 
 I am interested in: ${productName}
 
@@ -704,42 +676,27 @@ Additional requirements:`;
 
 /* =========================================
    PRODUCT DETAILS MODAL
-========================================= */
+   ========================================= */
 
 function openProduct(id) {
   const product =
-    products.find(
-      item => item.id === id
-    );
+    products.find(item => item.id === id);
 
   const modal =
-    document.getElementById(
-      "productModal"
-    );
+    document.getElementById("productModal");
 
-  if (!product || !modal) {
-    return;
-  }
+  if (!product || !modal) return;
 
   const specs =
     Object.entries(product.specs)
-
       .map(
         ([label, value]) => `
           <div class="spec-row">
-
-            <strong>
-              ${label}
-            </strong>
-
-            <span>
-              ${value}
-            </span>
-
+            <strong>${label}</strong>
+            <span>${value}</span>
           </div>
         `
       )
-
       .join("");
 
   modal.innerHTML = `
@@ -760,177 +717,241 @@ function openProduct(id) {
       </button>
 
       <div class="modal-image-wrapper">
-
         <img
           id="modalProductImage"
           alt="${product.name}"
         >
-
       </div>
 
-      <h2>
-        ${product.name}
-      </h2>
+      <div class="modal-product-info">
 
-      <p>
-        ${product.description}
-      </p>
+        <span class="product-category">
+          ${product.category}
+        </span>
 
-      <h3>
-        Specifications
-      </h3>
+        <h2>
+          ${product.name}
+        </h2>
 
-      <div class="spec-list">
-        ${specs}
+        <p>
+          ${product.description}
+        </p>
+
+        <h3>
+          Specifications
+        </h3>
+
+        <div class="spec-list">
+          ${specs}
+        </div>
+
+        <div class="modal-actions">
+
+          <button
+            type="button"
+            class="whatsapp-btn"
+            onclick="askQuote('${product.name.replace(/'/g, "\\'")}')"
+          >
+            Request Quote on WhatsApp
+          </button>
+
+          <button
+            type="button"
+            class="close-product-button"
+            onclick="closeProduct()"
+          >
+            Close
+          </button>
+
+        </div>
+
       </div>
-
-      <button
-        type="button"
-        class="whatsapp-btn"
-        onclick="askQuote('${product.name.replace(
-          /'/g,
-          "\\'"
-        )}')"
-      >
-        Request Quote
-      </button>
 
     </div>
   `;
 
   const modalImage =
-    document.getElementById(
-      "modalProductImage"
-    );
+    document.getElementById("modalProductImage");
 
-  loadProductImage(
-    modalImage,
-    product
-  );
+  setProductImage(modalImage, product);
 
   modal.style.display = "flex";
+  modal.setAttribute("aria-hidden", "false");
 
-  document.body.style.overflow =
-    "hidden";
+  document.body.style.overflow = "hidden";
 }
 
 
 function closeProduct() {
   const modal =
-    document.getElementById(
-      "productModal"
-    );
+    document.getElementById("productModal");
 
-  if (modal) {
-    modal.style.display = "none";
-    modal.innerHTML = "";
-  }
+  if (!modal) return;
+
+  modal.style.display = "none";
+  modal.setAttribute("aria-hidden", "true");
+  modal.innerHTML = "";
 
   document.body.style.overflow = "";
 }
 
 
 /* =========================================
-   CLOSE MODAL
-========================================= */
+   MODAL CLOSE
+   ========================================= */
 
-document.addEventListener(
-  "click",
-  event => {
-    const modal =
-      document.getElementById(
-        "productModal"
-      );
+document.addEventListener("click", event => {
+  const modal =
+    document.getElementById("productModal");
 
-    if (
-      modal &&
-      event.target === modal
-    ) {
-      closeProduct();
-    }
+  if (
+    modal &&
+    event.target === modal
+  ) {
+    closeProduct();
   }
-);
+});
 
 
-document.addEventListener(
-  "keydown",
-  event => {
-    if (event.key === "Escape") {
-      closeProduct();
-    }
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+    closeProduct();
   }
-);
+});
 
 
 /* =========================================
-   INITIALIZATION + MOBILE MENU
-========================================= */
+   QUOTE FORM
+   ========================================= */
 
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
+document.addEventListener("DOMContentLoaded", () => {
 
-    renderProducts();
+  const quoteForm =
+    document.getElementById("quoteForm");
 
-    const menuBtn =
-      document.querySelector(
-        ".menu-btn"
+  if (quoteForm) {
+
+    quoteForm.addEventListener("submit", event => {
+
+      event.preventDefault();
+
+      const name =
+        document.getElementById("name")?.value || "";
+
+      const company =
+        document.getElementById("company")?.value ||
+        "Not specified";
+
+      const country =
+        document.getElementById("country")?.value || "";
+
+      const phone =
+        document.getElementById("phone")?.value ||
+        "Not specified";
+
+      const quantity =
+        document.getElementById("quantity")?.value ||
+        "Not specified";
+
+      const interest =
+        document.getElementById("interest")?.value || "";
+
+      const message =
+        document.getElementById("message")?.value ||
+        "Not specified";
+
+      const lines = [
+        "Hello Slow Rider,",
+        "",
+        "I would like to request more information and a quotation.",
+        "",
+        `Name: ${name}`,
+        `Company: ${company}`,
+        `Country: ${country}`,
+        `WhatsApp / Phone: ${phone}`,
+        `Estimated Order Quantity: ${quantity}`,
+        `Product Interested In: ${interest}`,
+        "",
+        "Requirements:",
+        message
+      ];
+
+      const url =
+        "https://wa.me/8618620284214?text=" +
+        encodeURIComponent(lines.join("\n"));
+
+      window.open(
+        url,
+        "_blank",
+        "noopener,noreferrer"
       );
-
-    const nav =
-      document.getElementById(
-        "mainNav"
-      );
-
-    if (
-      menuBtn &&
-      nav
-    ) {
-
-      menuBtn.addEventListener(
-        "click",
-        () => {
-
-          const open =
-            nav.classList.toggle(
-              "mobile-open"
-            );
-
-          menuBtn.setAttribute(
-            "aria-expanded",
-            String(open)
-          );
-
-          menuBtn.textContent =
-            open
-              ? "×"
-              : "☰";
-        }
-      );
-
-      nav
-        .querySelectorAll("a")
-        .forEach(link => {
-
-          link.addEventListener(
-            "click",
-            () => {
-
-              nav.classList.remove(
-                "mobile-open"
-              );
-
-              menuBtn.setAttribute(
-                "aria-expanded",
-                "false"
-              );
-
-              menuBtn.textContent =
-                "☰";
-            }
-          );
-
-        });
-    }
+    });
   }
-);
+
+
+  /* =========================================
+     MOBILE MENU
+     ========================================= */
+
+  const menuBtn =
+    document.querySelector(".menu-btn");
+
+  const nav =
+    document.getElementById("mainNav") ||
+    document.querySelector("nav");
+
+  if (menuBtn && nav) {
+
+    menuBtn.addEventListener("click", () => {
+
+      const open =
+        nav.classList.toggle("mobile-open");
+
+      menuBtn.setAttribute(
+        "aria-expanded",
+        String(open)
+      );
+
+      menuBtn.textContent =
+        open ? "×" : "☰";
+    });
+
+
+    nav.querySelectorAll("a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        nav.classList.remove("mobile-open");
+
+        menuBtn.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuBtn.textContent = "☰";
+      });
+
+    });
+  }
+
+
+  /* =========================================
+     CATALOG INITIALIZATION
+     ========================================= */
+
+  renderProducts("all");
+
+
+  /* =========================================
+     CURRENT YEAR
+     ========================================= */
+
+  const year =
+    document.getElementById("year");
+
+  if (year) {
+    year.textContent =
+      new Date().getFullYear();
+  }
+
+});
