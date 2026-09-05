@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slow Rider | Electric Mobility & ATV Solutions</title>
+<meta name="description" content="Slow Rider supplies electric scooters, motorcycles, utility vehicles and ATVs from China for global dealers, distributors and OEM partners.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="#home"><span class="brand-mark">SR</span><span>Slow Rider</span></a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#home">Home</a><a href="#products">Products</a><a href="#oem">OEM/ODM</a><a href="#why">Why Us</a><a href="#process">How It Works</a><a href="#contact">Contact</a>
+      <a class="nav-quote" href="quote.html">Get Quote <span>→</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">CHINA SOURCING • GLOBAL SUPPLY</span>
+      <h1>Electric Mobility.<br><span>Off-Road Power.</span></h1>
+      <p>Reliable vehicles for international dealers, distributors and OEM partners — sourced and supported from China.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="#products">Explore Products <span>→</span></a><a class="btn btn-ghost" href="quote.html">Request Wholesale Quote</a></div>
+      <div class="hero-trust"><span>✓ Factory-direct sourcing</span><span>✓ OEM / ODM support</span><span>✓ Global shipping</span></div>
+    </div>
+    <div class="hero-panel"><span>WHOLESALE VEHICLES</span><strong>66+</strong><small>electric & off-road models</small><div class="panel-line"></div><span>SUPPLY SUPPORT</span><strong>Worldwide</strong><small>dealer & distributor cooperation</small></div>
+  </div>
+</section>
+
+<section class="category-strip">
+  <div class="container category-strip-inner">
+    <div><span class="strip-number">01</span><div><b>Electric Mobility</b><small>Scooters • Motorcycles • Utility</small></div></div>
+    <div><span class="strip-number orange">02</span><div><b>ATV & Off-Road</b><small>Gasoline • Electric • 2WD / 4WD</small></div></div>
+    <div><span class="strip-number">03</span><div><b>OEM / ODM</b><small>Branding • Colors • Specifications</small></div></div>
+  </div>
+</section>
+
+<section class="section products-section" id="products">
+  <div class="container">
+    <div class="section-heading"><div><span class="eyebrow dark">OUR VEHICLES</span><h2>Choose Your Category</h2></div><p>Browse real models and open any product to see its specifications and request a quotation.</p></div>
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all" onclick="renderProducts('all')">All Vehicles</button>
+      <button class="filter-btn" data-filter="Electric Scooter" onclick="filterProducts('Electric Scooter')">Scooters</button>
+      <button class="filter-btn" data-filter="Electric Motorcycle" onclick="filterProducts('Electric Motorcycle')">Motorcycles</button>
+      <button class="filter-btn" data-filter="Commercial" onclick="filterProducts('Commercial')">Commercial</button>
+      <button class="filter-btn" data-filter="Gas ATV" onclick="filterProducts('Gas ATV')">Gas ATV</button>
+      <button class="filter-btn" data-filter="Electric ATV" onclick="filterProducts('Electric ATV')">Electric ATV</button>
+    </div>
+    <div id="productContainer" class="product-grid"></div>
+  </div>
+</section>
+
+<section class="split-category electric-block">
+  <div class="split-copy"><span class="eyebrow">ELECTRIC MOBILITY</span><h2>Built for modern mobility.</h2><p>From city scooters to practical commercial vehicles, Slow Rider helps dealers build a product range for their market.</p><div class="pill-row"><span>Electric Scooters</span><span>Electric Motorcycles</span><span>Utility Vehicles</span><span>Cargo Vehicles</span></div><button class="text-link" onclick="filterProducts('Electric Mobility')">Explore Electric Range →</button></div>
+  <div class="split-stat"><strong>01</strong><span>Electric<br>Mobility</span><small>Flexible battery options<br>OEM / ODM available</small></div>
+</section>
+
+<section class="split-category atv-block">
+  <div class="split-stat"><strong>02</strong><span>ATV &<br>Off-Road</span><small>125cc–400cc class<br>Electric options available</small></div>
+  <div class="split-copy"><span class="eyebrow orange-text">ATV & OFF-ROAD</span><h2>Power for work & adventure.</h2><p>Separate your off-road range from electric mobility with a dedicated ATV selection for recreation, agriculture and commercial applications.</p><div class="pill-row"><span>Gas ATV</span><span>Electric ATV</span><span>2WD / 4WD</span><span>CVT / Chain Drive</span></div><div class="dual-links"><button class="text-link orange-text" onclick="filterProducts('Gas ATV')">Gas ATV →</button><button class="text-link orange-text" onclick="filterProducts('Electric ATV')">Electric ATV →</button></div></div>
+</section>
+
+<section class="section light-section" id="oem">
+ <div class="container"><div class="section-heading centered"><div><span class="eyebrow dark">OEM / ODM</span><h2>Turn a vehicle into your brand.</h2></div><p>We support international partners from model selection through customization, quality control and shipment.</p></div>
+ <div class="process-cards"><div><span>01</span><h3>Choose Models</h3><p>Select the vehicles that fit your market.</p></div><div><span>02</span><h3>Customize</h3><p>Colors, branding, specifications and options.</p></div><div><span>03</span><h3>Quality Check</h3><p>Inspection before loading and shipment.</p></div><div><span>04</span><h3>Ship Worldwide</h3><p>Support for international logistics.</p></div></div></div>
+</section>
+
+<section class="section why-section" id="why">
+ <div class="container"><div class="section-heading"><div><span class="eyebrow dark">WHY SLOW RIDER</span><h2>A supply partner built for dealers.</h2></div></div>
+ <div class="why-grid"><div><b>Factory-direct sourcing</b><p>Work with a China-based supply partner and access competitive wholesale options.</p></div><div><b>Real product selection</b><p>Electric mobility and off-road vehicles across multiple price and performance levels.</p></div><div><b>OEM / ODM ready</b><p>Build a product range around your market, brand and customer requirements.</p></div><div><b>Global cooperation</b><p>Designed for dealers, distributors, importers and business partners worldwide.</p></div></div></div>
+</section>
+
+<section class="section process-section" id="process">
+ <div class="container"><div class="section-heading centered"><div><span class="eyebrow">HOW IT WORKS</span><h2>Simple from inquiry to delivery.</h2></div></div><div class="timeline"><div><span>01</span><h3>Inquiry</h3><p>Tell us your country, quantity and requirements.</p></div><div><span>02</span><h3>Selection</h3><p>Choose models and specifications.</p></div><div><span>03</span><h3>Production</h3><p>Manufacturing and quality inspection.</p></div><div><span>04</span><h3>Delivery</h3><p>Loading and worldwide logistics support.</p></div></div></div>
+</section>
+
+<section class="about-band"><div class="container about-grid"><div><span class="eyebrow">ABOUT SLOW RIDER</span><h2>Your China vehicle sourcing partner.</h2></div><p>Slow Rider supplies electric mobility and off-road vehicles for international dealers, distributors and OEM partners. Our goal is simple: make sourcing vehicles from China easier, clearer and more reliable.</p></div></section>
+
+<section class="section faq-section"><div class="container"><div class="section-heading centered"><div><span class="eyebrow dark">FAQ</span><h2>Questions before you order?</h2></div></div><div class="faq-grid"><details><summary>Can you provide OEM customization?</summary><p>Yes. We can support branding, colors, specifications and other customization requirements depending on the model.</p></details><details><summary>What products do you supply?</summary><p>Electric scooters, electric motorcycles, utility and cargo vehicles, plus gasoline and electric ATVs.</p></details><details><summary>Do you ship internationally?</summary><p>Yes. We work with international dealers, distributors and importers and can discuss shipping arrangements for your market.</p></details><details><summary>How do I request a quotation?</summary><p>Open a product and click Request Quote on WhatsApp, or use the Get Quote button in the navigation.</p></details></div></div></section>
+
+<section class="cta-section" id="contact"><div class="container cta-inner"><div><span class="eyebrow">READY TO START?</span><h2>Build your vehicle business with Slow Rider.</h2><p>Tell us your market, quantity and preferred models.</p></div><a class="btn btn-primary" href="quote.html">Request a Wholesale Quote <span>→</span></a></div></section>
+
+<section class="contact-section"><div class="container contact-grid"><div><a class="brand footer-brand" href="#home"><span class="brand-mark">SR</span><span>Slow Rider</span></a><p>Electric Mobility & Off-Road Vehicle Solutions</p></div><div><span>CONTACT</span><a href="https://wa.me/8618620284214" target="_blank" rel="noopener">WhatsApp: +86 186 2028 4214</a><a href="quote.html">Request a Quote</a></div><div><span>QUICK LINKS</span><a href="#products">Products</a><a href="#oem">OEM / ODM</a><a href="#process">How It Works</a></div></div></section>
+</main>
+<footer><div class="container footer-bottom"><span>© 2026 Slow Rider. All Rights Reserved.</span><span>China • Global Supply</span></div></footer>
+
+<div id="productModal" class="product-modal" aria-hidden="true"></div>
+<script src="script.js"></script>
+</body>
+</html>
