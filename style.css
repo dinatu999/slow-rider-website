@@ -117,3 +117,27 @@
     font-size: 15px;
   }
 }
+/* BIG VIEW ALL LINK */
+.home-atv-section .text-link,
+.home-featured .text-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 26px;
+  min-width: 210px;
+  background: #ff5b0a;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .2s ease;
+}
+
+.home-atv-section .text-link:hover,
+.home-featured .text-link:hover {
+  background: #d94800;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255,91,10,.25);
+}
