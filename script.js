@@ -1527,3 +1527,134 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeProduct()});win
     }
   });
 })();
+/* PRODUCT SEARCH */
+(function () {
+
+  function searchProducts(term) {
+
+    const search = String(term || '').trim().toLowerCase();
+    const root = document.getElementById('catalogView');
+
+    if (!root) return;
+
+    if (!search) {
+      renderCatalog('all');
+      removeSearchInfo();
+      return;
+    }
+
+    const results = products.filter(function (p) {
+
+      const specs = Object.entries(p.specs || {})
+        .map(function ([key, value]) {
+          return key + ' ' + value;
+        })
+        .join(' ');
+
+      const searchableText = [
+        p.name,
+        p.category,
+        p.type,
+        p.description,
+        specs
+      ]
+        .join(' ')
+        .toLowerCase();
+
+      return searchableText.includes(search);
+
+    });
+
+    root.innerHTML = sectionBlock(
+      'Search Results',
+      '🔍',
+      results,
+      'orange'
+    );
+
+    root.querySelectorAll('.catalog-product-image').forEach(function (img, i) {
+
+      if (results[i]) {
+        loadProductImage(img, results[i]);
+      }
+
+    });
+
+    showSearchInfo(results.length, search);
+
+  }
+
+
+  function showSearchInfo(count, term) {
+
+    removeSearchInfo();
+
+    const root = document.getElementById('catalogView');
+
+    if (!root) return;
+
+    const info = document.createElement('div');
+
+    info.className = 'search-results-info';
+
+    info.textContent =
+      count === 1
+        ? '1 product found for "' + term + '"'
+        : count + ' products found for "' + term + '"';
+
+    root.parentNode.insertBefore(info, root);
+
+  }
+
+
+  function removeSearchInfo() {
+
+    document
+      .querySelectorAll('.search-results-info')
+      .forEach(function (el) {
+        el.remove();
+      });
+
+  }
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+    const input = document.getElementById('productSearch');
+    const clear = document.getElementById('clearProductSearch');
+
+    if (!input) return;
+
+
+    input.addEventListener('input', function () {
+
+      const value = input.value;
+
+      if (clear) {
+        clear.style.display = value ? 'block' : 'none';
+      }
+
+      searchProducts(value);
+
+    });
+
+
+    if (clear) {
+
+      clear.addEventListener('click', function () {
+
+        input.value = '';
+
+        clear.style.display = 'none';
+
+        searchProducts('');
+
+        input.focus();
+
+      });
+
+    }
+
+  });
+
+})();
