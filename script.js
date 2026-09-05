@@ -1431,3 +1431,99 @@ document.addEventListener('click',e=>{
   if(m&&e.target===m)closeProduct();
 });
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeProduct()});window.openProduct=openProduct;window.closeProduct=closeProduct;window.askQuote=askQuote;document.addEventListener('DOMContentLoaded',()=>{updateCounts();renderCatalog('all');document.querySelectorAll('.side-item,.sub-items button').forEach(b=>b.addEventListener('click',()=>filterProducts(b.dataset.filter)));const s=document.getElementById('mobileFilter');if(s)s.addEventListener('change',()=>filterProducts(s.value));const menu=document.querySelector('.menu-toggle'),nav=document.getElementById('mainNav');if(menu&&nav)menu.addEventListener('click',()=>{const open=nav.classList.toggle('mobile-open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'})});
+/* PRODUCT SEARCH */
+(function(){
+  function searchProducts(term){
+    const search = String(term || '').trim().toLowerCase();
+    const root = document.getElementById('catalogView');
+    if(!root) return;
+
+    if(!search){
+      renderCatalog('all');
+      removeSearchInfo();
+      return;
+    }
+
+    const results = products.filter(p => {
+      const specs = Object.entries(p.specs || {})
+        .map(([k,v]) => `${k} ${v}`)
+        .join(' ');
+
+      const text = [
+        p.name,
+        p.category,
+        p.type,
+        p.description,
+        specs
+      ].join(' ').toLowerCase();
+
+      return text.includes(search);
+    });
+
+    const meta = {
+      title: 'Search Results',
+      icon: '🔍',
+      color: 'orange'
+    };
+
+    root.innerHTML = sectionBlock(
+      meta.title,
+      meta.icon,
+      results,
+      meta.color
+    );
+
+    root.querySelectorAll('.catalog-product-image').forEach((img,i)=>{
+      if(results[i]) loadProductImage(img,results[i]);
+    });
+
+    showSearchInfo(results.length, search);
+  }
+
+  function showSearchInfo(count, term){
+    removeSearchInfo();
+
+    const root = document.getElementById('catalogView');
+    if(!root) return;
+
+    const info = document.createElement('div');
+    info.className = 'search-results-info';
+
+    info.textContent = count === 1
+      ? '1 product found for "' + term + '"'
+      : count + ' products found for "' + term + '"';
+
+    root.parentNode.insertBefore(info, root);
+  }
+
+  function removeSearchInfo(){
+    document.querySelectorAll('.search-results-info')
+      .forEach(el => el.remove());
+  }
+
+  document.addEventListener('DOMContentLoaded',()=>{
+    const input = document.getElementById('productSearch');
+    const clear = document.getElementById('clearProductSearch');
+
+    if(!input) return;
+
+    input.addEventListener('input',()=>{
+      const value = input.value;
+
+      if(clear){
+        clear.style.display = value ? 'block' : 'none';
+      }
+
+      searchProducts(value);
+    });
+
+    if(clear){
+      clear.addEventListener('click',()=>{
+        input.value = '';
+        clear.style.display = 'none';
+        searchProducts('');
+        input.focus();
+      });
+    }
+  });
+})();
