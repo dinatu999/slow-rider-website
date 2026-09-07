@@ -13,11 +13,30 @@ name:"CG125 Electric Motorcycle",
 
 category:"Electric Motorcycle",
 
-image:"big-cg125.png",
+image:"slow_rider_product_images/CG125_配置_1",
 
 gallery:[
+"slow_rider_product_images/CG125_配置_1"
+],
 
-"big-cg125.png"
+description:
+"Reliable electric motorcycle designed for global dealers and distributors.",
+
+specs:{
+Motor:"3000W",
+Battery:"72V Lithium",
+Speed:"60 km/h",
+Range:"80 km"
+},
+
+features:[
+"LED Lighting System",
+"Digital Display",
+"Strong Frame Design",
+"OEM Customization Available"
+]
+
+},
 
 ],
 
