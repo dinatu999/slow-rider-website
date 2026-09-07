@@ -95,7 +95,7 @@ const products = [
     "id": "u2",
     "name": "U2 Electric Motorcycle",
     "category": "Electric Motorcycle",
-    "image": "slow_rider_product_images/U2_配置_2.png",
+    "image": "slow_rider_product_images/U2__配置_2.png",
     "description": "A compact 1500W electric motorcycle for urban commuting, offering 55 km/h maximum speed, dual disc brakes and multiple battery options.",
     "specs": {
       "Motor": "1500W",
