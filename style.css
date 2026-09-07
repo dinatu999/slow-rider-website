@@ -1361,3 +1361,69 @@ WHY SECTION
 
 
 }
+.hero-image{
+
+    width:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.hero-image img{
+
+    width:100%;
+
+    max-width:650px;
+
+    object-fit:contain;
+
+}
+
+
+
+.home-banner-inner{
+
+    display:flex;
+
+    flex-direction:row;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+
+.home-copy h1 span{
+
+    color:#d6a900;
+
+}
+
+
+
+@media(max-width:900px){
+
+.hero-image{
+
+    width:100%;
+
+    margin-top:40px;
+
+}
+
+
+.home-banner-inner{
+
+    flex-direction:column;
+
+}
+
+
+}
