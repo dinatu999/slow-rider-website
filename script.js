@@ -1,3 +1,110 @@
+/* =========================================================
+   SLOW RIDER MAIN SCRIPT FIX
+========================================================= */
+/* =========================
+   MOBILE MENU
+========================= */
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
+const menuButton =
+document.querySelector(".menu-toggle");
+const mainNav =
+document.querySelector(".main-nav");
+if(menuButton && mainNav){
+menuButton.addEventListener(
+"click",
+()=>{
+mainNav.classList.toggle("open");
+
+const expanded =
+mainNav.classList.contains("open");
+
+
+menuButton.setAttribute(
+"aria-expanded",
+expanded
+);
+
+});
+
+
+}
+
+/* =========================
+   AUTO PRODUCT COUNTS
+========================= */
+if(typeof products !== "undefined"){
+
+const total =
+products.length;
+
+const countAll =
+document.getElementById("count-all");
+
+
+if(countAll){
+
+countAll.innerText=total;
+
+}
+
+/* CATEGORY COUNTS */
+
+
+function countCategory(value){
+
+
+return products.filter(
+p=>
+
+p.category===value
+
+||
+
+p.type===value
+
+).length;
+
+
+}
+
+const categories={
+
+
+"count-atv":"ATV",
+
+"count-electric-atv":"Electric ATV",
+
+"count-gas-atv":"Gas ATV",
+
+"count-scooter":"Electric Scooter",
+
+"count-motorcycle":"Electric Motorcycle",
+
+"count-commercial":"Commercial"
+
+};
+
+Object.keys(categories).forEach(id=>{
+
+
+const el=
+document.getElementById(id);
+
+if(el){
+
+el.innerText =
+countCategory(categories[id]);
+
+
+}
+
+});
+
+}
+
+});
 /* SLOW RIDER - CATALOG DESIGN REBUILD */
 const products = [
   {
