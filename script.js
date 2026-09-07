@@ -1122,7 +1122,7 @@ const products = [
       "Tire": "8‑inch tire with rim",
       "Overall Dimensions": "L1.55m W1.05m H1.00m",
       "Package Dimensions": "L1.35m W0.88m H0.63m",
-      "Vehicle Weight": "100kg",
+      "Vehicle Weight": "100 kg",
       "Optional engine": "150cc"
     },
     "type": "Gas ATV"
@@ -1379,7 +1379,7 @@ const products = [
       "Other configurations": "Turn signal lamp, body trim, fuel gauge, four‑net lamp, roll‑over bar",
       "Overall Dimensions": "L1.85m W1.1m H1.15m",
       "Packing dimensions": "L1.54m × W0.87m × H0.83m, extra tire volume 0.3 CBM",
-      "Vehicle Weight": "175kg",
+      "Vehicle Weight": "175 kg",
       "Optional engine": "150cc / 200cc"
     },
     "type": "Gas ATV"
