@@ -69,13 +69,15 @@ function createProductCard(product){
             </p>
 
 
-            <div class="product-actions">
+           <div class="product-actions">
 
-                <button 
-                onclick="openProductModal('${product.id}')">
-                    View Details
-                </button>
+<a 
+href="product.html?id=${product.id}"
+class="details-btn">
 
+View Details
+
+</a>
 
                 <a 
                 href="https://wa.me/8618620284214?text=I%20am%20interested%20in%20${encodeURIComponent(product.name)}"
