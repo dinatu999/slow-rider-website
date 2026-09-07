@@ -1389,6 +1389,10 @@ const products = [
    CATEGORY SYSTEM
    ========================================= */
 
+/* =========================================
+   CATEGORY SYSTEM
+   ========================================= */
+
 const CATEGORY_META = {
   ATV: {
     title: 'ATVs',
@@ -1452,21 +1456,18 @@ const CATEGORY_META = {
 };
 
 
-/* -----------------------------------------
-   ATV SUBCATEGORY MAP
-   ----------------------------------------- */
+/* =========================================
+   ATV MODEL GROUPS
+   ========================================= */
 
-/*
-  These IDs are grouped from the current
-  42-model ATV catalog.
-
-  Kids ATVs = 12 models
-  Electric ATVs = 6 models
-  Utility ATVs = 11 models
-  Sport / 4x4 ATVs = 13 models
-
-  Total = 42
-*/
+const ELECTRIC_ATV_IDS = [
+  'atv-08',
+  'atv-09',
+  'atv-19',
+  'atv-22',
+  'atv-23',
+  'atv-29'
+];
 
 const KIDS_ATV_IDS = [
   'atv-12',
@@ -1483,21 +1484,6 @@ const KIDS_ATV_IDS = [
   'atv-36'
 ];
 
-const ELECTRIC_ATV_IDS = [
-  'atv-08',
-  'atv-09',
-  'atv-19',
-  'atv-22',
-  'atv-23',
-  'atv-29'
-];
-
-
-/*
-  Utility ATV:
-  11 models
-*/
-
 const UTILITY_ATV_IDS = [
   'atv-01',
   'atv-02',
@@ -1511,12 +1497,6 @@ const UTILITY_ATV_IDS = [
   'atv-38',
   'atv-41'
 ];
-
-
-/*
-  Sport / 4x4 ATV:
-  13 models
-*/
 
 const SPORT_ATV_IDS = [
   'atv-05',
@@ -1535,12 +1515,12 @@ const SPORT_ATV_IDS = [
 ];
 
 
-/* -----------------------------------------
+/* =========================================
    CATEGORY HELPERS
-   ----------------------------------------- */
+   ========================================= */
 
 function isElectricATV(p) {
-  return !!p &&
+  return p &&
     p.category === 'ATV' &&
     ELECTRIC_ATV_IDS.includes(p.id);
 }
@@ -1595,9 +1575,9 @@ function isElectricMobility(p) {
 }
 
 
-/* -----------------------------------------
-   CATEGORY MATCHING
-   ----------------------------------------- */
+/* =========================================
+   FILTER MATCHING
+   ========================================= */
 
 function matches(p, filter) {
 
@@ -1605,56 +1585,46 @@ function matches(p, filter) {
     return true;
   }
 
-
   if (filter === 'ATV') {
     return p.category === 'ATV';
   }
-
 
   if (filter === 'Gas ATV') {
     return p.category === 'ATV' &&
       getATVCategory(p) === 'Gas ATV';
   }
 
-
   if (filter === 'Electric ATV') {
     return p.category === 'ATV' &&
       getATVCategory(p) === 'Electric ATV';
   }
-
 
   if (filter === 'Kids ATV') {
     return p.category === 'ATV' &&
       getATVCategory(p) === 'Kids ATV';
   }
 
-
   if (filter === 'Utility ATV') {
     return p.category === 'ATV' &&
       getATVCategory(p) === 'Utility ATV';
   }
-
 
   if (filter === 'Sport ATV') {
     return p.category === 'ATV' &&
       getATVCategory(p) === 'Sport ATV';
   }
 
-
   if (filter === 'Electric Mobility') {
     return isElectricMobility(p);
   }
-
 
   if (filter === 'Electric Scooter') {
     return p.category === 'Electric Scooter';
   }
 
-
   if (filter === 'Electric Motorcycle') {
     return p.category === 'Electric Motorcycle';
   }
-
 
   if (filter === 'Commercial') {
     return [
@@ -1665,14 +1635,13 @@ function matches(p, filter) {
     ].includes(p.category);
   }
 
-
   return p.category === filter;
 }
 
 
-/* -----------------------------------------
-   COUNTS
-   ----------------------------------------- */
+/* =========================================
+   COUNT HELPERS
+   ========================================= */
 
 function count(filter) {
   return products.filter(function (p) {
