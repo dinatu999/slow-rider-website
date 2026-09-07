@@ -454,12 +454,12 @@ const products = [
   },
   {
     "id": "atv-01",
-    "name": "Big Dodge200ccChain Drive)Automatic",
+    "name": "Big Dodge 200cc (Chain Drive) Automatic",
     "category": "ATV",
     "image": "atv_images/atv-01-big-dodge200ccchain-drive-automatic.jpg",
     "description": "Gasoline ATV for recreational, agricultural and utility applications, with wholesale supply and customization available.",
     "specs": {
-      "Engine": "200Engine 1 Forward, 1 Reverse, Neutral",
+      "Engine": "200 Engine 1 Forward, 1 Reverse, Neutral",
       "Starting Method": "Electric Start",
       "Tires": "10inch Aluminum Wheels",
       "Suspension": "Front and Rear Reinforced Hydraulic Suspension",
@@ -471,18 +471,18 @@ const products = [
       "Overall Dimensions": "L1.80m W1.1m H1.10m",
       "Package Dimensions": "L1.70m W1.00m H0.82m",
       "Vehicle Weight": "200kg",
-      "Additional": "Engine200cc.250cc, can be chosen"
+      "Additional": "Engine 200cc&250cc, can be chosen"
     },
     "type": "Gas ATV"
   },
   {
     "id": "atv-02",
-    "name": "Big DodgeRoll Cage200cc (Chain Drive)Automatic",
+    "name": "Big Dodge Roll Cage 200cc (Chain Drive) Automatic",
     "category": "ATV",
     "image": "atv_images/atv-02-big-dodgeroll-cage200cc-chain-drive-automatic.jpg",
     "description": "Gasoline ATV for recreational, agricultural and utility applications, with wholesale supply and customization available.",
     "specs": {
-      "Engine": "200Engine 1 Forward, 1 Reverse, Neutral",
+      "Engine": "200 Engine 1 Forward, 1 Reverse, Neutral",
       "Starting Method": "Electric Start",
       "Tires": "10inch Aluminum Wheels",
       "Suspension": "Front and Rear Reinforced Hydraulic Suspension",
@@ -493,19 +493,19 @@ const products = [
       "Other Configurations": "Turn Signals Body Trim Front and Rear Plastic Panels Large Backrest Handguards",
       "Overall Dimensions": "L1.80m W1.1m H1.10m",
       "Package Dimensions": "L1.70m W1.00m H0.82m",
-      "Vehicle Weight": "200kg",
-      "Additional": "Engine200cc.250cc can be chosen"
+      "Vehicle Weight": "200 kg",
+      "Additional": "Engine 200cc&250cc, can be chosen"
     },
     "type": "Gas ATV"
   },
   {
     "id": "atv-03",
-    "name": "Extended VersionBig Dodge200cc (Chain Drive)Automatic",
+    "name": "Extended Version Big Dodge 200cc (Chain Drive) Automatic",
     "category": "ATV",
     "image": "atv_images/atv-03-extended-versionbig-dodge200cc-chain-drive-automatic.jpg",
     "description": "Gasoline ATV for recreational, agricultural and utility applications, with wholesale supply and customization available.",
     "specs": {
-      "Engine": "200Engine 1 Forward, 1 Reverse, Neutral",
+      "Engine": "200 Engine 1 Forward, 1 Reverse, Neutral",
       "Starting Method": "Electric Start",
       "Tires": "10inch Aluminum Wheels",
       "Suspension": "Front and Rear Reinforced Hydraulic Suspension",
@@ -517,7 +517,7 @@ const products = [
       "Overall Dimensions": "L1.90m W1.1m H1.10m",
       "Package Dimensions": "L1.75m W1.00m H0.82m",
       "Vehicle Weight": "205kg",
-      "Additional": "Engine200cc.250cc can be chosen"
+      "Additional": "Engine 200cc&250cc, can be chosen"
     },
     "type": "Gas ATV"
   },
@@ -528,7 +528,7 @@ const products = [
     "image": "atv_images/atv-04-shock-proof-bull-200cc-cvt-automatic-chain-drive-version.jpg",
     "description": "Gasoline ATV for recreational, agricultural and utility applications, with wholesale supply and customization available.",
     "specs": {
-      "Engine": "200Engine 1 Forward, 1 Reverse, Neutral",
+      "Engine": "200 Engine 1 Forward, 1 Reverse, Neutral",
       "Starting Method": "Electric Start",
       "Tires": "10inch Aluminum Wheels",
       "Suspension": "Front and Rear Reinforced Hydraulic Suspension",
@@ -541,7 +541,7 @@ const products = [
       "Overall Dimensions": "L1.80m W1.1m H1.15m",
       "Package Dimensions": "L1.54m W0.87m H0.83m Tires加0.3方",
       "Vehicle Weight": "175kg",
-      "Additional": "Engine150cc.200cc.can be chosen"
+      "Additional": "Engine 150cc&200cc, can be chosen"
     },
     "type": "Gas ATV"
   },
@@ -586,7 +586,7 @@ const products = [
       "Other Configurations": "Turn Signals Body Trim Front and Rear Plastic Panels Large Backrest Handguards",
       "Overall Dimensions": "L1.80m W1.1m H1.10m",
       "Package Dimensions": "L1.70m W1.03m H0.82m",
-      "Vehicle Weight": "200kg"
+      "Vehicle Weight": "200 kg"
     },
     "type": "Gas ATV"
   },
@@ -609,7 +609,7 @@ const products = [
       "Other configurations": "Hand guard, backrest, winch, heated handlebar, rear‑view mirror",
       "Overall Dimensions": "L2.08m W1.20m H1.20m",
       "Package Dimensions": "L2.08m W1.16m H0.95m",
-      "Vehicle Weight": "325kg"
+      "Vehicle Weight": "325 kg"
     },
     "type": "Gas ATV"
   },
@@ -630,7 +630,7 @@ const products = [
       "Other Configurations": "Four‑net lamp, backrest",
       "Overall Dimensions": "L1.9m W1.1m H1.15m",
       "Package Dimensions": "L1.70m W0.95m H0.88m",
-      "Vehicle Weight": "200kg",
+      "Vehicle Weight": "200 kg",
       "Battery optional": "60V / 72V\n(Motor optional: 1000W, 1500W, 2200W)",
       "Additional": "Custom lithium battery available"
     },
@@ -652,14 +652,14 @@ const products = [
       "Overall Dimensions": "L1.45m W1.00m H0.98m",
       "Package Dimensions": "L1.32m W0.8m H0.72m",
       "Vehicle Weight": "100kg",
-      "Battery optional": "48V / 60V\n(Motor optional: 500W, 750W, 1000W)",
+      "Battery optional": "48V / 60V\n (Motor optional: 500W, 750W, 1000W)",
       "Additional": "Custom lithium battery available"
     },
     "type": "Electric ATV"
   },
   {
     "id": "atv-10",
-    "name": "Big Hummer CVT(Chain Drive)Automatic",
+    "name": "Big Hummer CVT (Chain Drive) Automatic",
     "category": "ATV",
     "image": "atv_images/atv-10-big-hummer-cvt-chain-drive-automatic.jpg",
     "description": "Gasoline ATV for recreational, agricultural and utility applications, with wholesale supply and customization available.",
@@ -675,7 +675,7 @@ const products = [
       "Other Configurations": "Turn Signals Body Trim Large Backrest Roll Cage 4网灯",
       "Overall Dimensions": "L2.00m W1.20m H1.10m",
       "Packing dimensions": "Length 1.95 m, Width 1.09 m, Height 0.9 m, Additional tire volume: 0.3 CBM",
-      "Vehicle Weight": "250kg",
+      "Vehicle Weight": "250 kg",
       "Additional": "Electric version optional"
     },
     "type": "Gas ATV"
@@ -698,7 +698,7 @@ const products = [
       "Other Configurations": "Turn Signals Body Trim Roll Cage 4网灯 后背箱",
       "Overall Dimensions": "L2.00m W1.20m H1.10m",
       "Packing dimensions": "Length 1.95 m, Width 1.09 m, Height 0.9 m, Additional tire volume: 0.3 CBM",
-      "Vehicle Weight": "270kg"
+      "Vehicle Weight": "270 kg"
     },
     "type": "Gas ATV"
   },
@@ -720,7 +720,7 @@ const products = [
       "Other Configurations": "Handguards",
       "Overall Dimensions": "L1.5m W0.85m H1.10m",
       "Package Dimensions": "L1.32m W0.81m H0.72m",
-      "Vehicle Weight": "100kg",
+      "Vehicle Weight": "100 kg",
       "Additional": "Electric version optional"
     },
     "type": "Gas ATV"
@@ -766,7 +766,7 @@ const products = [
       "Other configurations": "Fuel gauge, backrest, hand guard, plastic panels",
       "Overall Dimensions": "L1.80m W1.15m H1.15m",
       "Package Dimensions": "L1.54m W0.88m H0.85m",
-      "Vehicle Weight": "170kg",
+      "Vehicle Weight": "170 kg",
       "Optional engine": "150cc / 200cc; electric version optional"
     },
     "type": "Gas ATV"
@@ -789,7 +789,7 @@ const products = [
       "Other configurations": "Chest protector",
       "Overall Dimensions": "L1.38m W0.84m H0.84m",
       "Package Dimensions": "L1.27m W0.77m H0.66m",
-      "Vehicle Weight": "85kg",
+      "Vehicle Weight": "85 kg",
       "Additional": "Electric version optional"
     },
     "type": "Gas ATV"
@@ -810,7 +810,7 @@ const products = [
       "Other configurations": "Hand guard, headlight eyebrow, tail light, backrest, LED spot lamp, plastic panels",
       "Overall Dimensions": "L1.52m W1.0m H0.98m",
       "Package Dimensions": "L1.42m W0.9m H0.75m",
-      "Vehicle Weight": "135kg"
+      "Vehicle Weight": "135 kg"
     },
     "type": "Gas ATV"
   },
@@ -830,7 +830,7 @@ const products = [
       "Other Configurations": "Turn Signals .Roll Cage Large Backrest",
       "Overall Dimensions": "L2.1m W1.15m H1.1m",
       "Packing dimensions": "Length 2.1 m, Width 1.15 m, Height 0.81 m, additional tire volume 0.3 CBM",
-      "Vehicle Weight": "220kg"
+      "Vehicle Weight": "220 kg"
     },
     "type": "Gas ATV"
   },
@@ -850,7 +850,7 @@ const products = [
       "Tire": "10‑inch aluminum highway tire",
       "Overall Dimensions": "L1.45m W0.9m H0.9m",
       "Package Dimensions": "L1.32m W0.8m H0.72m",
-      "Vehicle Weight": "75kg"
+      "Vehicle Weight": "75 kg"
     },
     "type": "Gas ATV"
   },
@@ -870,7 +870,7 @@ const products = [
       "Other configurations": "Hand guard, four‑net lamp, rear‑view mirror, backrest",
       "Overall Dimensions": "L1.9m W1.1m H1.15m",
       "Package Dimensions": "L1.70m W0.95m H0.88m 加Tires0.3方",
-      "Vehicle Weight": "220kg"
+      "Vehicle Weight": "220 kg"
     },
     "type": "Electric ATV"
   },
@@ -890,7 +890,7 @@ const products = [
       "Other Configurations": "Large Backrest",
       "Overall Dimensions": "L2.00m W1.1m H1.2m",
       "Package Dimensions": "L2.00m W1.2m H0.9m",
-      "Vehicle Weight": "245kg"
+      "Vehicle Weight": "245 kg"
     },
     "type": "Gas ATV"
   },
@@ -901,7 +901,7 @@ const products = [
     "image": "atv_images/atv-21-shock-proof-big-mars-cvt-automatic-chain-drive-version.jpg",
     "description": "Gasoline ATV for recreational, agricultural and utility applications, with wholesale supply and customization available.",
     "specs": {
-      "Engine": "200Engine 1 Forward, 1 Reverse, Neutral",
+      "Engine": "200 Engine 1 Forward, 1 Reverse, Neutral",
       "Starting Method": "Electric Start",
       "Tires": "10inch Aluminum Wheels",
       "Shock absorber": "Front & rear thickened hydraulic shock absorbers",
@@ -912,7 +912,7 @@ const products = [
       "Other Configurations": "",
       "Overall Dimensions": "L1.85m W1.1m H1.15m",
       "Package Dimensions": "L1.54m W0.87m H0.83m",
-      "Vehicle Weight": "180kg"
+      "Vehicle Weight": "180 kg"
     },
     "type": "Gas ATV"
   },
@@ -940,7 +940,7 @@ const products = [
   },
   {
     "id": "atv-23",
-    "name": "Little BullElectric Model",
+    "name": "Little Bull Electric Model",
     "category": "ATV",
     "image": "atv_images/atv-23-little-bullelectric-model.jpg",
     "description": "Electric ATV for recreational, utility and dealer markets, with configurable battery and motor options.",
@@ -977,14 +977,14 @@ const products = [
       "Other Configurations": "Turn Signals Body Trim Roll Cage 4网灯 靠背",
       "Overall Dimensions": "L2.00mW1.20mH1.10m",
       "Package Dimensions": "L1.8mW1.0mH0.84m",
-      "Vehicle Weight": "220kg",
-      "Optional": "250cc /300cc engine"
+      "Vehicle Weight": "220 kg",
+      "Optional": "Engine 250cc&300cc, can be chosen"
     },
     "type": "Gas ATV"
   },
   {
     "id": "atv-25",
-    "name": "Little Mars(Chain Drive)",
+    "name": "Little Mars (Chain Drive)",
     "category": "ATV",
     "image": "atv_images/atv-25-little-mars-chain-drive.jpg",
     "description": "Gasoline ATV for recreational, agricultural and utility applications, with wholesale supply and customization available.",
@@ -1004,7 +1004,7 @@ const products = [
   },
   {
     "id": "atv-26",
-    "name": "ittle War God(Chain Drive)",
+    "name": "Little War God (Chain Drive)",
     "category": "ATV",
     "image": "atv_images/atv-26-ittle-war-god-chain-drive.jpg",
     "description": "Gasoline ATV for recreational, agricultural and utility applications, with wholesale supply and customization available.",
@@ -1018,7 +1018,7 @@ const products = [
       "Tire": "8‑inch tire with rim",
       "Overall Dimensions": "L1.45m W1.00m H0.98m",
       "Package Dimensions": "L1.32m W0.8m H0.72m",
-      "Vehicle Weight": "90kg",
+      "Vehicle Weight": "90 kg",
       "Brake": "Front drum brake, rear disc brake"
     },
     "type": "Gas ATV"
@@ -1059,7 +1059,7 @@ const products = [
       "Other configurations": "Turn signals, body trim, roll‑over bar, four‑net lamp, winch",
       "Overall Dimensions": "L1.90m W1.20m H1.20m",
       "Package Dimensions": "L1.9m W1.02m H0.87m",
-      "Vehicle Weight": "240kg",
+      "Vehicle Weight": "240 kg",
       "Optional engine": "250cc / 300cc / 350cc"
     },
     "type": "Gas ATV"
@@ -1107,7 +1107,7 @@ const products = [
   },
   {
     "id": "atv-31",
-    "name": "Little Sirius(Chain Drive)",
+    "name": "Little Sirius (Chain Drive)",
     "category": "ATV",
     "image": "atv_images/atv-31-little-sirius-chain-drive.jpg",
     "description": "Gasoline ATV for recreational, agricultural and utility applications, with wholesale supply and customization available.",
@@ -1144,7 +1144,7 @@ const products = [
       "Additional": "Other Configurations;Handguards",
       "Overall Dimensions": "L1.47m W1.0m H0.92m",
       "Package Dimensions": "L1.32m W0.81m H0.72m",
-      "Vehicle Weight": "100kg",
+      "Vehicle Weight": "100 kg",
       "Optional engine": "125cc / 150cc"
     },
     "type": "Gas ATV"
@@ -1168,14 +1168,14 @@ const products = [
       "Other configurations": "Turn signal lamp, body trim, fuel gauge, four‑net lamp, roll‑over bar",
       "Overall Dimensions": "L1.85m W1.1m H1.15m",
       "Packing dimensions": "Length 0.94 m, Width 0.94 m, Height 0.80 m, additional tire volume 0.3 CBM",
-      "Vehicle Weight": "200kg",
+      "Vehicle Weight": "200 kg",
       "Optional engine": "150cc / 200cc"
     },
     "type": "Gas ATV"
   },
   {
     "id": "atv-34",
-    "name": "Little Bull(Chain Drive)",
+    "name": "Little Bull (Chain Drive)",
     "category": "ATV",
     "image": "atv_images/atv-34-little-bull-chain-drive.jpg",
     "description": "Gasoline ATV for recreational, agricultural and utility applications, with wholesale supply and customization available.",
@@ -1191,13 +1191,13 @@ const products = [
       "Tire": "7‑inch tire",
       "Overall Dimensions": "L1.45mW0.9mH0.9m",
       "Package Dimensions": "L1.32mW0.8mH0.72m",
-      "Vehicle Weight": "75kg"
+      "Vehicle Weight": "75 kg"
     },
     "type": "Gas ATV"
   },
   {
     "id": "atv-35",
-    "name": "Little Bull(Chain Drive)",
+    "name": "Little Bull (Chain Drive)",
     "category": "ATV",
     "image": "atv_images/atv-35-little-bull-chain-drive.jpg",
     "description": "Gasoline ATV for recreational, agricultural and utility applications, with wholesale supply and customization available.",
@@ -1213,13 +1213,13 @@ const products = [
       "Other Configurations": "Body TrimTurn Signals",
       "Overall Dimensions": "L1.45mW0.9mH0.9m",
       "Package Dimensions": "L1.32mW0.8mH0.72m",
-      "Vehicle Weight": "75kg"
+      "Vehicle Weight": "75 kg"
     },
     "type": "Gas ATV"
   },
   {
     "id": "atv-36",
-    "name": "Little Bull(Shaft Drive)",
+    "name": "Little Bull (Shaft Drive)",
     "category": "ATV",
     "image": "atv_images/atv-36-little-bull-shaft-drive.jpg",
     "description": "Gasoline ATV for recreational, agricultural and utility applications, with wholesale supply and customization available.",
@@ -1236,13 +1236,13 @@ const products = [
       "Other configurations": "Body trim, turn signal lamp",
       "Overall Dimensions": "L1.45mW0.9mH0.9m",
       "Package Dimensions": "L1.32mW0.8mH0.72m",
-      "Vehicle Weight": "90kg"
+      "Vehicle Weight": "90 kg"
     },
     "type": "Gas ATV"
   },
   {
     "id": "atv-37",
-    "name": "Big Bull(Chain Drive)",
+    "name": "Big Bull (Chain Drive)",
     "category": "ATV",
     "image": "atv_images/atv-37-big-bull-chain-drive.jpg",
     "description": "Gasoline ATV for recreational, agricultural and utility applications, with wholesale supply and customization available.",
@@ -1259,14 +1259,14 @@ const products = [
       "Other Configurations": "Turn Signals Body Trim",
       "Overall Dimensions": "L1.85m W1.1m H1.15m",
       "Package Dimensions": "L1.54m W0.87m H0.83m",
-      "Vehicle Weight": "160kg",
+      "Vehicle Weight": "160 kg",
       "Optional engine": "150cc / 200cc / 250cc"
     },
     "type": "Gas ATV"
   },
   {
     "id": "atv-38",
-    "name": "Big Bull (shaft‑drive version) 150c",
+    "name": "Big Bull (shaft‑drive version) 150cc",
     "category": "ATV",
     "image": "atv_images/atv-38-big-bull-shaft-drive-version-150c.jpg",
     "description": "Gasoline ATV for recreational, agricultural and utility applications, with wholesale supply and customization available.",
@@ -1283,7 +1283,7 @@ const products = [
       "Other configurations": "Turn signal lamp, body trim",
       "Overall Dimensions": "L1.85m W1.1m H1.15m",
       "Package Dimensions": "L1.54m W0.87m H0.83m",
-      "Vehicle Weight": "185kg",
+      "Vehicle Weight": "185 kg",
       "Optional engine": "150cc / 200cc / 250cc"
     },
     "type": "Gas ATV"
@@ -1307,7 +1307,7 @@ const products = [
       "Other configurations": "Turn signal lamp, body trim, fuel gauge, four‑net lamp, roll‑over bar",
       "Overall Dimensions": "L1.85m W1.1m H1.15m",
       "Packing dimensions": "Length 1.54 m, Width 0.87 m, Height 0.83 m, additional tire volume 0.3 CBM",
-      "Vehicle Weight": "200kg",
+      "Vehicle Weight": "200 kg",
       "Optional engine": "250cc / 300cc / 350cc"
     },
     "type": "Gas ATV"
@@ -1331,7 +1331,7 @@ const products = [
       "Other configurations": "Turn signal lamp, body trim, fuel gauge",
       "Overall Dimensions": "L1.85m W1.1m H1.15m",
       "Packing dimensions": "L1.54m × W0.87m × H0.83m, extra tire volume 0.3 CBM",
-      "Vehicle Weight": "200kg",
+      "Vehicle Weight": "200 kg",
       "Optional engine": "250cc / 300cc / 350cc"
     },
     "type": "Gas ATV"
@@ -1355,7 +1355,7 @@ const products = [
       "Other configurations": "Turn signal lamp, body trim, fuel gauge",
       "Overall Dimensions": "L1.85m W1.1m H1.15m",
       "Package Dimensions": "L1.54m W0.87m H0.83m",
-      "Vehicle Weight": "160kg",
+      "Vehicle Weight": "160 kg",
       "Optional engine": "150cc / 200cc"
     },
     "type": "Gas ATV"
