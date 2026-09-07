@@ -1385,15 +1385,336 @@ const products = [
     "type": "Gas ATV"
   }
 ];
-const CATEGORY_META={ATV:{title:'ATVs',icon:'🏍',color:'orange'},'Electric Mobility':{title:'Electric Mobility',icon:'🚲',color:'green'},'Electric Scooter':{title:'Electric Scooters',icon:'🛵',color:'orange'},'Electric Motorcycle':{title:'Motorcycles',icon:'🏍',color:'orange'},Commercial:{title:'Commercial Vehicles',icon:'◉',color:'orange'},'Gas ATV':{title:'Gas ATVs',icon:'🏍',color:'orange'},'Electric ATV':{title:'Electric ATVs',icon:'⚡',color:'green'}};
-function getImageCandidates(p){const path=p.image||'';if(!path)return[];const out=[path],add=v=>{if(v&&!out.includes(v))out.push(v)};add(path.replace('_配置_','__配置_'));add(path.replace('__配置_','_配置_'));add(path.replace('_配置xlsx_','_配置_'));add(path.replace('_配置_','_配置xlsx_'));if(/\.png$/i.test(path)){add(path.replace(/\.png$/i,'.jpeg'));add(path.replace(/\.png$/i,'.jpg'))}if(/\.jpeg$/i.test(path)){add(path.replace(/\.jpeg$/i,'.png'));add(path.replace(/\.jpeg$/i,'.jpg'))}if(/\.jpg$/i.test(path)){add(path.replace(/\.jpg$/i,'.png'));add(path.replace(/\.jpg$/i,'.jpeg'))}return out}
-function loadProductImage(img,p){const c=getImageCandidates(p);let i=0;const next=()=>{if(i>=c.length){img.onerror=null;img.classList.add('image-failed');return}img.src=encodeURI(c[i++])};img.onerror=next;next()}
-function isElectricATV(p){return p?.category==='ATV'&&(p.type==='Electric ATV'||p.specs?.Motor||p.name.toLowerCase().includes('electric'))}
-function labelFor(p){return p.category==='ATV'?(isElectricATV(p)?'Electric ATV':'Gas ATV'):p.category}
-function isElectricMobility(p){return ['Electric Scooter','Electric Motorcycle','Utility Vehicle','Cargo Vehicle','Passenger Vehicle','Three Wheel Vehicle','E-Bike'].includes(p.category)}
-function matches(p,f){if(f==='all')return true;if(f==='ATV')return p.category==='ATV';if(f==='Gas ATV')return p.category==='ATV'&&!isElectricATV(p);if(f==='Electric ATV')return isElectricATV(p);if(f==='Electric Mobility'||f==='E-Bike')return f==='E-Bike'?p.category==='E-Bike':isElectricMobility(p);if(f==='Commercial')return ['Utility Vehicle','Cargo Vehicle','Passenger Vehicle','Three Wheel Vehicle'].includes(p.category);if(f==='Other')return ['Go Kart','Other'].includes(p.category);return p.category===f}
-function count(f){return products.filter(p=>matches(p,f)).length}function setCount(id,n){const e=document.getElementById(id);if(e)e.textContent=n}
-function updateCounts(){setCount('count-all',products.length);setCount('count-atv',count('ATV'));setCount('count-ebike',count('E-Bike'));setCount('count-scooter',count('Electric Scooter'));setCount('count-motorcycle',count('Electric Motorcycle'));setCount('count-commercial',count('Commercial'));setCount('count-gokart',count('Go Kart'));setCount('count-other',count('Other'));['Utility ATV','Sport ATV','Kids ATV','Side by Side','City E-Bike','Mountain E-Bike','Fat Tire E-Bike','Folding E-Bike'].forEach(x=>setCount('count-'+x.toLowerCase().replaceAll(' ','-'),count(x)))}
+/* =========================================
+   CATEGORY SYSTEM
+   ========================================= */
+
+const CATEGORY_META = {
+  ATV: {
+    title: 'ATVs',
+    icon: '🏍',
+    color: 'orange'
+  },
+
+  'Gas ATV': {
+    title: 'Gas ATVs',
+    icon: '🏍',
+    color: 'orange'
+  },
+
+  'Electric ATV': {
+    title: 'Electric ATVs',
+    icon: '⚡',
+    color: 'green'
+  },
+
+  'Kids ATV': {
+    title: 'Kids ATVs',
+    icon: '🏍',
+    color: 'orange'
+  },
+
+  'Utility ATV': {
+    title: 'Utility ATVs',
+    icon: '🏍',
+    color: 'orange'
+  },
+
+  'Sport ATV': {
+    title: 'Sport / 4x4 ATVs',
+    icon: '🏍',
+    color: 'orange'
+  },
+
+  'Electric Mobility': {
+    title: 'Electric Mobility',
+    icon: '⚡',
+    color: 'green'
+  },
+
+  'Electric Scooter': {
+    title: 'Electric Scooters',
+    icon: '🛵',
+    color: 'orange'
+  },
+
+  'Electric Motorcycle': {
+    title: 'Electric Motorcycles',
+    icon: '🏍',
+    color: 'orange'
+  },
+
+  Commercial: {
+    title: 'Commercial Vehicles',
+    icon: '◉',
+    color: 'orange'
+  }
+};
+
+
+/* -----------------------------------------
+   ATV SUBCATEGORY MAP
+   ----------------------------------------- */
+
+/*
+  These IDs are grouped from the current
+  42-model ATV catalog.
+
+  Kids ATVs = 12 models
+  Electric ATVs = 6 models
+  Utility ATVs = 11 models
+  Sport / 4x4 ATVs = 13 models
+
+  Total = 42
+*/
+
+const KIDS_ATV_IDS = [
+  'atv-12',
+  'atv-13',
+  'atv-15',
+  'atv-16',
+  'atv-18',
+  'atv-25',
+  'atv-26',
+  'atv-31',
+  'atv-32',
+  'atv-34',
+  'atv-35',
+  'atv-36'
+];
+
+const ELECTRIC_ATV_IDS = [
+  'atv-08',
+  'atv-09',
+  'atv-19',
+  'atv-22',
+  'atv-23',
+  'atv-29'
+];
+
+
+/*
+  Utility ATV:
+  11 models
+*/
+
+const UTILITY_ATV_IDS = [
+  'atv-01',
+  'atv-02',
+  'atv-03',
+  'atv-04',
+  'atv-06',
+  'atv-10',
+  'atv-14',
+  'atv-33',
+  'atv-37',
+  'atv-38',
+  'atv-41'
+];
+
+
+/*
+  Sport / 4x4 ATV:
+  13 models
+*/
+
+const SPORT_ATV_IDS = [
+  'atv-05',
+  'atv-07',
+  'atv-11',
+  'atv-17',
+  'atv-20',
+  'atv-21',
+  'atv-24',
+  'atv-27',
+  'atv-28',
+  'atv-30',
+  'atv-39',
+  'atv-40',
+  'atv-42'
+];
+
+
+/* -----------------------------------------
+   CATEGORY HELPERS
+   ----------------------------------------- */
+
+function isElectricATV(p) {
+  return !!p &&
+    p.category === 'ATV' &&
+    ELECTRIC_ATV_IDS.includes(p.id);
+}
+
+
+function getATVCategory(p) {
+
+  if (!p || p.category !== 'ATV') {
+    return null;
+  }
+
+  if (ELECTRIC_ATV_IDS.includes(p.id)) {
+    return 'Electric ATV';
+  }
+
+  if (KIDS_ATV_IDS.includes(p.id)) {
+    return 'Kids ATV';
+  }
+
+  if (UTILITY_ATV_IDS.includes(p.id)) {
+    return 'Utility ATV';
+  }
+
+  if (SPORT_ATV_IDS.includes(p.id)) {
+    return 'Sport ATV';
+  }
+
+  return 'Gas ATV';
+}
+
+
+function labelFor(p) {
+
+  if (p.category === 'ATV') {
+    return getATVCategory(p);
+  }
+
+  return p.category;
+}
+
+
+function isElectricMobility(p) {
+
+  return [
+    'Electric Scooter',
+    'Electric Motorcycle',
+    'Utility Vehicle',
+    'Cargo Vehicle',
+    'Passenger Vehicle',
+    'Three Wheel Vehicle'
+  ].includes(p.category);
+}
+
+
+/* -----------------------------------------
+   CATEGORY MATCHING
+   ----------------------------------------- */
+
+function matches(p, filter) {
+
+  if (filter === 'all') {
+    return true;
+  }
+
+
+  if (filter === 'ATV') {
+    return p.category === 'ATV';
+  }
+
+
+  if (filter === 'Gas ATV') {
+    return p.category === 'ATV' &&
+      getATVCategory(p) === 'Gas ATV';
+  }
+
+
+  if (filter === 'Electric ATV') {
+    return p.category === 'ATV' &&
+      getATVCategory(p) === 'Electric ATV';
+  }
+
+
+  if (filter === 'Kids ATV') {
+    return p.category === 'ATV' &&
+      getATVCategory(p) === 'Kids ATV';
+  }
+
+
+  if (filter === 'Utility ATV') {
+    return p.category === 'ATV' &&
+      getATVCategory(p) === 'Utility ATV';
+  }
+
+
+  if (filter === 'Sport ATV') {
+    return p.category === 'ATV' &&
+      getATVCategory(p) === 'Sport ATV';
+  }
+
+
+  if (filter === 'Electric Mobility') {
+    return isElectricMobility(p);
+  }
+
+
+  if (filter === 'Electric Scooter') {
+    return p.category === 'Electric Scooter';
+  }
+
+
+  if (filter === 'Electric Motorcycle') {
+    return p.category === 'Electric Motorcycle';
+  }
+
+
+  if (filter === 'Commercial') {
+    return [
+      'Utility Vehicle',
+      'Cargo Vehicle',
+      'Passenger Vehicle',
+      'Three Wheel Vehicle'
+    ].includes(p.category);
+  }
+
+
+  return p.category === filter;
+}
+
+
+/* -----------------------------------------
+   COUNTS
+   ----------------------------------------- */
+
+function count(filter) {
+  return products.filter(function (p) {
+    return matches(p, filter);
+  }).length;
+}
+
+
+function setCount(id, number) {
+
+  const element = document.getElementById(id);
+
+  if (element) {
+    element.textContent = number;
+  }
+}
+
+
+function updateCounts() {
+
+  setCount('count-all', products.length);
+
+  setCount('count-atv', count('ATV'));
+
+  setCount('count-gas-atv', count('Gas ATV'));
+
+  setCount('count-electric-atv', count('Electric ATV'));
+
+  setCount('count-kids-atv', count('Kids ATV'));
+
+  setCount('count-utility-atv', count('Utility ATV'));
+
+  setCount('count-sport-atv', count('Sport ATV'));
+
+  setCount('count-scooter', count('Electric Scooter'));
+
+  setCount('count-motorcycle', count('Electric Motorcycle'));
+
+  setCount('count-commercial', count('Commercial'));
+
+  setCount('count-electric-mobility', count('Electric Mobility'));
+}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]))}
 function productCard(p){
   const label=labelFor(p);
