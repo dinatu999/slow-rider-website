@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071a2b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=13">
+<title>Request a Quote | Slow Rider</title>
+<meta name="description" content="Request a wholesale quotation from Slow Rider with product and market requirements.">
+</head>
+<body data-page="quote">
+<div id="siteHeader"></div>
+
+<main>
+  <section class="page-hero compact-hero"><div class="container page-hero-copy"><span class="eyebrow">REQUEST A QUOTE</span><h1>Prepare a focused B2B inquiry.</h1><p>Share your market, quantity, product and configuration requirements.</p></div></section>
+  <section class="section section-soft">
+    <div class="container quote-layout">
+      <form class="form-card quote-form" id="quoteForm">
+        <div class="form-heading"><span class="eyebrow">WHOLESALE INQUIRY</span><h2>Request product information and pricing.</h2><p>Submitting opens WhatsApp with the complete inquiry prefilled.</p></div>
+        <div class="form-grid">
+          <label><span>Name *</span><input name="name" required autocomplete="name"></label>
+          <label><span>Company</span><input name="company" autocomplete="organization"></label>
+          <label><span>Country *</span><input name="country" required autocomplete="country-name"></label>
+          <label><span>Phone / WhatsApp</span><input name="phone" autocomplete="tel"></label>
+          <label><span>Estimated Quantity</span><input name="quantity" inputmode="numeric" placeholder="e.g. 20 units"></label>
+          <label><span>Interested Product *</span><select name="product" id="quoteProduct" required><option value="">Select a product</option></select></label>
+          <label class="full"><span>Requirements *</span><textarea name="requirements" required placeholder="Colors, battery / engine configuration, destination market, OEM / ODM needs, packaging or other requirements."></textarea></label>
+        </div>
+        <button class="btn btn-primary form-submit" type="submit">Send Quote Request →</button>
+      </form>
+      <aside class="quote-help">
+        <span class="eyebrow">WHAT TO INCLUDE</span><h3>A better inquiry gets a faster product discussion.</h3>
+        <ul><li>Target country or market</li><li>Product model or category</li><li>Estimated order quantity</li><li>Required specification or configuration</li><li>OEM / ODM or branding needs if applicable</li></ul>
+        <div class="quote-help-card"><strong>Prefer WhatsApp?</strong><p>Start a direct conversation with the same sales contact used throughout the existing project.</p><a href="https://wa.me/8618620284214" target="_blank" rel="noopener">+86 186 2028 4214 →</a></div>
+      </aside>
+    </div>
+  </section>
+</main>
+<div id="siteFooter"></div>
+<script src="script.js?v=13"></script>
+</body>
+</html>

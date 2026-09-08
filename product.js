@@ -1,0 +1,1 @@
+/* Compatibility file. All product logic now lives in script.js. */
