@@ -211,3 +211,70 @@
  .hero-model-bike{left:12px;bottom:25%}
  .hero-model-atv{right:12px;top:48px}
 }
+/* =========================================================
+   SLOW RIDER — BLUE VEHICLE BACKGROUNDS
+   Paste at the VERY END of style.css
+========================================================= */
+
+/* Product cards */
+.product-card-media {
+  background: linear-gradient(145deg, #eef9ff 0%, #cfeeff 50%, #a9dcf8 100%) !important;
+  overflow: hidden;
+}
+
+/* Product detail main image */
+.product-gallery-main {
+  background: linear-gradient(145deg, #eef9ff 0%, #cfeeff 50%, #a9dcf8 100%) !important;
+  overflow: hidden;
+}
+
+/* Product thumbnails */
+.product-thumb {
+  background: #d9f2ff !important;
+  overflow: hidden;
+}
+
+/* Make white image backgrounds blend into the blue areas */
+.product-card-media img,
+.product-gallery-main img,
+.product-thumb img {
+  mix-blend-mode: multiply !important;
+}
+
+/* Homepage vehicle area */
+.hero-stage {
+  background: linear-gradient(
+    145deg,
+    #1197e0 0%,
+    #0875bb 52%,
+    #07538b 100%
+  ) !important;
+  overflow: hidden;
+}
+
+/* Soft blue light behind the vehicles */
+.hero-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 60%,
+    rgba(91,214,255,.35),
+    transparent 45%
+  );
+  pointer-events: none;
+}
+
+/* Keep vehicles above the background effect */
+.hero-stage .hero-bike,
+.hero-stage .hero-atv {
+  position: absolute;
+  z-index: 2;
+}
+
+/* Keep product images clean and centered */
+.product-card-media img,
+.product-gallery-main img,
+.product-thumb img {
+  object-fit: contain;
+}
