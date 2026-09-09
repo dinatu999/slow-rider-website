@@ -127,36 +127,30 @@
    ================================= */
 
 
+/* =================================
+   VEHICLE SHOWROOM IMAGE FIX
+   ================================= */
+
 .hero-composite{
 
     position:absolute !important;
 
-
-    width:96% !important;
-
+    width:92% !important;
 
     height:auto !important;
 
+    left:4% !important;
 
-    left:2% !important;
-
-
-    bottom:-8% !important;
-
+    bottom:0 !important;
 
     z-index:5 !important;
 
-
     object-fit:contain !important;
 
-
     filter:
-
     drop-shadow(
         0 35px 35px rgba(0,0,0,.65)
     );
-
-
 
 }
 
