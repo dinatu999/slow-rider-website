@@ -220,5 +220,23 @@ height:450px !important;
 }
 
 .hero-motorcycle{
-    transform:scale(1.05) translateZ(40px);
+    transform:
+    perspective(900px)
+    rotateY(-12deg)
+    rotateX(3deg)
+    scale(1.08);
+}
+
+.hero-scooter-small{
+    transform:
+    perspective(900px)
+    rotateY(12deg)
+    scale(.92);
+}
+
+.hero-atv-main{
+    transform:
+    perspective(900px)
+    rotateY(-10deg)
+    scale(1);
 }
