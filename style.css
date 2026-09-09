@@ -182,18 +182,51 @@
 
 
 
-/* support text */
+/* ===== FINAL SUPPORT TEXT POSITION FIX ===== */
+
+.hero-visual{
+    position:relative !important;
+    overflow:visible !important;
+}
+
+
+.hero-showcase{
+    overflow:hidden !important;
+}
+
 
 .hero-support{
-
     position:absolute !important;
 
-    right:-30px !important;
-
-    top:105px !important;
+    /* move inside right side */
+    right:25px !important;
+    top:110px !important;
 
     z-index:20 !important;
 
+    width:120px !important;
+}
+
+
+.support-item{
+    display:flex !important;
+    align-items:flex-start !important;
+    gap:8px !important;
+
+    margin-bottom:12px !important;
+}
+
+
+.support-item strong{
+    font-size:16px !important;
+    line-height:1.15 !important;
+    color:white !important;
+}
+
+
+.support-icon{
+    font-size:20px !important;
+    color:white !important;
 }
 
 
