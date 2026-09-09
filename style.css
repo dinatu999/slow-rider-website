@@ -34,44 +34,33 @@
 
 
 
-/* =====================================
-   REAL HERO FIX - HTML CLASS MATCH
-===================================== */
+/* =========================================
+   FINAL SHOWROOM COMPOSITE HERO
+   USING showroom-vehicles.png
+   ========================================= */
 
 
+/* hero container */
 .hero-home{
     overflow:hidden !important;
 }
 
 
 .hero-home-grid{
-
     grid-template-columns:
     0.9fr 1.1fr !important;
 
     gap:40px !important;
 
     align-items:center !important;
-
 }
 
 
-
-.hero-copy h1{
-
-    font-size:64px !important;
-
-}
-
-
-
-/* RIGHT AREA */
+/* right visual area */
 
 .hero-visual{
 
     position:relative !important;
-
-    display:block !important;
 
     height:520px !important;
 
@@ -79,24 +68,29 @@
 
 
 
-/* ===== BLUE 3D SHOWROOM HERO ===== */
+/* BLUE SHOWROOM BOX */
 
 .hero-showcase{
 
     position:absolute !important;
 
     right:0 !important;
+
     top:40px !important;
 
     width:100% !important;
+
     height:430px !important;
 
+
     background:
+
     radial-gradient(
-        circle at 50% 55%,
-        rgba(50,200,255,.45),
-        transparent 45%
+        circle at 50% 65%,
+        rgba(40,200,255,.45),
+        transparent 50%
     ),
+
     linear-gradient(
         145deg,
         #17699a,
@@ -106,100 +100,69 @@
 
     border-radius:30px !important;
 
-    overflow:visible !important;
+    overflow:hidden !important;
 
-    perspective:1200px !important;
-
-    transform-style:preserve-3d !important;
 }
 
 
 
-/* all vehicles */
+/* badge */
 
-.hero-vehicle{
+.visual-badge{
 
     position:absolute !important;
 
-    object-fit:contain !important;
+    left:24px !important;
 
-    transform-style:preserve-3d !important;
+    top:24px !important;
 
-    filter:
-    drop-shadow(0 35px 35px rgba(0,0,0,.65))
-    drop-shadow(0 15px 20px rgba(0,180,255,.25)) !important;
+    z-index:10 !important;
 
 }
 
 
 
-/* rear scooter */
-
-.hero-scooter-small{
-
-    width:32% !important;
-
-    left:-2% !important;
-
-    bottom:8% !important;
-
-    z-index:2 !important;
+/* =================================
+   ONE IMAGE VEHICLE DISPLAY
+   ================================= */
 
 
-    transform:
-    rotateY(15deg)
-    scale(.92) !important;
+.hero-composite{
 
-}
+    position:absolute !important;
 
 
+    width:96% !important;
 
-/* front motorcycle */
 
-.hero-motorcycle{
+    height:auto !important;
 
-    width:68% !important;
 
-    left:16% !important;
+    left:2% !important;
 
-    bottom:2% !important;
+
+    bottom:-8% !important;
+
 
     z-index:5 !important;
 
 
-    transform:
-    perspective(1000px)
-    rotateY(-10deg)
-    rotateX(3deg)
-    translateY(-15px)
-    scale(1.12) !important;
+    object-fit:contain !important;
+
+
+    filter:
+
+    drop-shadow(
+        0 35px 35px rgba(0,0,0,.65)
+    );
+
+
 
 }
 
 
 
-/* rear ATV */
-
-.hero-atv-main{
-
-    width:36% !important;
-
-    right:-2% !important;
-
-    bottom:8% !important;
-
-    z-index:3 !important;
-
-
-    transform:
-    rotateY(-12deg)
-    scale(1) !important;
-
-}
-
-
-
-/* showroom floor */
+/* blue floor light */
 
 .hero-showcase:after{
 
@@ -207,26 +170,39 @@
 
     position:absolute;
 
+
     left:15%;
 
     right:15%;
 
-    bottom:20px;
 
-    height:70px;
+    bottom:15px;
+
+
+    height:80px;
+
 
 
     background:
+
     radial-gradient(
+
         ellipse,
-        rgba(0,190,255,.7),
+
+        rgba(0,190,255,.65),
+
         transparent 70%
+
     );
+
 
 
     filter:blur(25px);
 
+
+
     z-index:1;
+
 
 }
 
@@ -248,241 +224,23 @@
 
 
 
+/* mobile */
+
 @media(max-width:900px){
+
 
 .hero-home-grid{
 
-grid-template-columns:1fr !important;
+    grid-template-columns:1fr !important;
 
 }
 
 
 .hero-visual{
 
-height:450px !important;
+    height:450px !important;
 
 }
 
-}
-
-/* 3D showroom space */
-.hero-showcase{
-    perspective:1200px !important;
-    transform-style:preserve-3d;
-}
-
-
-/* fake depth */
-.hero-scooter-small{
-    transform:
-    perspective(900px)
-    rotateY(12deg)
-    scale(.95);
-}
-
-
-.hero-atv-main{
-    transform:
-    perspective(900px)
-    rotateY(-10deg)
-    scale(1);
-}
-
-
-/* floor lighting */
-.hero-showcase:after{
-    content:"";
-    position:absolute;
-    left:20%;
-    right:20%;
-    bottom:8%;
-    height:70px;
-
-    background:
-    radial-gradient(
-        ellipse,
-        rgba(23,168,244,.55),
-        transparent 70%
-    );
-
-    filter:blur(22px);
-    z-index:1;
-}
-/* ===== FINAL HERO 3D SHOWROOM ===== */
-
-.hero-showcase{
-
-    position:absolute !important;
-
-    right:0 !important;
-    top:40px !important;
-
-    width:100% !important;
-    height:430px !important;
-
-    background:
-    radial-gradient(
-        circle at center,
-        rgba(50,200,255,.35),
-        transparent 55%
-    ),
-    linear-gradient(
-        145deg,
-        #17699a,
-        #08243c
-    ) !important;
-
-    border-radius:30px !important;
-
-    overflow:hidden !important;
-
-    perspective:1200px !important;
-    transform-style:preserve-3d !important;
-
-}
-
-
-/* background light only */
-
-.hero-showcase:before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-    radial-gradient(
-        circle at 50% 70%,
-        rgba(0,200,255,.35),
-        transparent 45%
-    );
-
-    filter:blur(35px);
-
-    z-index:0;
-
-    pointer-events:none;
-
-}
-
-
-
-/* all vehicles */
-
-.hero-vehicle{
-
-    position:absolute !important;
-
-    object-fit:contain !important;
-
-    z-index:2;
-
-    transform-style:preserve-3d !important;
-
-    filter:
-    drop-shadow(0 40px 35px rgba(0,0,0,.65))
-    drop-shadow(0 10px 20px rgba(0,180,255,.25)) !important;
-
-}
-
-
-
-/* scooter back left */
-
-.hero-scooter-small{
-
-    width:32% !important;
-
-    left:-2% !important;
-
-    bottom:8% !important;
-
-    z-index:2 !important;
-
-
-    transform:
-    perspective(1000px)
-    rotateY(15deg)
-    scale(.9) !important;
-
-}
-
-
-
-/* motorcycle front */
-
-.hero-motorcycle{
-
-    width:65% !important;
-
-    left:18% !important;
-
-    bottom:3% !important;
-
-    z-index:5 !important;
-
-
-    transform:
-    perspective(1000px)
-    rotateY(-10deg)
-    rotateX(3deg)
-    translateY(-15px)
-    scale(1.1) !important;
-
-}
-
-
-
-/* ATV back right */
-
-.hero-atv-main{
-
-    width:36% !important;
-
-    right:-2% !important;
-
-    bottom:8% !important;
-
-    z-index:3 !important;
-
-
-    transform:
-    perspective(1000px)
-    rotateY(-12deg)
-    scale(1) !important;
-
-}
-
-
-
-/* floor glow */
-
-.hero-showcase:after{
-
-    content:"";
-
-    position:absolute;
-
-    left:15%;
-
-    right:15%;
-
-    bottom:10px;
-
-    height:80px;
-
-
-    background:
-    radial-gradient(
-        ellipse,
-        rgba(0,190,255,.7),
-        transparent 70%
-    );
-
-    filter:blur(25px);
-
-    z-index:1;
 
 }
