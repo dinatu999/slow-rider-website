@@ -79,50 +79,160 @@
 
 
 
-/* BLUE SHOWROOM */
+/* ===== BLUE 3D SHOWROOM HERO ===== */
 
 .hero-showcase{
 
     position:absolute !important;
 
     right:0 !important;
-
     top:40px !important;
 
     width:100% !important;
-
     height:430px !important;
 
     background:
-
     radial-gradient(
-    circle at center,
-    rgba(30,170,255,.35),
-    transparent 45%
+        circle at 50% 55%,
+        rgba(50,200,255,.45),
+        transparent 45%
     ),
-
     linear-gradient(
-    145deg,
-    #17699a,
-    #08243c
+        145deg,
+        #17699a,
+        #08243c
     ) !important;
 
 
     border-radius:30px !important;
 
-    overflow:hidden !important;
+    overflow:visible !important;
+
+    perspective:1200px !important;
+
+    transform-style:preserve-3d !important;
+}
+
+
+
+/* all vehicles */
+
+.hero-vehicle{
+
+    position:absolute !important;
+
+    object-fit:contain !important;
+
+    transform-style:preserve-3d !important;
+
+    filter:
+    drop-shadow(0 35px 35px rgba(0,0,0,.65))
+    drop-shadow(0 15px 20px rgba(0,180,255,.25)) !important;
 
 }
 
 
 
-.hero-showcase{
-    perspective:1000px !important;
-    transform-style:preserve-3d;
+/* rear scooter */
+
+.hero-scooter-small{
+
+    width:32% !important;
+
+    left:-2% !important;
+
+    bottom:8% !important;
+
+    z-index:2 !important;
+
+
+    transform:
+    rotateY(15deg)
+    scale(.92) !important;
+
 }
 
 
-/* support */
+
+/* front motorcycle */
+
+.hero-motorcycle{
+
+    width:68% !important;
+
+    left:16% !important;
+
+    bottom:2% !important;
+
+    z-index:5 !important;
+
+
+    transform:
+    perspective(1000px)
+    rotateY(-10deg)
+    rotateX(3deg)
+    translateY(-15px)
+    scale(1.12) !important;
+
+}
+
+
+
+/* rear ATV */
+
+.hero-atv-main{
+
+    width:36% !important;
+
+    right:-2% !important;
+
+    bottom:8% !important;
+
+    z-index:3 !important;
+
+
+    transform:
+    rotateY(-12deg)
+    scale(1) !important;
+
+}
+
+
+
+/* showroom floor */
+
+.hero-showcase:after{
+
+    content:"";
+
+    position:absolute;
+
+    left:15%;
+
+    right:15%;
+
+    bottom:20px;
+
+    height:70px;
+
+
+    background:
+    radial-gradient(
+        ellipse,
+        rgba(0,190,255,.7),
+        transparent 70%
+    );
+
+
+    filter:blur(25px);
+
+    z-index:1;
+
+}
+
+
+
+/* support text */
 
 .hero-support{
 
@@ -133,30 +243,6 @@
     top:120px !important;
 
     z-index:20 !important;
-
-}
-
-
-
-/* floor glow */
-
-.hero-floor-glow{
-
-    position:absolute !important;
-
-    bottom:30px !important;
-
-    left:20% !important;
-
-    width:60% !important;
-
-    height:40px !important;
-
-    background:#42d8ff !important;
-
-    filter:blur(25px) !important;
-
-    opacity:.5 !important;
 
 }
 
@@ -178,47 +264,6 @@ height:450px !important;
 }
 
 }
-/* ===== SLOW RIDER HERO VEHICLE FINAL COMPOSITION ===== */
-
-.hero-vehicle{
-    position:absolute !important;
-    object-fit:contain !important;
-    filter:drop-shadow(0 35px 30px rgba(0,0,0,.55));
-}
-
-
-/* scooter - background left */
-.hero-scooter-small{
-    width:30% !important;
-    left:-2% !important;
-    bottom:10% !important;
-    z-index:2 !important;
-}
-
-
-/* motorcycle - main front vehicle */
-.hero-motorcycle{
-    width:58% !important;
-    left:23% !important;
-    bottom:7% !important;
-    z-index:5 !important;
-
-    transform:
-    perspective(1000px)
-    rotateY(-8deg)
-    rotateX(2deg)
-    scale(1.05);
-}
-
-
-/* ATV - background right */
-.hero-atv-main{
-    width:32% !important;
-    right:-1% !important;
-    bottom:10% !important;
-    z-index:3 !important;
-}
-
 
 /* 3D showroom space */
 .hero-showcase{
