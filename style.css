@@ -33,163 +33,7 @@
 
 
 
-/* ================================
-   HERO SHOWROOM FINAL POSITION
-================================ */
 
-.hero-visual{
-    position:relative;
-    min-height:520px;
-}
-
-
-.hero-stage{
-    position:absolute;
-    inset:35px 0 35px 0;
-
-    border-radius:28px;
-    overflow:hidden;
-
-    background:
-    radial-gradient(
-        circle at 55% 55%,
-        rgba(23,168,244,.45),
-        transparent 45%
-    ),
-    linear-gradient(
-        145deg,
-        #17466b,
-        #061b2d
-    );
-
-    box-shadow:
-    0 35px 80px rgba(0,0,0,.35);
-}
-
-
-
-/* showroom light floor */
-
-.hero-stage:after{
-
-    content:"";
-
-    position:absolute;
-
-    left:15%;
-    right:15%;
-    bottom:12%;
-
-    height:80px;
-
-    background:
-    radial-gradient(
-        ellipse,
-        rgba(23,168,244,.5),
-        transparent 70%
-    );
-
-}
-
-
-
-/* CENTER MOTORCYCLE */
-
-.hero-bike-main{
-
-    width:62%;
-    height:62%;
-
-    left:20%;
-    top:28%;
-
-    z-index:5;
-
-    filter:
-    drop-shadow(
-    0 35px 35px rgba(0,0,0,.55)
-    );
-
-}
-
-
-
-/* LEFT SCOOTER */
-
-.hero-bike-left{
-
-    width:42%;
-    height:45%;
-
-    left:3%;
-    bottom:12%;
-
-    z-index:3;
-
-    opacity:.95;
-
-}
-
-
-
-/* RIGHT ATV */
-
-.hero-bike-right{
-
-    width:38%;
-    height:40%;
-
-    right:3%;
-    bottom:10%;
-
-    z-index:4;
-
-}
-
-
-
-/* badge */
-
-.visual-badge{
-
-    top:25px;
-    left:50%;
-    transform:translateX(-50%);
-
-    background:white;
-    color:#071a2b;
-
-}
-
-
-
-/* SUPPORT */
-
-.hero-support{
-
-    position:absolute;
-
-    right:-10px;
-
-    top:180px;
-
-    z-index:20;
-
-}
-
-
-
-@media(max-width:900px){
-
-.hero-support{
-
-position:relative;
-right:auto;
-top:auto;
-
-}
-
-}
 /* =====================================
    REAL HERO FIX - HTML CLASS MATCH
 ===================================== */
@@ -382,86 +226,71 @@ height:450px !important;
 }
 
 }
-/* ===============================
-   FINAL HERO VEHICLE POSITION FIX
-   For current HTML structure
-================================ */
-
-.hero-showcase{
-    position:relative;
-    width:100%;
-    height:460px;
-    overflow:hidden;
-}
-
+/* ===== FINAL 3D VEHICLE DEPTH FIX ===== */
 
 .hero-vehicle{
-    position:absolute;
+    position:absolute !important;
     object-fit:contain;
-    filter:drop-shadow(0 25px 30px rgba(0,0,0,.45));
+    filter:
+    drop-shadow(0 35px 35px rgba(0,0,0,.55));
+    transform-style:preserve-3d;
 }
 
 
-/* left scooter */
-
-.hero-scooter-small{
-    width:32%;
-    left:-2%;
-    bottom:8%;
-    z-index:2;
-}
-
-
-/* main motorcycle */
-
+/* center bike */
 .hero-motorcycle{
-    width:58%;
-    left:20%;
-    bottom:5%;
-    z-index:3;
+    width:58% !important;
+    left:24% !important;
+    bottom:8% !important;
+    z-index:5 !important;
+    transform:
+        perspective(900px)
+        translateZ(80px)
+        rotateY(-8deg);
 }
 
 
-/* ATV */
+/* scooter behind */
+.hero-scooter-small{
+    width:38% !important;
+    left:2% !important;
+    bottom:8% !important;
+    z-index:3 !important;
+    opacity:.9;
+    transform:
+        perspective(900px)
+        translateZ(20px)
+        rotateY(10deg);
+}
 
+
+/* ATV behind right */
 .hero-atv-main{
-    width:34%;
-    right:-2%;
-    bottom:10%;
-    z-index:2;
+    width:36% !important;
+    right:1% !important;
+    bottom:10% !important;
+    z-index:4 !important;
+    transform:
+        perspective(900px)
+        translateZ(40px)
+        rotateY(-12deg);
 }
 
 
-/* 3D showroom depth */
-
+/* showroom floor */
 .hero-showcase:after{
-
     content:"";
-
     position:absolute;
-
-    left:10%;
-    right:10%;
+    left:15%;
+    right:15%;
     bottom:5%;
-
-    height:80px;
-
+    height:90px;
     background:
     radial-gradient(
         ellipse,
-        rgba(23,168,244,.45),
+        rgba(23,168,244,.65),
         transparent 70%
     );
-
-    filter:blur(15px);
-
+    filter:blur(18px);
     z-index:1;
-}
-
-
-
-/* keep badge above vehicles */
-
-.visual-badge{
-    z-index:10;
 }
