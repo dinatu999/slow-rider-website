@@ -294,3 +294,49 @@ height:450px !important;
     filter:blur(18px);
     z-index:1;
 }
+/* REAL 3D SPACE */
+.hero-showcase{
+    perspective:1200px !important;
+    transform-style:preserve-3d;
+}
+
+
+/* make vehicles float */
+.hero-vehicle{
+    transform-origin:center center;
+    will-change:transform;
+}
+
+
+/* main motorcycle */
+.hero-motorcycle{
+    transform:
+    translateZ(120px)
+    rotateY(-12deg)
+    scale(1.08) !important;
+}
+
+
+/* left scooter */
+.hero-scooter-small{
+    transform:
+    translateZ(40px)
+    rotateY(15deg)
+    scale(.95) !important;
+}
+
+
+/* right ATV */
+.hero-atv-main{
+    transform:
+    translateZ(70px)
+    rotateY(-15deg)
+    scale(1) !important;
+}
+
+
+/* stronger shadow */
+.hero-vehicle{
+    filter:
+    drop-shadow(0 45px 45px rgba(0,0,0,.65)) !important;
+}
