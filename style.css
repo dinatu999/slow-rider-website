@@ -226,71 +226,60 @@ height:450px !important;
 }
 
 }
-/* ===== HERO SHOWROOM 3D COMPOSITION ===== */
+/* ===== FINAL HERO SHOWROOM POSITION ===== */
 
 .hero-showcase{
     position:relative;
-    perspective:1200px;
     overflow:hidden;
 }
 
 
-/* common vehicle style */
-.hero-vehicle{
-    position:absolute;
-    object-fit:contain;
-    filter:
-    drop-shadow(0 35px 35px rgba(0,0,0,.55));
-    transition:.4s ease;
-}
-
-
-/* back scooter */
+/* scooter background left */
 .hero-scooter-small{
-    width:38%;
-    left:2%;
-    bottom:12%;
-    z-index:2;
-    opacity:.95;
-    transform:
-        scale(.85)
-        rotateY(12deg);
+    width:42% !important;
+    left:0% !important;
+    bottom:8% !important;
+    z-index:2 !important;
+    opacity:.9;
 }
 
 
-/* main motorcycle - front */
+/* main motorcycle front */
 .hero-motorcycle{
-    width:65%;
-    left:18%;
-    bottom:7%;
-    z-index:5;
 
-    transform:
-        scale(1.18)
-        translateY(-10px);
+    width:72% !important;
+
+    left:15% !important;
+
+    bottom:2% !important;
+
+    z-index:5 !important;
 
     filter:
-    drop-shadow(0 45px 45px rgba(0,0,0,.7));
+    drop-shadow(0 45px 35px rgba(0,0,0,.65)) !important;
 }
 
 
 /* ATV background right */
+
 .hero-atv-main{
-    width:42%;
-    right:-2%;
-    bottom:12%;
-    z-index:3;
 
-    transform:
-        scale(.9)
-        rotateY(-8deg);
+    width:42% !important;
 
-    opacity:.95;
+    right:-4% !important;
+
+    bottom:8% !important;
+
+    z-index:3 !important;
+
+    filter:
+    drop-shadow(0 35px 30px rgba(0,0,0,.55)) !important;
 }
 
 
 
-/* floor light */
+/* light under vehicles */
+
 .hero-showcase:after{
 
     content:"";
@@ -299,34 +288,18 @@ height:450px !important;
 
     left:15%;
     right:15%;
-    bottom:5%;
+    bottom:3%;
 
-    height:80px;
+    height:70px;
 
     background:
     radial-gradient(
         ellipse,
-        rgba(0,200,255,.45),
+        rgba(0,180,255,.55),
         transparent 70%
     );
 
     filter:blur(25px);
 
     z-index:1;
-
-}
-
-
-
-/* keep badge above */
-.visual-badge{
-    z-index:10;
-}
-
-
-
-/* move support away */
-.hero-support{
-    position:relative;
-    z-index:20;
 }
