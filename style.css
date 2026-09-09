@@ -358,3 +358,49 @@ height:450px !important;
     filter:blur(25px);
     z-index:1;
 }
+/* ===== FINAL VEHICLE POSITION TUNING ===== */
+
+
+/* main motorcycle */
+.hero-motorcycle{
+    width:62% !important;
+    left:20% !important;
+    bottom:8% !important;
+    z-index:5 !important;
+
+    transform:
+    perspective(1000px)
+    rotateY(-8deg)
+    rotateX(2deg)
+    scale(1.05) !important;
+}
+
+
+/* scooter behind */
+.hero-scooter-small{
+    width:27% !important;
+    left:0% !important;
+    bottom:12% !important;
+    z-index:2 !important;
+
+    opacity:.85;
+
+    transform:
+    perspective(1000px)
+    rotateY(12deg)
+    scale(.9) !important;
+}
+
+
+/* ATV behind right */
+.hero-atv-main{
+    width:34% !important;
+    right:0% !important;
+    bottom:12% !important;
+    z-index:3 !important;
+
+    transform:
+    perspective(1000px)
+    rotateY(-10deg)
+    scale(1) !important;
+}
