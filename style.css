@@ -35,40 +35,33 @@
 
 
 /* =========================================
-   FINAL SHOWROOM COMPOSITE HERO
-   USING showroom-vehicles.png
+   FINAL SHOWROOM HERO FIX
    ========================================= */
 
 
-/* hero container */
+/* hero layout */
 .hero-home{
     overflow:hidden !important;
 }
 
 
 .hero-home-grid{
-    grid-template-columns:
-    0.9fr 1.1fr !important;
-
+    grid-template-columns:1fr 1fr !important;
     gap:40px !important;
-
     align-items:center !important;
 }
 
 
-/* right visual area */
+/* right showcase */
 
 .hero-visual{
 
     position:relative !important;
 
-    height:520px !important;
+    min-height:460px !important;
 
 }
 
-
-
-/* BLUE SHOWROOM BOX */
 
 .hero-showcase{
 
@@ -86,9 +79,9 @@
     background:
 
     radial-gradient(
-        circle at 50% 65%,
-        rgba(40,200,255,.45),
-        transparent 50%
+        circle at center,
+        rgba(50,200,255,.35),
+        transparent 55%
     ),
 
     linear-gradient(
@@ -103,7 +96,6 @@
     overflow:hidden !important;
 
 }
-
 
 
 /* badge */
@@ -122,32 +114,27 @@
 
 
 
-/* =================================
-   ONE IMAGE VEHICLE DISPLAY
-   ================================= */
-
-
-/* =================================
-   VEHICLE SHOWROOM IMAGE FIX
-   ================================= */
+/* showroom PNG */
 
 .hero-composite{
 
     position:absolute !important;
 
-    width:92% !important;
+    width:96% !important;
 
     height:auto !important;
 
-    left:4% !important;
+    left:2% !important;
 
-    bottom:0 !important;
+    bottom:12px !important;
 
     z-index:5 !important;
 
     object-fit:contain !important;
 
+
     filter:
+
     drop-shadow(
         0 35px 35px rgba(0,0,0,.65)
     );
@@ -156,7 +143,7 @@
 
 
 
-/* blue floor light */
+/* floor light */
 
 .hero-showcase:after{
 
@@ -164,39 +151,27 @@
 
     position:absolute;
 
-
     left:15%;
 
     right:15%;
 
+    bottom:10px;
 
-    bottom:15px;
-
-
-    height:80px;
-
+    height:70px;
 
 
     background:
 
     radial-gradient(
-
         ellipse,
-
         rgba(0,190,255,.65),
-
         transparent 70%
-
     );
-
 
 
     filter:blur(25px);
 
-
-
     z-index:1;
-
 
 }
 
@@ -208,9 +183,9 @@
 
     position:absolute !important;
 
-    right:-10px !important;
+    right:-30px !important;
 
-    top:120px !important;
+    top:105px !important;
 
     z-index:20 !important;
 
@@ -218,10 +193,9 @@
 
 
 
-/* mobile */
+/* responsive */
 
 @media(max-width:900px){
-
 
 .hero-home-grid{
 
@@ -236,5 +210,5 @@
 
 }
 
-
 }
+
