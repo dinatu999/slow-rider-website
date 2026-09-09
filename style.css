@@ -34,7 +34,7 @@
 
 
 /* ================================
-   HERO 3D SHOWROOM FIX
+   HERO SHOWROOM FINAL POSITION
 ================================ */
 
 .hero-visual{
@@ -45,89 +45,102 @@
 
 .hero-stage{
     position:absolute;
-    inset:20px 0 20px 0;
-    border-radius:30px;
+    inset:35px 0 35px 0;
+
+    border-radius:28px;
     overflow:hidden;
 
     background:
     radial-gradient(
-        circle at 50% 45%,
+        circle at 55% 55%,
         rgba(23,168,244,.45),
         transparent 45%
     ),
     linear-gradient(
         145deg,
-        #174a70,
+        #17466b,
         #061b2d
     );
 
-    border:1px solid rgba(255,255,255,.15);
-
     box-shadow:
-    0 40px 90px rgba(0,0,0,.35);
+    0 35px 80px rgba(0,0,0,.35);
 }
 
 
-/* showroom grid */
-.hero-stage:before{
+
+/* showroom light floor */
+
+.hero-stage:after{
+
     content:"";
+
     position:absolute;
-    inset:0;
+
+    left:15%;
+    right:15%;
+    bottom:12%;
+
+    height:80px;
 
     background:
-    linear-gradient(
-        rgba(255,255,255,.06) 1px,
-        transparent 1px
-    ),
-    linear-gradient(
-        90deg,
-        rgba(255,255,255,.06) 1px,
-        transparent 1px
+    radial-gradient(
+        ellipse,
+        rgba(23,168,244,.5),
+        transparent 70%
     );
 
-    background-size:45px 45px;
 }
 
 
-/* main bike */
+
+/* CENTER MOTORCYCLE */
+
 .hero-bike-main{
-    width:65%;
-    height:72%;
-    left:18%;
-    top:18%;
+
+    width:62%;
+    height:62%;
+
+    left:20%;
+    top:28%;
+
     z-index:5;
 
     filter:
     drop-shadow(
     0 35px 35px rgba(0,0,0,.55)
     );
+
 }
 
 
-/* left scooter */
+
+/* LEFT SCOOTER */
+
 .hero-bike-left{
 
-    width:38%;
-    height:42%;
+    width:42%;
+    height:45%;
 
-    left:-5%;
-    bottom:6%;
+    left:3%;
+    bottom:12%;
 
     z-index:3;
 
     opacity:.95;
+
 }
 
 
 
-/* right ATV */
+/* RIGHT ATV */
+
 .hero-bike-right{
 
-    width:40%;
-    height:42%;
+    width:38%;
+    height:40%;
 
-    right:-5%;
-    bottom:7%;
+    right:3%;
+    bottom:10%;
 
     z-index:4;
 
@@ -136,28 +149,29 @@
 
 
 /* badge */
+
 .visual-badge{
 
-    z-index:10;
+    top:25px;
+    left:50%;
+    transform:translateX(-50%);
 
     background:white;
-
     color:#071a2b;
 
-    box-shadow:
-    0 10px 25px rgba(0,0,0,.25);
 }
 
 
 
-/* move support to right side */
+/* SUPPORT */
+
 .hero-support{
 
     position:absolute;
 
-    right:-45px;
+    right:-10px;
 
-    top:170px;
+    top:180px;
 
     z-index:20;
 
@@ -170,12 +184,8 @@
 .hero-support{
 
 position:relative;
-
 right:auto;
-
 top:auto;
-
-margin-top:20px;
 
 }
 
