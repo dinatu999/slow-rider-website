@@ -278,3 +278,77 @@
 .product-thumb img {
   object-fit: contain;
 }
+/* ================================
+   FINAL HERO VEHICLE POSITION FIX
+================================ */
+
+
+.hero-showcase{
+    position:relative;
+    height:430px;
+    overflow:hidden;
+}
+
+
+/* all vehicles */
+
+.hero-vehicle{
+
+    position:absolute;
+
+    object-fit:contain;
+
+    filter:
+    drop-shadow(
+    0 25px 25px rgba(0,0,0,.45)
+    );
+
+}
+
+
+
+/* small scooter left */
+
+.hero-scooter-small{
+
+    width:34%;
+
+    left:2%;
+
+    bottom:8%;
+
+    z-index:2;
+
+}
+
+
+
+/* main motorcycle center */
+
+.hero-motorcycle{
+
+    width:62%;
+
+    left:20%;
+
+    bottom:5%;
+
+    z-index:3;
+
+}
+
+
+
+/* ATV right */
+
+.hero-atv-main{
+
+    width:38%;
+
+    right:0;
+
+    bottom:8%;
+
+    z-index:2;
+
+}
