@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420">
+<defs>
+ <pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse">
+  <circle cx="2" cy="2" r="1.25" fill="#bcecff" opacity=".45"/>
+ </pattern>
+ <mask id="m">
+  <rect width="1000" height="420" fill="black"/>
+  <path d="M70 110l55-30 72 5 35 32 67-10 53 30 38 48-42 35-62-9-37 32-74-15-55-43-47-8z
+           M395 190l48-30 61 10 31 42-28 34-18 57-39 28-29-42 12-52-39-21z
+           M515 88l64-26 86 8 54 36-23 35-74 4-47-24z
+           M690 100l86-13 96 40 54 45-24 44-76 5-55-28-60-8-38-40z
+           M745 224l78-7 67 38-12 41-80 13-53-35z" fill="white"/>
+ </mask>
+</defs>
+<rect width="1000" height="420" fill="url(#dots)" mask="url(#m)"/>
+</svg>
