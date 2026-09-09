@@ -34,76 +34,79 @@
 
 
 /* ================================
-   FINAL HERO VEHICLE POSITION FIX
+   FINAL HERO COMPOSITION
 ================================ */
 
-
-.hero-showcase{
+.hero-visual{
     position:relative;
-    height:430px;
-    overflow:hidden;
+    min-height:520px;
 }
 
 
-/* all vehicles */
-
-.hero-vehicle{
-
+.hero-bike{
     position:absolute;
-
     object-fit:contain;
-
-    filter:
-    drop-shadow(
-    0 25px 25px rgba(0,0,0,.45)
-    );
-
+    filter:drop-shadow(0 22px 25px rgba(0,0,0,.35));
 }
 
 
+/* main motorcycle */
 
-/* small scooter left */
-
-.hero-scooter-small{
-
-    width:34%;
-
-    left:2%;
-
-    bottom:8%;
-
-    z-index:2;
-
-}
-
-
-
-/* main motorcycle center */
-
-.hero-motorcycle{
-
+.hero-bike-main{
     width:62%;
-
+    height:62%;
     left:20%;
-
-    bottom:5%;
-
+    top:15%;
     z-index:3;
-
 }
 
 
 
-/* ATV right */
+/* left scooter */
 
-.hero-atv-main{
-
+.hero-bike-left{
     width:38%;
-
-    right:0;
-
-    bottom:8%;
-
+    height:38%;
+    left:0%;
+    bottom:10%;
     z-index:2;
+    opacity:.95;
+}
+
+
+
+/* ATV */
+
+.hero-bike-right{
+    width:43%;
+    height:43%;
+    right:-2%;
+    bottom:7%;
+    z-index:2;
+}
+
+
+
+/* support position */
+
+.hero-support{
+    position:absolute;
+    right:-5px;
+    bottom:80px;
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+}
+
+
+
+@media(max-width:900px){
+
+.hero-support{
+    position:relative;
+    right:auto;
+    bottom:auto;
+    margin-top:20px;
+}
 
 }
