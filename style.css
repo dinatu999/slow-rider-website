@@ -226,3 +226,65 @@ height:450px !important;
 }
 
 }
+/* ===== HERO 3D DEPTH EFFECT ONLY ===== */
+
+.hero-showcase{
+    perspective:1200px;
+    transform-style:preserve-3d;
+}
+
+
+/* all vehicles float */
+.hero-vehicle{
+    transform-style:preserve-3d;
+    filter:drop-shadow(0 35px 35px rgba(0,0,0,.55));
+    transition:.4s ease;
+}
+
+
+/* front main motorcycle */
+.hero-motorcycle{
+    transform:
+        translateZ(80px)
+        rotateY(-6deg)
+        scale(1.05);
+    z-index:5 !important;
+}
+
+
+/* rear scooter */
+.hero-scooter-small{
+    transform:
+        translateZ(20px)
+        rotateY(8deg)
+        scale(.95);
+    z-index:2 !important;
+}
+
+
+/* rear ATV */
+.hero-atv-main{
+    transform:
+        translateZ(45px)
+        rotateY(-8deg)
+        scale(1);
+    z-index:3 !important;
+}
+
+
+/* showroom light reflection */
+.hero-showcase:after{
+    content:"";
+    position:absolute;
+    left:15%;
+    right:15%;
+    bottom:5%;
+    height:80px;
+    background:radial-gradient(
+        ellipse,
+        rgba(23,168,244,.55),
+        transparent 70%
+    );
+    filter:blur(25px);
+    z-index:1;
+}
