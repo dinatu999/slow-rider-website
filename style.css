@@ -263,3 +263,98 @@ height:450px !important;
     filter:blur(22px);
     z-index:1;
 }
+/* ===== FINAL 3D SHOWROOM EFFECT ===== */
+
+/* stronger showroom depth */
+.hero-showcase{
+    perspective:1200px !important;
+    transform-style:preserve-3d;
+}
+
+
+/* vehicle floating shadow */
+.hero-vehicle{
+    filter:
+    drop-shadow(0 35px 35px rgba(0,0,0,.65))
+    drop-shadow(0 10px 20px rgba(0,180,255,.25)) !important;
+
+    transform-style:preserve-3d;
+}
+
+
+/* main bike comes forward */
+.hero-motorcycle{
+    transform:
+    perspective(1000px)
+    rotateY(-10deg)
+    rotateX(2deg)
+    translateY(-10px)
+    scale(1.08) !important;
+
+    z-index:5 !important;
+}
+
+
+/* scooter stays behind */
+.hero-scooter-small{
+    transform:
+    perspective(1000px)
+    rotateY(15deg)
+    translateY(10px)
+    scale(.90) !important;
+
+    opacity:.9;
+    z-index:2 !important;
+}
+
+
+/* ATV depth */
+.hero-atv-main{
+    transform:
+    perspective(1000px)
+    rotateY(-12deg)
+    translateY(5px)
+    scale(1.02) !important;
+
+    z-index:3 !important;
+}
+
+
+/* blue showroom light behind vehicles */
+.hero-showcase:before{
+    content:"";
+    position:absolute;
+    inset:15% 10% 5% 10%;
+
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(50,200,255,.35),
+        transparent 60%
+    );
+
+    filter:blur(35px);
+    z-index:1;
+    pointer-events:none;
+}
+
+
+/* floor reflection */
+.hero-showcase:after{
+    content:"";
+    position:absolute;
+    left:15%;
+    right:15%;
+    bottom:8%;
+    height:90px;
+
+    background:
+    radial-gradient(
+        ellipse,
+        rgba(0,190,255,.65),
+        transparent 70%
+    );
+
+    filter:blur(25px);
+    z-index:1;
+}
