@@ -116,58 +116,10 @@
 
 
 
-/* scooter */
-
-.hero-scooter-small{
-
-    position:absolute !important;
-
-    width:34% !important;
-
-    left:3% !important;
-
-    bottom:8% !important;
-
-    z-index:2 !important;
-
+.hero-showcase{
+    perspective:1000px !important;
+    transform-style:preserve-3d;
 }
-
-
-
-/* MAIN MOTORCYCLE */
-
-.hero-motorcycle{
-
-    position:absolute !important;
-
-    width:52% !important;
-
-    left:27% !important;
-
-    bottom:8% !important;
-
-    z-index:5 !important;
-
-}
-
-
-
-/* ATV */
-
-.hero-atv-main{
-
-    position:absolute !important;
-
-    width:34% !important;
-
-    right:2% !important;
-
-    bottom:10% !important;
-
-    z-index:3 !important;
-
-}
-
 
 
 /* support */
