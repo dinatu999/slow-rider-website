@@ -567,62 +567,67 @@ body[data-page="home"] .section-head h2{
     }
 
 }
-/* ===== MOBILE FEATURE STRIP FINAL ===== */
+/* ===== MOBILE PRODUCT PAGE CLEANUP ===== */
 
 @media(max-width:580px){
 
-    .feature-strip{
-        display:grid !important;
-        grid-template-columns:1fr 1fr !important;
-        gap:0 !important;
+    /* reduce section spacing */
+    .product-detail-shell{
+        padding-bottom:20px !important;
+    }
+
+    .product-lower{
+        margin-top:12px !important;
+        gap:12px !important;
+    }
+
+
+    /* specifications and features cards */
+    .lower-card{
+        padding:14px !important;
+        border-radius:14px !important;
+    }
+
+
+    .lower-card h2{
+        margin-bottom:12px !important;
+        font-size:20px !important;
+    }
+
+
+    /* promo card */
+    .promo-card{
+        min-height:260px !important;
+        padding:20px !important;
+    }
+
+
+    .promo-card h3{
+        font-size:26px !important;
+    }
+
+
+    /* related products */
+    .related-section{
+        margin-top:20px !important;
+        padding-top:0 !important;
+    }
+
+
+    .related-section .product-card{
+        margin-bottom:12px !important;
+    }
+
+
+    .related-section .product-card img{
+        max-height:170px !important;
+        object-fit:contain !important;
+    }
+
+
+    .related-section .product-card{
         padding:12px !important;
-        margin:18px 0 !important;
-        border-radius:18px !important;
     }
 
-
-    .feature-strip article{
-        min-height:0 !important;
-        height:auto !important;
-        padding:14px 10px !important;
-        display:flex !important;
-        flex-direction:column !important;
-        justify-content:flex-start !important;
-        gap:5px !important;
-        border-right:1px solid #244057 !important;
-        border-bottom:1px solid #244057 !important;
-    }
-
-
-    .feature-strip article:nth-child(2n){
-        border-right:none !important;
-    }
-
-
-    .feature-strip article:nth-child(3),
-    .feature-strip article:nth-child(4){
-        border-bottom:none !important;
-    }
-
-
-    .feature-strip article span{
-        font-size:14px !important;
-        line-height:1 !important;
-        margin:0 !important;
-    }
-
-
-    .feature-strip article strong{
-        font-size:16px !important;
-        line-height:1.2 !important;
-        margin:0 !important;
-    }
-
-
-    .feature-strip article small{
-        font-size:12px !important;
-        line-height:1.3 !important;
-        margin:0 !important;
-    }
 
 }
