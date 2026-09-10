@@ -521,101 +521,29 @@ body[data-page="home"] .section-head h2{
     line-height:1.15 !important;
     margin-top:8px !important;
 }
-/* ===== REAL MOBILE PRODUCT DETAIL FIX ===== */
+/* ===== MOBILE PRODUCT DETAIL ONLY ===== */
 
 @media(max-width:580px){
 
-    /* remove big gap after image gallery */
-    .product-top{
-        padding-bottom:10px !important;
-        gap:15px !important;
-    }
-
-
-    /* product title */
-    .product-info-panel h1{
-        font-size:34px !important;
-        line-height:1.1 !important;
-        margin:10px 0 8px !important;
-        letter-spacing:-0.04em !important;
-    }
-
-
-    /* subtitle */
-    .product-tagline{
-        font-size:15px !important;
-        line-height:1.4 !important;
-        margin-bottom:10px !important;
-    }
-
-
-    /* description */
-    .product-description{
-        font-size:14px !important;
-        line-height:1.55 !important;
-    }
-
-
-    /* 4 specification cards */
-    .detail-spec-cards{
-        margin:15px 0 !important;
-        gap:8px !important;
-    }
-
-    .detail-spec-card{
-        padding:12px !important;
-    }
-
-    .detail-spec-card strong{
-        font-size:14px !important;
-    }
-
-    .detail-spec-card span{
-        font-size:9px !important;
-    }
-
-
-    /* option boxes */
-    .detail-options{
-        margin:12px 0 !important;
-    }
-
-
-    /* support links */
-    .support-row{
-        margin-top:12px !important;
-    }
-
-
-}
-/* ===== MOBILE PRODUCT FEATURE STRIP FINAL ===== */
-
-@media(max-width:580px){
-
+    /* Feature strip */
     .feature-strip{
         grid-template-columns:1fr 1fr !important;
-        padding:10px !important;
-        gap:0 !important;
+        padding:12px !important;
+        margin:20px 0 !important;
         border-radius:18px !important;
     }
 
-
     .feature-strip article{
-        min-height:115px !important;
+        min-height:100px !important;
         height:auto !important;
-        padding:14px 12px !important;
-        display:flex !important;
-        flex-direction:column !important;
-        justify-content:flex-start !important;
+        padding:12px 10px !important;
         border-right:1px solid #244057 !important;
         border-bottom:1px solid #244057 !important;
     }
 
-
     .feature-strip article:nth-child(2n){
         border-right:0 !important;
     }
-
 
     .feature-strip article:nth-child(3),
     .feature-strip article:nth-child(4){
@@ -624,23 +552,50 @@ body[data-page="home"] .section-head h2{
 
 
     .feature-strip article span{
-        font-size:14px !important;
-        line-height:1 !important;
-        margin-bottom:10px !important;
+        font-size:13px !important;
+        margin-bottom:6px !important;
     }
-
 
     .feature-strip article strong{
-        font-size:16px !important;
+        font-size:15px !important;
         line-height:1.25 !important;
-        margin:0 !important;
     }
-
 
     .feature-strip article small{
-        font-size:12px !important;
+        font-size:11px !important;
         line-height:1.35 !important;
-        margin-top:6px !important;
     }
+
+
+    /* Reduce gaps between product sections */
+    .product-lower{
+        margin-top:24px !important;
+        gap:20px !important;
+    }
+
+
+    .lower-card{
+        padding:20px !important;
+    }
+
+
+    /* Promo card only mobile */
+    .promo-card{
+        min-height:260px !important;
+        height:auto !important;
+        padding:22px !important;
+    }
+
+
+    .promo-card h3{
+        font-size:28px !important;
+        line-height:1.1 !important;
+    }
+
+
+    .promo-card p{
+        font-size:12px !important;
+    }
+
 
 }
