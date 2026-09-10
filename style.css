@@ -310,3 +310,36 @@
     color:#ffffff;
     opacity:.9;
 }
+/* FINAL PROMO CARD FIX */
+.promo-card{
+    min-height:410px !important;
+    height:410px !important;
+    padding:32px 28px !important;
+    display:flex !important;
+    align-items:flex-start !important;
+}
+
+.promo-card h3{
+    font-size:30px !important;
+    line-height:1.1 !important;
+    margin:15px 0 18px !important;
+}
+
+.promo-card p{
+    font-size:14px !important;
+    line-height:1.5 !important;
+    max-width:260px !important;
+}
+
+.promo-points{
+    display:flex !important;
+    flex-direction:column !important;
+    gap:10px !important;
+    margin-top:18px !important;
+}
+
+.promo-points span{
+    display:block !important;
+    font-size:13px !important;
+    color:white !important;
+}
