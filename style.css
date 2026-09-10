@@ -588,40 +588,37 @@ body[data-page="home"] .section-head h2{
 
 
 }
-/* ===== MOBILE FEATURE STRIP COMPACT FIX ===== */
+/* ===== MOBILE FEATURE STRIP FINAL COMPACT ===== */
 
 @media(max-width:580px){
 
     .feature-strip{
-        padding:18px 20px !important;
+        margin-top:20px !important;
+        padding:10px 18px !important;
         border-radius:18px !important;
-        gap:0 !important;
     }
 
     .feature-strip article{
-        padding:18px 0 !important;
+        padding:14px 0 !important;
         min-height:0 !important;
-        display:block !important;
-        border-bottom:1px solid rgba(255,255,255,.15);
-    }
-
-    .feature-strip article:last-child{
-        border-bottom:none;
+        gap:6px !important;
     }
 
     .feature-strip article span{
-        font-size:12px !important;
-        margin-bottom:6px !important;
+        font-size:14px !important;
+        margin-bottom:2px !important;
     }
 
     .feature-strip article strong{
-        font-size:20px !important;
+        font-size:18px !important;
         line-height:1.2 !important;
+        margin:0 !important;
     }
 
     .feature-strip article small{
-        font-size:14px !important;
-        line-height:1.4 !important;
-        margin-top:4px !important;
+        font-size:13px !important;
+        line-height:1.3 !important;
+        margin-top:2px !important;
     }
+
 }
