@@ -424,3 +424,24 @@
     font-size:15px !important;
     line-height:1.8 !important;
 }
+/* ===== TOP FEATURE STRIP FINAL SIZE ===== */
+
+.feature-strip article strong{
+    font-size:18px !important;
+    font-weight:700 !important;
+    color:#ffffff !important;
+}
+
+.feature-strip article span{
+    font-size:13px !important;
+    color:#9bb8d0 !important;
+    line-height:1.5 !important;
+}
+
+.feature-strip article{
+    padding:18px !important;
+}
+
+.feature-strip article::before{
+    font-size:22px !important;
+}
