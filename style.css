@@ -622,3 +622,38 @@ body[data-page="home"] .section-head h2{
     }
 
 }
+@media(max-width:580px){
+
+    .feature-strip{
+        grid-template-columns:1fr 1fr !important;
+        padding:16px !important;
+        gap:0 !important;
+        margin-top:20px !important;
+        border-radius:18px !important;
+    }
+
+    .feature-strip article{
+        padding:16px 12px !important;
+        min-height:120px !important;
+        border-right:1px solid #244057 !important;
+        border-bottom:1px solid #244057 !important;
+    }
+
+    .feature-strip article:nth-child(2n){
+        border-right:0 !important;
+    }
+
+    .feature-strip article:nth-last-child(-n+2){
+        border-bottom:0 !important;
+    }
+
+    .feature-strip article strong{
+        font-size:17px !important;
+    }
+
+    .feature-strip article small{
+        font-size:12px !important;
+        line-height:1.4 !important;
+    }
+
+}
