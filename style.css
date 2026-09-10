@@ -507,3 +507,17 @@ body[data-page="home"] .section-head p{
     font-size:15px;
     margin-top:0;
 }
+/* ===== HOMEPAGE SECTION LABEL POLISH ===== */
+
+body[data-page="home"] .eyebrow{
+    font-size:12px !important;
+    font-weight:800 !important;
+    letter-spacing:.12em !important;
+    margin-bottom:6px !important;
+}
+
+body[data-page="home"] .section-head h2{
+    font-size:42px !important;
+    line-height:1.15 !important;
+    margin-top:8px !important;
+}
