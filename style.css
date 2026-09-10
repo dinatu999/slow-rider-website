@@ -481,3 +481,29 @@
     color:#9bb8d0 !important;
     margin-top:6px !important;
 }
+/* ===== HOMEPAGE SECTION TITLE POLISH ===== */
+
+body[data-page="home"] .section{
+    padding:70px 0;
+}
+
+body[data-page="home"] .section-head{
+    margin-bottom:24px;
+}
+
+body[data-page="home"] .eyebrow{
+    font-size:13px;
+    letter-spacing:.14em;
+    margin-bottom:6px;
+}
+
+body[data-page="home"] .section-head h2{
+    font-size:42px;
+    line-height:1.15;
+    margin:8px 0 14px;
+}
+
+body[data-page="home"] .section-head p{
+    font-size:15px;
+    margin-top:0;
+}
