@@ -649,3 +649,26 @@ body[data-page="home"] .section-head h2{
     }
 
 }
+/* ===== FINAL MOBILE BUTTON WIDTH FIX ===== */
+
+@media(max-width:580px){
+
+    .detail-actions{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:10px !important;
+        width:100% !important;
+        padding:0 !important;
+    }
+
+
+    .detail-actions a{
+        display:flex !important;
+        width:100% !important;
+        max-width:100% !important;
+        margin:0 !important;
+        box-sizing:border-box !important;
+        justify-content:center !important;
+    }
+
+}
