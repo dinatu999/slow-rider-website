@@ -567,71 +567,7 @@ body[data-page="home"] .section-head h2{
     }
 
 }
-/* ===== MOBILE PRODUCT PAGE CLEANUP ===== */
-
-@media(max-width:580px){
-
-    /* reduce section spacing */
-    .product-detail-shell{
-        padding-bottom:20px !important;
-    }
-
-    .product-lower{
-        margin-top:12px !important;
-        gap:12px !important;
-    }
-
-
-    /* specifications and features cards */
-    .lower-card{
-        padding:14px !important;
-        border-radius:14px !important;
-    }
-
-
-    .lower-card h2{
-        margin-bottom:12px !important;
-        font-size:20px !important;
-    }
-
-
-    /* promo card */
-    .promo-card{
-        min-height:260px !important;
-        padding:20px !important;
-    }
-
-
-    .promo-card h3{
-        font-size:26px !important;
-    }
-
-
-    /* related products */
-    .related-section{
-        margin-top:20px !important;
-        padding-top:0 !important;
-    }
-
-
-    .related-section .product-card{
-        margin-bottom:12px !important;
-    }
-
-
-    .related-section .product-card img{
-        max-height:170px !important;
-        object-fit:contain !important;
-    }
-
-
-    .related-section .product-card{
-        padding:12px !important;
-    }
-
-
-}
-/* ===== MOBILE PRODUCT WIDTH FIX ===== */
+/* ===== MOBILE PRODUCT INFO FIX FINAL ===== */
 
 @media(max-width:580px){
 
@@ -652,9 +588,30 @@ body[data-page="home"] .section-head h2{
 
     .product-gallery-main img{
         width:100% !important;
-        max-width:100% !important;
         height:auto !important;
+        max-width:100% !important;
         object-fit:contain !important;
+    }
+
+
+    .detail-spec-cards{
+        display:grid !important;
+        grid-template-columns:1fr 1fr !important;
+        gap:12px !important;
+    }
+
+
+    .detail-spec-card{
+        overflow:hidden !important;
+    }
+
+
+    .detail-spec-card strong{
+        font-size:14px !important;
+        line-height:1.3 !important;
+        white-space:normal !important;
+        word-break:break-word !important;
+        overflow-wrap:anywhere !important;
     }
 
 
@@ -666,13 +623,11 @@ body[data-page="home"] .section-head h2{
     }
 
 
-    .detail-spec-cards{
-        grid-template-columns:1fr 1fr !important;
-    }
-
-
-    .detail-spec-card{
-        overflow:hidden !important;
+    .option-box,
+    .detail-actions,
+    .detail-actions a{
+        width:100% !important;
+        box-sizing:border-box !important;
     }
 
 }
