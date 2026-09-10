@@ -672,3 +672,100 @@ body[data-page="home"] .section-head h2{
     }
 
 }
+/* =========================================
+   FINAL MOBILE HOMEPAGE SPACING FIX
+   DO NOT AFFECT DESKTOP
+========================================= */
+
+@media(max-width:580px){
+
+    body[data-page="home"] .section{
+        padding:32px 0 !important;
+    }
+
+
+    body[data-page="home"] .section-head{
+        margin-bottom:16px !important;
+    }
+
+
+    body[data-page="home"] .section-head h2{
+        font-size:28px !important;
+        line-height:1.15 !important;
+        margin:6px 0 10px !important;
+    }
+
+
+    body[data-page="home"] .section-head p{
+        font-size:13px !important;
+        line-height:1.5 !important;
+    }
+
+
+    /* category cards */
+    body[data-page="home"] .category-showcase article{
+        padding:16px !important;
+    }
+
+
+    body[data-page="home"] .category-showcase h3{
+        margin:12px 0 6px !important;
+    }
+
+
+    body[data-page="home"] .category-showcase p{
+        min-height:auto !important;
+    }
+
+
+    /* featured products */
+    body[data-page="home"] .product-card-media{
+        height:180px !important;
+    }
+
+
+    body[data-page="home"] .product-card-body{
+        padding:14px !important;
+    }
+
+
+    body[data-page="home"] .product-card-body>p{
+        height:auto !important;
+        max-height:45px !important;
+    }
+
+
+    /* why slow rider */
+    body[data-page="home"] .advantage-grid article{
+        padding:18px !important;
+    }
+
+
+    /* process section */
+    body[data-page="home"] .b2b-split{
+        gap:25px !important;
+    }
+
+
+    body[data-page="home"] .process-panel{
+        padding:8px !important;
+    }
+
+
+    body[data-page="home"] .process-row{
+        padding:12px !important;
+    }
+
+
+    /* feature cards bottom */
+    body[data-page="home"] .feature-card-grid article{
+        padding:18px !important;
+    }
+
+
+    /* CTA */
+    body[data-page="home"] .cta-band{
+        padding:35px 0 !important;
+    }
+
+}
