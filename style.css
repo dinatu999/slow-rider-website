@@ -182,69 +182,21 @@
 
 
 
-/* ===== FINAL SUPPORT TEXT POSITION FIX ===== */
-
 .hero-visual{
-    position:relative !important;
-    overflow:visible !important;
+    position:relative;
 }
 
-
-.hero-support{
-
-    position:absolute !important;
-
-    /* align with showcase right edge */
-    right:35px !important;
-
-    /* vertical position */
-    top:150px !important;
-
-    width:130px !important;
-
-    z-index:30 !important;
-
+.hero-showcase{
+    position:relative;
+    overflow:hidden;
 }
 
-
-.support-item{
-
-    display:flex !important;
-
-    align-items:flex-start !important;
-
-    gap:8px !important;
-
-    margin-bottom:14px !important;
-
+.hero-composite{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
 }
-
-
-.support-item strong{
-
-    display:block !important;
-
-    font-size:16px !important;
-
-    line-height:1.15 !important;
-
-    color:#ffffff !important;
-
-    white-space:nowrap !important;
-
-}
-
-
-.support-icon{
-
-    font-size:18px !important;
-
-    color:#ffffff !important;
-
-    flex-shrink:0 !important;
-
-}
-
 
 
 /* responsive */
