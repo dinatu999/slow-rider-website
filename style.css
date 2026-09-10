@@ -521,112 +521,70 @@ body[data-page="home"] .section-head h2{
     line-height:1.15 !important;
     margin-top:8px !important;
 }
-/* ===== MOBILE PRODUCT DETAIL FINAL POLISH ===== */
+/* ===== REAL MOBILE PRODUCT DETAIL FIX ===== */
 
-@media(max-width:768px){
+@media(max-width:580px){
 
-    /* Product title */
-    .product-top h1{
+    /* remove big gap after image gallery */
+    .product-top{
+        padding-bottom:10px !important;
+        gap:15px !important;
+    }
+
+
+    /* product title */
+    .product-info-panel h1{
         font-size:34px !important;
-        line-height:1.15 !important;
-        word-break:break-word !important;
+        line-height:1.1 !important;
+        margin:10px 0 8px !important;
+        letter-spacing:-0.04em !important;
     }
 
-    /* Product description */
-    .product-top p{
+
+    /* subtitle */
+    .product-tagline{
         font-size:15px !important;
-        line-height:1.6 !important;
-    }
-
-    /* Feature cards spacing */
-    .feature-grid,
-    .product-feature-grid{
-        gap:12px !important;
-    }
-
-    /* Feature card text */
-    .feature-card strong{
-        font-size:16px !important;
-    }
-
-    .feature-card small{
-        font-size:11px !important;
-    }
-
-    /* Reduce unnecessary mobile gaps */
-    .product-top{
-        padding-top:20px !important;
-    }
-
-    .feature-strip{
-        margin-top:25px !important;
-        margin-bottom:25px !important;
-    }
-
-    /* Promo card */
-    .promo-card{
-        min-height:260px !important;
-    }
-
-}
-/* ===== MOBILE PRODUCT TOP SPACING FIX ===== */
-
-@media(max-width:768px){
-
-    /* Reduce gap after image gallery */
-    .product-top{
-        gap:12px !important;
-    }
-
-    .product-gallery{
-        margin-bottom:10px !important;
-    }
-
-    /* Category badge */
-    .product-top .eyebrow{
-        margin-bottom:10px !important;
-        font-size:11px !important;
-    }
-
-    /* Product title */
-    .product-top h1{
-        font-size:32px !important;
-        line-height:1.15 !important;
-        margin:8px 0 10px !important;
-        letter-spacing:-0.5px !important;
-    }
-
-    /* Subtitle */
-    .product-top h2{
-        font-size:17px !important;
         line-height:1.4 !important;
-        margin-bottom:12px !important;
+        margin-bottom:10px !important;
     }
 
-    /* Description */
-    .product-top p{
+
+    /* description */
+    .product-description{
         font-size:14px !important;
         line-height:1.55 !important;
-        margin-bottom:15px !important;
     }
 
-    /* Four feature cards */
-    .feature-strip{
-        margin-top:15px !important;
-        gap:10px !important;
+
+    /* 4 specification cards */
+    .detail-spec-cards{
+        margin:15px 0 !important;
+        gap:8px !important;
     }
 
-    .feature-strip article{
-        padding:14px !important;
-        min-height:90px !important;
+    .detail-spec-card{
+        padding:12px !important;
     }
 
-    .feature-strip article strong{
-        font-size:17px !important;
+    .detail-spec-card strong{
+        font-size:14px !important;
     }
 
-    .feature-strip article small{
-        font-size:12px !important;
+    .detail-spec-card span{
+        font-size:9px !important;
     }
+
+
+    /* option boxes */
+    .detail-options{
+        margin:12px 0 !important;
+    }
+
+
+    /* support links */
+    .support-row{
+        margin-top:12px !important;
+    }
+
 
 }
