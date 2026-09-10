@@ -217,16 +217,3 @@
 }
 
 }
-/* ===== PRODUCT IMAGE BACKGROUND FIX ===== */
-
-.product-image{
-    background:#ffffff !important;
-}
-
-
-.product-image img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    mix-blend-mode:multiply;
-}
