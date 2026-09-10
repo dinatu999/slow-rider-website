@@ -445,3 +445,10 @@
 .feature-strip article::before{
     font-size:22px !important;
 }
+/* ===== TOP FEATURE DESCRIPTION SIZE ===== */
+
+.feature-strip article span{
+    font-size:15px !important;
+    line-height:1.6 !important;
+    color:#9bb8d0 !important;
+}
