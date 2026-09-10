@@ -631,3 +631,48 @@ body[data-page="home"] .section-head h2{
 
 
 }
+/* ===== MOBILE PRODUCT WIDTH FIX ===== */
+
+@media(max-width:580px){
+
+    .product-detail-shell,
+    .product-detail-shell .container,
+    .product-top,
+    .product-info-panel,
+    .product-gallery-main,
+    .detail-spec-cards,
+    .detail-options,
+    .detail-spec-card{
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+        box-sizing:border-box !important;
+    }
+
+
+    .product-gallery-main img{
+        width:100% !important;
+        max-width:100% !important;
+        height:auto !important;
+        object-fit:contain !important;
+    }
+
+
+    .product-info-panel h1,
+    .product-description,
+    .product-tagline{
+        max-width:100% !important;
+        overflow-wrap:break-word !important;
+    }
+
+
+    .detail-spec-cards{
+        grid-template-columns:1fr 1fr !important;
+    }
+
+
+    .detail-spec-card{
+        overflow:hidden !important;
+    }
+
+}
