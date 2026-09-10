@@ -260,3 +260,21 @@
     font-size:13px !important;
     line-height:1.5 !important;
 }
+/* clean promo card without image */
+
+.promo-card{
+    min-height:220px !important;
+    height:220px !important;
+    padding:30px 26px !important;
+}
+
+.promo-card h3{
+    font-size:34px !important;
+    line-height:1.05 !important;
+    margin:12px 0 14px !important;
+}
+
+.promo-card p{
+    font-size:13px !important;
+    max-width:240px !important;
+}
