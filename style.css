@@ -366,3 +366,30 @@
     line-height:1.4 !important;
     color:#ffffff !important;
 }
+/* ===== PRODUCT DETAIL TEXT SIZE BALANCE ===== */
+
+/* Specifications table */
+.spec-table td,
+.spec-table th{
+    font-size:15px !important;
+    line-height:1.6 !important;
+}
+
+/* Specification labels */
+.spec-table td:first-child{
+    font-weight:600 !important;
+    color:#35546d !important;
+}
+
+/* Specification values */
+.spec-table td:last-child{
+    font-size:15px !important;
+    color:#102d46 !important;
+}
+
+
+/* Product feature list */
+.feature-list li{
+    font-size:15px !important;
+    line-height:1.6 !important;
+}
