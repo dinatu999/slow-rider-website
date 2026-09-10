@@ -521,81 +521,21 @@ body[data-page="home"] .section-head h2{
     line-height:1.15 !important;
     margin-top:8px !important;
 }
-/* ===== MOBILE PRODUCT DETAIL ONLY ===== */
+/* ===== MOBILE PRODUCT GAP FIX ONLY ===== */
 
 @media(max-width:580px){
 
-    /* Feature strip */
     .feature-strip{
-        grid-template-columns:1fr 1fr !important;
-        padding:12px !important;
-        margin:20px 0 !important;
-        border-radius:18px !important;
+        margin:18px 0 12px !important;
     }
 
-    .feature-strip article{
-        min-height:100px !important;
-        height:auto !important;
-        padding:12px 10px !important;
-        border-right:1px solid #244057 !important;
-        border-bottom:1px solid #244057 !important;
-    }
-
-    .feature-strip article:nth-child(2n){
-        border-right:0 !important;
-    }
-
-    .feature-strip article:nth-child(3),
-    .feature-strip article:nth-child(4){
-        border-bottom:0 !important;
-    }
-
-
-    .feature-strip article span{
-        font-size:13px !important;
-        margin-bottom:6px !important;
-    }
-
-    .feature-strip article strong{
-        font-size:15px !important;
-        line-height:1.25 !important;
-    }
-
-    .feature-strip article small{
-        font-size:11px !important;
-        line-height:1.35 !important;
-    }
-
-
-    /* Reduce gaps between product sections */
     .product-lower{
-        margin-top:24px !important;
-        gap:20px !important;
+        margin-top:0 !important;
+        margin-bottom:25px !important;
     }
-
 
     .lower-card{
-        padding:20px !important;
+        padding:18px !important;
     }
-
-
-    /* Promo card only mobile */
-    .promo-card{
-        min-height:260px !important;
-        height:auto !important;
-        padding:22px !important;
-    }
-
-
-    .promo-card h3{
-        font-size:28px !important;
-        line-height:1.1 !important;
-    }
-
-
-    .promo-card p{
-        font-size:12px !important;
-    }
-
 
 }
