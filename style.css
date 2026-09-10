@@ -567,3 +567,22 @@ body[data-page="home"] .section-head h2{
     }
 
 }
+/* ===== MOBILE PRODUCT SPACING FIX ONLY ===== */
+
+@media(max-width:580px){
+
+    .product-top{
+        padding-bottom:15px !important;
+    }
+
+    .feature-strip{
+        grid-template-columns:1fr 1fr !important;
+        margin:15px 0 !important;
+    }
+
+    .product-lower{
+        margin-bottom:20px !important;
+        gap:15px !important;
+    }
+
+}
