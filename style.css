@@ -586,3 +586,11 @@ body[data-page="home"] .section-head h2{
     }
 
 }
+@media(max-width:580px){
+
+    .product-lower{
+        margin-top:0 !important;
+        padding-top:0 !important;
+    }
+
+}
