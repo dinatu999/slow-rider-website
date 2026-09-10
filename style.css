@@ -445,20 +445,12 @@
 .feature-strip article::before{
     font-size:22px !important;
 }
-/* TOP FEATURE ICON */
-.feature-strip article > span{
-    font-size:18px !important;
-}
+/* FINAL TOP FEATURE VALUE FIX */
 
-/* TOP FEATURE TITLE */
-.feature-strip article strong{
-    font-size:18px !important;
-    font-weight:700 !important;
-}
-
-/* TOP FEATURE VALUE */
-.feature-strip article small{
-    font-size:15px !important;
-    line-height:1.6 !important;
+.product-detail-shell .feature-strip article small{
+    display:block !important;
+    font-size:14px !important;
+    line-height:1.8 !important;
     color:#9bb8d0 !important;
+    margin-top:6px !important;
 }
