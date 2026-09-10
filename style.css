@@ -843,3 +843,75 @@ body[data-page="home"] .section-head h2{
     }
 
 }
+/* =====================================
+   HOME MOBILE HERO COMPACT
+   ONLY HOME PAGE
+===================================== */
+
+@media(max-width:580px){
+
+    body[data-page="home"] .hero-home{
+        padding-top:20px !important;
+        padding-bottom:25px !important;
+    }
+
+
+    body[data-page="home"] .hero-copy{
+        gap:12px !important;
+    }
+
+
+    body[data-page="home"] .hero-copy h1{
+        font-size:32px !important;
+        line-height:1.05 !important;
+        margin-bottom:8px !important;
+    }
+
+
+    body[data-page="home"] .hero-copy p{
+        font-size:13px !important;
+        line-height:1.45 !important;
+        margin-bottom:12px !important;
+    }
+
+
+    body[data-page="home"] .hero-actions{
+        gap:8px !important;
+        margin-top:10px !important;
+    }
+
+
+    body[data-page="home"] .hero-actions .btn{
+        height:34px !important;
+        font-size:12px !important;
+        padding:0 12px !important;
+    }
+
+
+    body[data-page="home"] .hero-proof{
+        margin-top:15px !important;
+        margin-bottom:15px !important;
+    }
+
+
+    body[data-page="home"] .hero-proof strong{
+        font-size:20px !important;
+    }
+
+
+    body[data-page="home"] .hero-proof span{
+        font-size:10px !important;
+    }
+
+
+    body[data-page="home"] .hero-showcase{
+        margin-top:10px !important;
+    }
+
+
+    body[data-page="home"] .hero-composite{
+        max-height:220px !important;
+        object-fit:contain !important;
+    }
+
+}
