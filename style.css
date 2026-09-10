@@ -569,3 +569,64 @@ body[data-page="home"] .section-head h2{
     }
 
 }
+/* ===== MOBILE PRODUCT TOP SPACING FIX ===== */
+
+@media(max-width:768px){
+
+    /* Reduce gap after image gallery */
+    .product-top{
+        gap:12px !important;
+    }
+
+    .product-gallery{
+        margin-bottom:10px !important;
+    }
+
+    /* Category badge */
+    .product-top .eyebrow{
+        margin-bottom:10px !important;
+        font-size:11px !important;
+    }
+
+    /* Product title */
+    .product-top h1{
+        font-size:32px !important;
+        line-height:1.15 !important;
+        margin:8px 0 10px !important;
+        letter-spacing:-0.5px !important;
+    }
+
+    /* Subtitle */
+    .product-top h2{
+        font-size:17px !important;
+        line-height:1.4 !important;
+        margin-bottom:12px !important;
+    }
+
+    /* Description */
+    .product-top p{
+        font-size:14px !important;
+        line-height:1.55 !important;
+        margin-bottom:15px !important;
+    }
+
+    /* Four feature cards */
+    .feature-strip{
+        margin-top:15px !important;
+        gap:10px !important;
+    }
+
+    .feature-strip article{
+        padding:14px !important;
+        min-height:90px !important;
+    }
+
+    .feature-strip article strong{
+        font-size:17px !important;
+    }
+
+    .feature-strip article small{
+        font-size:12px !important;
+    }
+
+}
