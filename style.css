@@ -393,3 +393,34 @@
     font-size:15px !important;
     line-height:1.6 !important;
 }
+/* ===== PRODUCT DETAIL TOP FEATURE STRIP SIZE ===== */
+
+.feature-strip article strong{
+    font-size:18px !important;
+    font-weight:700 !important;
+}
+
+.feature-strip article span{
+    font-size:14px !important;
+    line-height:1.5 !important;
+}
+
+
+/* ===== PRODUCT DETAIL TABLE SIZE ===== */
+
+.product-detail-shell table td{
+    font-size:15px !important;
+    line-height:1.8 !important;
+}
+
+.product-detail-shell table td:first-child{
+    font-weight:600 !important;
+}
+
+
+/* ===== PRODUCT FEATURE LIST ===== */
+
+.product-detail-shell li{
+    font-size:15px !important;
+    line-height:1.8 !important;
+}
