@@ -1,4 +1,48 @@
 const products = [
+    {
+    "id": "m5",
+    "name": "M5",
+    "category": "Electric Motorcycle",
+    "image": "slow_rider_product_images/4.2.188.jpg",
+"gallery": [
+  "slow_rider_product_images/4.2.177.jpg",
+  "slow_rider_product_images/4.2.178.jpg",
+  "slow_rider_product_images/4.2.179.jpg",
+  "slow_rider_product_images/4.2.180.jpg",
+  "slow_rider_product_images/4.2.181.jpg"
+],
+    "description": "An electric dirt bike with a 1200W rated mid-drive motor, a removable 48V 20Ah lithium battery and front and rear hydraulic brakes.",
+    "specs": {
+      "Motor": "1200W rated mid-drive",
+      "Tyres (Front / Rear)": "60/100-14 / 80/100-12",
+      "Brakes (Front / Rear)": "Hydraulic / Hydraulic",
+      "Battery": "48V 20Ah removable lithium",
+      "Max Speed": "50 km/h",
+      "Lighting": "Integrated Headlight"
+    }
+  },
+  {
+    "id": "m7-pro",
+    "name": "M7 Pro",
+    "category": "Electric Motorcycle",
+    "image": "slow_rider_product_images/m7-pro-01.png",
+    "gallery": [
+      "slow_rider_product_images/m7-pro-02.png",
+      "slow_rider_product_images/m7-pro-03.png",
+      "slow_rider_product_images/m7-pro-04.png",
+      "slow_rider_product_images/m7-pro-05.png",
+      "slow_rider_product_images/m7-pro-06.png"
+    ],
+    "description": "An electric dirt bike with a 2000W rated mid-drive motor, a 60V 27Ah lithium battery and front and rear hydraulic brakes.",
+    "specs": {
+      "Motor": "2000W rated mid-drive",
+      "Tyres (Front / Rear)": "70/100-17 / 90/100-14",
+      "Brakes (Front / Rear)": "Hydraulic / Hydraulic",
+      "Battery": "60V 27Ah lithium",
+      "Max Speed": "70 km/h",
+      "Lighting": "Integrated LED Headlight + Tail Light"
+    }
+  },
   {
     "id": "patrol",
     "name": "Patrol Electric Scooter",
